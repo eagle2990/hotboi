@@ -736,6 +736,11 @@ Prefab:
       propertyPath: m_Center.y
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: 82776427893305860, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
   m_IsPrefabParent: 0
