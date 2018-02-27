@@ -998,9 +998,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 67871096}
   spawnTime: 3
-  spawnPoints:
+  spawnpoints:
   - {fileID: 663871005}
-  - {fileID: 663871005}
+  - {fileID: 720523281}
   - {fileID: 427622511}
   - {fileID: 1702659469}
 --- !u!1 &391273295
@@ -1179,8 +1179,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 427622511}
-  - component: {fileID: 427622512}
   - component: {fileID: 427622513}
+  - component: {fileID: 427622512}
   m_Layer: 0
   m_Name: Spawnpoint3
   m_TagString: Spawnpoint
@@ -1793,8 +1793,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 663871005}
-  - component: {fileID: 663871006}
   - component: {fileID: 663871007}
+  - component: {fileID: 663871006}
   m_Layer: 0
   m_Name: Spawnpoint1
   m_TagString: Spawnpoint
@@ -1869,8 +1869,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 720523281}
-  - component: {fileID: 720523282}
   - component: {fileID: 720523283}
+  - component: {fileID: 720523282}
   m_Layer: 0
   m_Name: Spawnpoint2
   m_TagString: Spawnpoint
@@ -2612,8 +2612,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1702659469}
-  - component: {fileID: 1702659470}
   - component: {fileID: 1702659471}
+  - component: {fileID: 1702659470}
   m_Layer: 0
   m_Name: Spawnpoint4
   m_TagString: Spawnpoint

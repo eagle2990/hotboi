@@ -327,14 +327,15 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-    <Compile Include="Assets\Scripts\AImovement\AI_Follow.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PlayerFollow.cs" />
-    <Compile Include="Assets\Scripts\RandomSpawner.cs" />
-    <Compile Include="Assets\Scripts\RotationLock.cs" />
-    <Compile Include="Assets\Scripts\Scrolltex.cs" />
-    <Compile Include="Assets\Scripts\SpawnpointChecker.cs" />
+    <Compile Include="Assets\Scripts\Bees\RotationLock.cs" />
+    <Compile Include="Assets\Scripts\Camera\PlayerFollow.cs" />
+    <Compile Include="Assets\Scripts\Spawner\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Spawner\RandomSpawner.cs" />
+    <Compile Include="Assets\Scripts\Spawner\SpawnpointChecker.cs" />
+    <Compile Include="Assets\Scripts\Superfan\AI_Follow.cs" />
+    <Compile Include="Assets\Scripts\Superfan\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Sweetboi\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Texture\Scrolltex.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
