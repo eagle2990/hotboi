@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{48B4DDBF-45AA-BA48-0FA8-60D735F05315}</ProjectGuid>
+    <ProjectGuid>{95027964-206A-998F-032F-F12967F5C1D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,11 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AImovement\AI_Follow.cs" />
-     <Compile Include="Assets\MeshAndMaterial\Scrolltex.cs" />
-     <Compile Include="Assets\ParticleSystems\RotationLock.cs" />
-     <Compile Include="Assets\PlayerController.cs" />
-     <Compile Include="Assets\PlayerFollow.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -101,6 +96,14 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\Scripts\AImovement\AI_Follow.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerFollow.cs" />
+     <Compile Include="Assets\Scripts\RandomSpawner.cs" />
+     <Compile Include="Assets\Scripts\RotationLock.cs" />
+     <Compile Include="Assets\Scripts\Scrolltex.cs" />
+     <Compile Include="Assets\Scripts\SpawnpointChecker.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
