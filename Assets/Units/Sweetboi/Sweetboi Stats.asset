@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4293c47b5c6de348afb79a1d10fb5ad, type: 3}
+  m_Name: Sweetboi Stats
+  m_EditorClassIdentifier: 
+  Name: Sweetboi
+  MaxHP:
+    UseConstant: 1
+    ConstantValue: 200
+    Variable: {fileID: 0}
+  MoveSpeed:
+    UseConstant: 1
+    ConstantValue: 7
+    Variable: {fileID: 0}
+  RotationSpeed:
+    UseConstant: 1
+    ConstantValue: 300
+    Variable: {fileID: 0}
+  HP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
+  Damage:
+    UseConstant: 1
+    ConstantValue: 50
+    Variable: {fileID: 0}
+  Type: {fileID: 11400000, guid: 1682776d5c284084abd18e66600f8e41, type: 2}

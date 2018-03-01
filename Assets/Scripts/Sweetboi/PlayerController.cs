@@ -8,9 +8,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController _characterController;
 
-    public float Speed = 5.0f;
-
-    public float RotationSpeed = 240.0f;
+    public UnitBasicData unitData;
 
     private float Gravity = 20.0f;
 
@@ -42,15 +40,15 @@ public class PlayerController : MonoBehaviour
         // Get Euler angles
         float turnAmount = Mathf.Atan2(move.x, move.z);
 
-        transform.Rotate(0, turnAmount *  RotationSpeed * Time.deltaTime, 0);
+        transform.Rotate(0, turnAmount * unitData.RotationSpeed.Value * Time.deltaTime, 0);
 
         if (_characterController.isGrounded)
         {
-            _animator.SetBool("run", move.magnitude> 0);
+            _animator.SetBool("run", move.magnitude > 0);
 
             _moveDir = transform.forward * move.magnitude;
 
-            _moveDir *= Speed;
+            _moveDir *= unitData.MoveSpeed.Value;
 
         }
 

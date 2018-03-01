@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44950223, g: 0.49649763, b: 0.5591471, a: 1}
+  m_IndirectSpecularColor: {r: 0.4495026, g: 0.49649847, b: 0.55914795, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -622,8 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f769344a18165840a13d2288152bea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  RotationSpeed: 240
+  unitData: {fileID: 0}
 --- !u!95 &111505790
 Animator:
   serializedVersion: 3
@@ -3124,6 +3123,7 @@ GameObject:
   - component: {fileID: 1277140988}
   - component: {fileID: 1277140987}
   - component: {fileID: 1277140986}
+  - component: {fileID: 1277140989}
   m_Layer: 0
   m_Name: Sweetboi
   m_TagString: Untagged
@@ -3179,8 +3179,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f769344a18165840a13d2288152bea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
-  RotationSpeed: 300
+  unitData: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
+--- !u!114 &1277140989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277140985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2cd92ee5abb474494ddc1bd3cfdbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
+  RestartHP: 1
+  DamageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1418959608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3948,6 +3970,29 @@ GameObject:
   m_PrefabParentObject: {fileID: 1588241364190656, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
     type: 2}
   m_PrefabInternal: {fileID: 338554417}
+--- !u!114 &1877911850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877911849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2cd92ee5abb474494ddc1bd3cfdbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseStats: {fileID: 11400000, guid: 720fa79d4b737b84ba80ce3620fd36a1, type: 2}
+  RestartHP: 0
+  DamageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1879609737
 GameObject:
   m_ObjectHideFlags: 0
