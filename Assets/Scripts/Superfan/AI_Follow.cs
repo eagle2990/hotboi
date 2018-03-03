@@ -7,17 +7,26 @@ public class AI_Follow : MonoBehaviour
 {
 	private NavMeshAgent myAgent;
 	public Transform target;
+    bool isTracking;
+    GameObject player;
 
-
-	// Use this for initialization
 	void Start () 
 	{
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
+        isTracking = player.activeInHierarchy;
 		myAgent = GetComponent<NavMeshAgent>();
+        target = player.transform;
 	}
 
-	// Update is called once per frame
 	void Update () 
 	{
-		myAgent.SetDestination(target.position);
+        if (isTracking)
+        {
+            myAgent.SetDestination(target.position);
+        }
 	}
+    public void StopNavAgent()
+    {
+        isTracking = false;
+    }
 }
