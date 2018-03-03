@@ -11,7 +11,7 @@ public class EnemyBaseData : UnitBasicData
     {
         if (HP == null)
         {
-            HP = new FloatVariable();
+            HP = ScriptableObject.CreateInstance<FloatVariable>();
         }
     }
 }

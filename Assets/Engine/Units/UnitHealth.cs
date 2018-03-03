@@ -7,8 +7,12 @@ public class UnitHealth : MonoBehaviour
 {
     public UnitBasicData BaseStats;
     public bool RestartHP;
+    public float secondsTriggerCollision;
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
+
+    
+    private float timer;
 
     void Start()
     {
@@ -23,9 +27,9 @@ public class UnitHealth : MonoBehaviour
         GotHitBy(other.gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        GotHitBy(collision.gameObject);
+        StartCoroutine(DamagePerSecond(other.gameObject));
     }
 
     private void GotHitBy(GameObject other)
@@ -49,7 +53,7 @@ public class UnitHealth : MonoBehaviour
         if (damage != null)
         {
             UnitType otherUnitType = GetCollidedUnitType(other.gameObject);
-            if (IsOpposite(otherUnitType))
+            if (BaseStats.Type.IsInjuredBy(otherUnitType))
             {
                 ApplyDamage(damage);
             }
@@ -60,18 +64,20 @@ public class UnitHealth : MonoBehaviour
     {
         if (BaseStats.HP.Value <= 0.0f)
         {
+            gameObject.SetActive(false);
             DeathEvent.Invoke();
         }
-    }
-
-    private bool IsOpposite(UnitType oppositeType)
-    {
-        return BaseStats.Type.InjuredBy.Contains(oppositeType);
     }
 
     private void ApplyDamage(FloatReference amount)
     {
         BaseStats.HP.Add(-amount);
         DamageEvent.Invoke();
+    }
+
+    private IEnumerator DamagePerSecond(GameObject other)
+    {
+        GotHitBy(other);
+        yield return new WaitForSeconds(secondsTriggerCollision);
     }
 }
