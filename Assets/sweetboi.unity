@@ -3982,7 +3982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseStats: {fileID: 11400000, guid: 720fa79d4b737b84ba80ce3620fd36a1, type: 2}
-  RestartHP: 0
+  RestartHP: 1
   DamageEvent:
     m_PersistentCalls:
       m_Calls: []
