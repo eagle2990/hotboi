@@ -10,7 +10,6 @@ public class UnitHealth : MonoBehaviour
     public float secondsTriggerCollision;
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
-
     
     private float timer;
 
