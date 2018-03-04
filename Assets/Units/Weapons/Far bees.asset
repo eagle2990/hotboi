@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f442d1cff01625f4fa5135031fcb32d0, type: 3}
   m_Name: Far bees
   m_EditorClassIdentifier: 
-  name: Far bees
-  damage:
+  Name: 
+  Damage:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 10
     Variable: {fileID: 0}

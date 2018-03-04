@@ -12,6 +12,8 @@ public class UnitHealth : MonoBehaviour
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
 
+    int i = 0;
+
     void Start()
     {
         if (BaseStats.HP.Value <= 0 || RestartHP)
