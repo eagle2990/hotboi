@@ -14,7 +14,7 @@ MonoBehaviour:
   Name: Regular Fanboy
   MaxHP:
     UseConstant: 1
-    ConstantValue: 50
+    ConstantValue: 0
     Variable: {fileID: 0}
   MoveSpeed:
     UseConstant: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
   HP: {fileID: 0}
   Damage:
     UseConstant: 1
-    ConstantValue: 15
+    ConstantValue: 0
     Variable: {fileID: 0}
   Type: {fileID: 11400000, guid: c431c3c535e9a39418b6a8be2e0812f3, type: 2}
   scoringPoints: {fileID: 11400000, guid: 979049a770c6afa4a81bb88fab821980, type: 2}
