@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MainMenu.unity
+    guid: f1edcbc4acffa954fb78aa800a2bec04
+  - enabled: 1
+    path: Assets/sweetboi.unity
+    guid: 2c754516a086e7d46b3d2537f36eb0c0
