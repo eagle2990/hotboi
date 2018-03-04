@@ -8,15 +8,44 @@ public class InflictDamage : MonoBehaviour
 {
     public WeaponBasicData weaponStats;
     public UnitBasicData weaponHolder;
-    public UnityEvent inflictingDamageEvent;
+    public UnityEvent attackEvent;
 
     private void OnTriggerEnter(Collider other)
     {
-        Hitting(other.gameObject);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Characters"))
+        {
+            Hitting(other.gameObject);
+        }
     }
 
-    private void Hitting(GameObject gameObject)
+    //private IEnumerator OnTriggerStay(Collider other)
+    //{
+    //    yield return new WaitForSeconds(10);
+    //    Hitting(other.gameObject);
+    //}
+
+    private void Hitting(GameObject other)
     {
-        //UnitType otherType = ga
+        if (IsOtherUnitWeapon(other))
+        {
+            RecieveDamage component = GetRecieveDamageComponent(other);
+            component.DamageCalculation(this);
+            attackEvent.Invoke();
+        }
+    }
+
+    private bool IsOtherUnitWeapon(GameObject other)
+    {
+        return gameObject != other && gameObject.transform.parent != other.transform && gameObject.transform.parent != other.transform.parent;
+    }
+
+    private RecieveDamage GetRecieveDamageComponent(GameObject other)
+    {
+        return other.GetComponent<RecieveDamage>() ?? other.GetComponentInParent<RecieveDamage>() ?? other.GetComponentInChildren<RecieveDamage>();
+    }
+
+    private bool IsNotAPlayer(GameObject other)
+    {
+        return other.CompareTag("Player");
     }
 }

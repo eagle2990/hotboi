@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class WeaponBasicData : ScriptableObject
 {
-    public string name;
-    public FloatReference damage;
+    public string Name;
+    public FloatReference Damage;
 }
