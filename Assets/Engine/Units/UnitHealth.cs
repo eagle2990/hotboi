@@ -11,8 +11,8 @@ public class UnitHealth : MonoBehaviour
     public float secondsTriggerCollision;
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
-
-    int i = 0;
+    
+    private float timer;
 
     void Start()
     {
@@ -34,15 +34,8 @@ public class UnitHealth : MonoBehaviour
 
     private void GotHitBy(GameObject other)
     {
-        UnitBasicData otherObjectStats = GetUnitBasicData(other);
-        CalculateDamage(otherObjectStats);
+        CalculateDamage(BaseStats.Damage, other);
         CheckDeath();
-    }
-
-    private UnitBasicData GetUnitBasicData(GameObject other)
-    {
-        UnitHealth unitHealth = other.GetComponent<UnitHealth>() ?? other.GetComponentInParent<UnitHealth>();
-        return unitHealth.BaseStats;
     }
 
     private UnitType GetCollidedUnitType(GameObject other)
@@ -55,13 +48,14 @@ public class UnitHealth : MonoBehaviour
         return null;
     }
 
-    private void CalculateDamage(UnitBasicData otherObjectStats)
+    private void CalculateDamage(FloatReference damage, GameObject other)
     {
-        if(otherObjectStats.Damage != null)
+        if (damage != null)
         {
-            if (BaseStats.Type.IsInjuredBy(otherObjectStats.Type))
+            UnitType otherUnitType = GetCollidedUnitType(other.gameObject);
+            if (BaseStats.Type.IsInjuredBy(otherUnitType))
             {
-                ApplyDamage(otherObjectStats.Damage);
+                ApplyDamage(damage);
             }
         }
     }
