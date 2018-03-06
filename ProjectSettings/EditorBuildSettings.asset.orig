@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+<<<<<<< HEAD
+    path: Assets/MainMenu.unity
+    guid: f1edcbc4acffa954fb78aa800a2bec04
+  - enabled: 1
+=======
+>>>>>>> 65da6199ede7f9dc7733bbd0bc300e2a42750e0e
+    path: Assets/sweetboi.unity
+    guid: 2c754516a086e7d46b3d2537f36eb0c0

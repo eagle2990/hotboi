@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63240b7e61c7f8448450bd423baf6c5, type: 3}
+  m_Name: Regular Fanboy Data
+  m_EditorClassIdentifier: 
+  Name: Regular Fanboy
+  MaxHP:
+    UseConstant: 1
+    ConstantValue: 100
+    Variable: {fileID: 0}
+  MoveSpeed:
+    UseConstant: 1
+    ConstantValue: 7
+    Variable: {fileID: 0}
+  RotationSpeed:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  HP: {fileID: 0}
+  Damage:
+    UseConstant: 1
+    ConstantValue: 10
+    Variable: {fileID: 0}
+  Type: {fileID: 11400000, guid: c431c3c535e9a39418b6a8be2e0812f3, type: 2}
+  scoringPoints: {fileID: 11400000, guid: 979049a770c6afa4a81bb88fab821980, type: 2}
