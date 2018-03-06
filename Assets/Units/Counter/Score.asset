@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Score
   m_EditorClassIdentifier: 
   DeveloperDescription: Amount of points acumulated
-  Value: 0
+  Value: 50

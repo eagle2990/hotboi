@@ -254,7 +254,6 @@ GameObject:
   - component: {fileID: 114834193882182718}
   - component: {fileID: 114031899147471080}
   - component: {fileID: 114979964142169060}
-  - component: {fileID: 114108935891613498}
   m_Layer: 8
   m_Name: Superfan
   m_TagString: Untagged
@@ -792,17 +791,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalScore: {fileID: 11400000, guid: 76e9ed73e692de5498bf224f16db0682, type: 2}
   TotalKills: {fileID: 11400000, guid: cd97b35802c09eb48bb19623bac38a93, type: 2}
---- !u!114 &114108935891613498
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1588241364190656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1a932abb27ee0c46b35708b7673d16d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114546731348000988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -865,7 +853,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114108935891613498}
+      - m_Target: {fileID: 0}
         m_MethodName: Die
         m_Mode: 1
         m_Arguments:

@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 4676525670087282}
   - component: {fileID: 136191047787171704}
   - component: {fileID: 114189923989151058}
-  - component: {fileID: 114834083543644282}
+  - component: {fileID: 114885908148131880}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -1115,8 +1115,8 @@ MonoBehaviour:
   DamageEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114834083543644282}
-        m_MethodName: flashBlood
+      - m_Target: {fileID: 114885908148131880}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16727dc74e02cb40b4acaeefc37a7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114834083543644282
+--- !u!114 &114885908148131880
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageImage: {fileID: 0}
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  timer: 5
+  flashSpeed: 5
 --- !u!114 &114992403653399792
 MonoBehaviour:
   m_ObjectHideFlags: 1

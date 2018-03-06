@@ -8,6 +8,6 @@ public class LoadSceneOnClick : MonoBehaviour {
 	public void LoadByIndex(int sceneIndex) 
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadSceneAsync(sceneIndex);
     }
 }
