@@ -21,6 +21,9 @@ public class ScoreUI : MonoBehaviour
 
     private void Start()
     {
+        //reset score and kills when sweetboi gameobject starts
+        score.Value = 0;
+        kills.Value = 0;
         scoreText.text = string.Format("Score: {0}", score.Value);
         killsText.text = string.Format("Kills: {0}", kills.Value);
         highScoreText.text = string.Format("Highscore: {0}", highScore.Value);

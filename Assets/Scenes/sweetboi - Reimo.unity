@@ -432,7 +432,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 62235169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fe24247c80db4b42b984f4e1ddd9d5b, type: 3}
   m_Name: 
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 62235169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
   m_Name: 
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 62235169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78b27548a41235b479e893d6e48fb018, type: 3}
   m_Name: 
@@ -3104,11 +3104,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4685994902451640, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.95
@@ -3146,16 +3141,6 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1798158487}
-    - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4095,6 +4080,9 @@ GameObject:
   - component: {fileID: 2041256541}
   - component: {fileID: 2041256545}
   - component: {fileID: 2041256546}
+  - component: {fileID: 2041256548}
+  - component: {fileID: 2041256547}
+  - component: {fileID: 2041256544}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -4161,6 +4149,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2041256544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041256540}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b27548a41235b479e893d6e48fb018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputUsername: 
+  inputPassword: 
 --- !u!114 &2041256545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4189,6 +4190,32 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &2041256547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041256540}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe24247c80db4b42b984f4e1ddd9d5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+--- !u!114 &2041256548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041256540}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputName: 
+  inputUsername: 
+  inputPassword: 
 --- !u!1 &2043308102
 GameObject:
   m_ObjectHideFlags: 0

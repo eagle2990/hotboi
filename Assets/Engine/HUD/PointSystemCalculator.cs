@@ -11,8 +11,6 @@ public class PointSystemCalculator : MonoBehaviour {
 
     private void Start()
     {
-        TotalScore.Value = 0;
-        TotalKills.Value = 0;
         DamageInfo = GetComponent<RecieveDamage>();
         Enemy = (EnemyBaseData)DamageInfo.UnitStats;
     }
