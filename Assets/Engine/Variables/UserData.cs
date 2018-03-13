@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserData : MonoBehaviour {
-    private string username;
-    private int highscore;
-    private List<int> scores;
-    private Dictionary<string, string> achievements;
-    private int mostKills;
-    private int highestLevelReached;
+[CreateAssetMenu]
+public class UserData : ScriptableObject {
+    public string username;
+    public string password;
+    public int highscore;
+    public List<int> scores;
+    public Dictionary<string, string> achievements;
+    public int mostKills;
+    public int highestLevelReached;
 
     public void setUsername(string username) {
         this.username = username;
@@ -31,18 +33,14 @@ public class UserData : MonoBehaviour {
     public Dictionary<string, string> getAchievements() {
         return achievements;
     }
-    public void setAsMostKillsIfNewMax(int kills) {
-        if (kills > this.mostKills) {
-            this.mostKills = kills;
-        }
+    public void setMostKills(int kills) {
+        this.mostKills = kills;
     }
     public int getMostKills() {
         return this.mostKills;
     }
-    public void setHighestLevelReachedIfNewMax(int levelReached) {
-        if (levelReached > this.highestLevelReached) {
-            this.highestLevelReached = levelReached;
-        }
+    public void setHighestLevelReached(int levelReached) {
+        this.highestLevelReached = levelReached;
     }
     public int getHighestLevelReached() {
         return this.highestLevelReached;

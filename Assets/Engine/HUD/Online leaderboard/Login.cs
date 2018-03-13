@@ -5,8 +5,8 @@ using UnityEngine;
 public class Login : MonoBehaviour {
     public UserData userdata;
     public DataLoader dataloader;
-    public string inputUsername;
-    public string inputPassword;
+    //public string inputUsername;
+    //public string inputPassword;
 
     string LoginURL = "https://localhost/sweetboi/Login.php";
 
@@ -18,7 +18,7 @@ public class Login : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.L)) {
-            StartCoroutine(LoginToDB(inputUsername, inputPassword));
+            StartCoroutine(LoginToDB(userdata.getUsername(), userdata.password));
         }
     }
     IEnumerator LoginToDB(string username, string password) {
@@ -30,7 +30,7 @@ public class Login : MonoBehaviour {
         string result = www.text;
         if (result.ToLower().Trim() == "success".ToLower()) {
             userdata.setUsername(username);
-            print("Login success!");
+            print("Login success ");
             dataloader.LoadData();
         }
     }

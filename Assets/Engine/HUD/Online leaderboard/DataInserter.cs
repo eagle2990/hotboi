@@ -5,10 +5,15 @@ using UnityEngine;
 public class DataInserter : MonoBehaviour {
 
     public UserData userdata;
-    public string inputName;
-    public string inputUsername;
-    public string inputPassword;
-    string CreateUserURL = "https://localhost/sweetboi/insert_user.php";
+    private string inputName;
+    private string inputUsername;
+    private string inputPassword;
+    private int inputScore;
+    private int inputKills;
+    private int inputPlaytime;
+    private int inputLevels;
+    private string CreateUserURL = "https://localhost/sweetboi/insert_user.php";
+    private string InsertGameResultURL = "http://localhost/sweetboi/insert_game_result.php";
     // Use this for initialization
     void Start () {
 		
@@ -19,6 +24,9 @@ public class DataInserter : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space)) {
             CreateUser(inputName, inputUsername, inputPassword);
         }
+        if (Input.GetKeyDown(KeyCode.U)) {
+            UploadResult(inputUsername, inputPassword, inputScore, inputKills, inputPlaytime, inputLevels);
+        }
     }
 
     public void CreateUser(string name, string username, string password) {
@@ -27,5 +35,16 @@ public class DataInserter : MonoBehaviour {
         form.AddField("usernamePost", username);
         form.AddField("passwordPost", password);
         WWW www = new WWW(CreateUserURL, form);
+    }
+
+    public void UploadResult(string username, string password, int score, int kills, int playtime, int level) {
+        WWWForm form = new WWWForm();
+        form.AddField("usernamePost", username);
+        form.AddField("passwordPost", password);
+        form.AddField("scorePost", score);
+        form.AddField("killsPost", kills);
+        form.AddField("playtimePost", playtime);
+        form.AddField("levelPost", level);
+        WWW www = new WWW(InsertGameResultURL, form);
     }
 }

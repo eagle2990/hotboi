@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userdata: {fileID: 0}
-  TopScoresToLoad: 0
+  NumberOfTopScoresToLoad: 0
 --- !u!114 &62235177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,9 +451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userdata: {fileID: 0}
-  inputName: 
-  inputUsername: 
-  inputPassword: 
 --- !u!114 &62235178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,8 +464,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userdata: {fileID: 0}
   dataloader: {fileID: 0}
-  inputUsername: 
-  inputPassword: 
 --- !u!1 &65667749
 GameObject:
   m_ObjectHideFlags: 0
@@ -4087,7 +4082,6 @@ GameObject:
   - component: {fileID: 2041256548}
   - component: {fileID: 2041256547}
   - component: {fileID: 2041256544}
-  - component: {fileID: 2041256549}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -4165,10 +4159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b27548a41235b479e893d6e48fb018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userdata: {fileID: 2041256549}
+  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
   dataloader: {fileID: 2041256547}
-  inputUsername: reimo110
-  inputPassword: test123
 --- !u!114 &2041256545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4208,8 +4200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe24247c80db4b42b984f4e1ddd9d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userdata: {fileID: 2041256549}
-  TopScoresToLoad: 2
+  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  NumberOfTopScoresToLoad: 10
 --- !u!114 &2041256548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4221,21 +4213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userdata: {fileID: 2041256549}
-  inputName: 
-  inputUsername: 
-  inputPassword: 
---- !u!114 &2041256549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2041256540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7412d3dede00548a8d28a20e28c60e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!1 &2043308102
 GameObject:
   m_ObjectHideFlags: 0
