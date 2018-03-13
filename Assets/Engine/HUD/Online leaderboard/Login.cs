@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Login : MonoBehaviour {
-
+    public UserData userdata;
+    public DataLoader dataloader;
     public string inputUsername;
     public string inputPassword;
 
-    string LoginURL = "https://sweetboi.000webhostapp.com/Login.php";
+    string LoginURL = "https://localhost/sweetboi/Login.php";
 
     // Use this for initialization
     void Start () {
@@ -26,6 +27,11 @@ public class Login : MonoBehaviour {
         form.AddField("passwordPost", password);
         WWW www = new WWW(LoginURL, form); 
         yield return www;
-        Debug.Log(www.text);
+        string result = www.text;
+        if (result.ToLower().Trim() == "success".ToLower()) {
+            userdata.setUsername(username);
+            print("Login success!");
+            dataloader.LoadData();
+        }
     }
 }

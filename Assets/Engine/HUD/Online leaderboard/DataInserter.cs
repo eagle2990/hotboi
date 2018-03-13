@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DataInserter : MonoBehaviour {
 
+    public UserData userdata;
     public string inputName;
     public string inputUsername;
     public string inputPassword;
-    string CreateUserURL = "https://sweetboi.000webhostapp.com/InsertUser.php";
+    string CreateUserURL = "https://localhost/sweetboi/insert_user.php";
     // Use this for initialization
     void Start () {
 		
@@ -25,7 +26,6 @@ public class DataInserter : MonoBehaviour {
         form.AddField("namePost", name);
         form.AddField("usernamePost", username);
         form.AddField("passwordPost", password);
-
         WWW www = new WWW(CreateUserURL, form);
     }
 }
