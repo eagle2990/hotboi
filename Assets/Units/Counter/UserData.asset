@@ -13,8 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: reimo110
   password: test123
-  highscore: 1102
-  scores: 
+  highscore: 0
   mostKills: 0
   highestLevelReached: 0
   score: {fileID: 11400000, guid: 76e9ed73e692de5498bf224f16db0682, type: 2}

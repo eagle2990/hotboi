@@ -23,16 +23,21 @@ public class DataInserter : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space)) {
             //Test user creation
-            //CreateUser(inputName, inputUsername, inputPassword);
         }
     }
+    public void Register() {
+        Debug.Log("Make a user registration form");
+            //CreateUser(inputName, inputUsername, inputPassword);
+
+    }
+
     public void UploadResultToDB() {
-        UploadResult(userdata.getUsername(),
+        UploadResult(userdata.GetUsername(),
                 userdata.password, (int)userdata.score.Value,
                 (int)userdata.kills.Value, (int)userdata.playtime.Value, (int)userdata.level.Value);
     }
 
-    public void CreateUser(string name, string username, string password) {
+    private void CreateUser(string name, string username, string password) {
         WWWForm form = new WWWForm();
         form.AddField("namePost", name);
         form.AddField("usernamePost", username);

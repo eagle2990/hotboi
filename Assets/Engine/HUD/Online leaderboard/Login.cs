@@ -1,13 +1,15 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Login : MonoBehaviour {
     public UserData userdata;
     public DataLoader dataloader;
+    public TextMeshProUGUI infoBoard;
     //public string inputUsername;
     //public string inputPassword;
-
+    public Text buttonText;
     string LoginURL = "https://localhost/sweetboi/Login.php";
 
     // Use this for initialization
@@ -17,10 +19,15 @@ public class Login : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.L)) {
-            StartCoroutine(LoginToDB(userdata.getUsername(), userdata.password));
-        }
     }
+    public void LogIn() {
+        StartCoroutine(LoginToDB(userdata.GetUsername(), userdata.password));
+    }
+    public void changeToLogOut() {
+        buttonText.text = "Log out";
+        infoBoard.text = "Sweeeeet....boi?";
+    }
+
     IEnumerator LoginToDB(string username, string password) {
         WWWForm form = new WWWForm();
         form.AddField("usernamePost", username);
@@ -29,8 +36,8 @@ public class Login : MonoBehaviour {
         yield return www;
         string result = www.text;
         if (result.ToLower().Trim() == "success".ToLower()) {
-            userdata.setUsername(username);
-            print("Login success ");
+            userdata.SetUsername(username);
+            Debug.Log("Login success ");
             dataloader.LoadData();
         }
     }

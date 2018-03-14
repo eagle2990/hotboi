@@ -9,6 +9,7 @@ public class ScoreUI : MonoBehaviour
     public FloatVariable score;
     public FloatVariable kills;
     public FloatVariable highScore;
+    public UserData userData;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI killsText;
@@ -26,10 +27,10 @@ public class ScoreUI : MonoBehaviour
         kills.Value = 0;
         scoreText.text = string.Format("Score: {0}", score.Value);
         killsText.text = string.Format("Kills: {0}", kills.Value);
-        highScoreText.text = string.Format("Highscore: {0}", highScore.Value);
+        highScoreText.text = string.Format("Highscore: {0}", userData.GetHighscore());
         previousScoreValue = score.Value;
         previousKillsValue = kills.Value;
-        previousHighScoreValue = highScore.Value;
+        previousHighScoreValue = (float)(userData.GetHighscore());
     }
 
     private void Update()

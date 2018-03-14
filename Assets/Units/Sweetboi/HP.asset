@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: HP
   m_EditorClassIdentifier: 
   DeveloperDescription: "Amount of HP Sweetboi currently has.\t"
-  Value: -29
+  Value: 11

@@ -33,7 +33,7 @@ public class RecieveDamage : MonoBehaviour
         if (UnitStats.HP.Value <= 0.0f)
         {
             DeathEvent.Invoke();
-            
+
         }
     }
 

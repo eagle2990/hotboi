@@ -14,7 +14,7 @@ MonoBehaviour:
   Name: Sweetboi
   MaxHP:
     UseConstant: 1
-    ConstantValue: 100
+    ConstantValue: 11
     Variable: {fileID: 0}
   MoveSpeed:
     UseConstant: 1

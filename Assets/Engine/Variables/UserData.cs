@@ -7,7 +7,8 @@ public class UserData : ScriptableObject {
     public string username;
     public string password;
     public int highscore;
-    public List<int> scores;
+    public List<Dictionary<string, int>> scores = new List<Dictionary<string, int>>();
+    public List<Dictionary<string, int>> globalScores = new List<Dictionary<string, int>>();
     public Dictionary<string, string> achievements;
     public int mostKills;
     public int highestLevelReached;
@@ -16,34 +17,46 @@ public class UserData : ScriptableObject {
     public FloatVariable playtime;
     public FloatVariable level;
 
-    public void setUsername(string username) {
+    public void SetUsername(string username) {
         this.username = username;
     }
-    public string getUsername() {
+    public string GetUsername() {
         return this.username;
     }
-    public void setHighscore(int highscore) {
+    public void SetHighscore(int highscore) {
         this.highscore = highscore;
     }
-    public int getHighscore() {
+    public int GetHighscore() {
         return this.highscore;
     }
-    public void addAchievement(string title, string description) {
+    public void AddAchievement(string title, string description) {
         this.achievements.Add(title, description);
     }
     public Dictionary<string, string> getAchievements() {
         return achievements;
     }
-    public void setMostKills(int kills) {
+    public void SetMostKills(int kills) {
         this.mostKills = kills;
     }
-    public int getMostKills() {
+    public void SetScores(List<Dictionary<string, int>> scores) {
+        this.scores = scores;
+    }
+    public List<Dictionary<string, int>> GetScores() {
+        return scores;
+    }
+    public void SetGlobalScores(List<Dictionary<string, int>> globalScores) {
+        this.globalScores = globalScores;
+    }
+    public List<Dictionary<string, int>> GetGlobalScores() {
+        return this.globalScores;
+    }
+    public int GetMostKills() {
         return this.mostKills;
     }
-    public void setHighestLevelReached(int levelReached) {
+    public void SetHighestLevelReached(int levelReached) {
         this.highestLevelReached = levelReached;
     }
-    public int getHighestLevelReached() {
+    public int GetHighestLevelReached() {
         return this.highestLevelReached;
     }
 }
