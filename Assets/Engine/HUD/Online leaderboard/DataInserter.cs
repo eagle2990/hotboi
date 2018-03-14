@@ -22,11 +22,14 @@ public class DataInserter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            CreateUser(inputName, inputUsername, inputPassword);
+            //Test user creation
+            //CreateUser(inputName, inputUsername, inputPassword);
         }
-        if (Input.GetKeyDown(KeyCode.U)) {
-            UploadResult(inputUsername, inputPassword, inputScore, inputKills, inputPlaytime, inputLevels);
-        }
+    }
+    public void UploadResultToDB() {
+        UploadResult(userdata.getUsername(),
+                userdata.password, (int)userdata.score.Value,
+                (int)userdata.kills.Value, (int)userdata.playtime.Value, (int)userdata.level.Value);
     }
 
     public void CreateUser(string name, string username, string password) {
@@ -37,7 +40,7 @@ public class DataInserter : MonoBehaviour {
         WWW www = new WWW(CreateUserURL, form);
     }
 
-    public void UploadResult(string username, string password, int score, int kills, int playtime, int level) {
+    private void UploadResult(string username, string password, int score, int kills, int playtime, int level) {
         WWWForm form = new WWWForm();
         form.AddField("usernamePost", username);
         form.AddField("passwordPost", password);

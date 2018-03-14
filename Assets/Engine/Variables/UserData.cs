@@ -11,6 +11,10 @@ public class UserData : ScriptableObject {
     public Dictionary<string, string> achievements;
     public int mostKills;
     public int highestLevelReached;
+    public FloatVariable score;
+    public FloatVariable kills;
+    public FloatVariable playtime;
+    public FloatVariable level;
 
     public void setUsername(string username) {
         this.username = username;
@@ -23,9 +27,6 @@ public class UserData : ScriptableObject {
     }
     public int getHighscore() {
         return this.highscore;
-    }
-    public void addScore(int score) {
-        this.scores.Add(score);
     }
     public void addAchievement(string title, string description) {
         this.achievements.Add(title, description);

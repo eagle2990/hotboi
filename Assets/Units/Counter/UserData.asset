@@ -17,3 +17,7 @@ MonoBehaviour:
   scores: 
   mostKills: 0
   highestLevelReached: 0
+  score: {fileID: 11400000, guid: 76e9ed73e692de5498bf224f16db0682, type: 2}
+  kills: {fileID: 11400000, guid: cd97b35802c09eb48bb19623bac38a93, type: 2}
+  playtime: {fileID: 11400000, guid: 49310320a49587846ad73ec4e848ad53, type: 2}
+  level: {fileID: 11400000, guid: c6c4ed89a51b3f544b53a8066bead359, type: 2}
