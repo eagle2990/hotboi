@@ -1652,6 +1652,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1475667340965518, guid: a5ac4662396fe704dbe3171b63614700,
     type: 2}
   m_PrefabInternal: {fileID: 1577896181}
+--- !u!114 &368508613 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114550260034235236, guid: a5ac4662396fe704dbe3171b63614700,
+    type: 2}
+  m_PrefabInternal: {fileID: 1577896181}
+  m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
 --- !u!136 &368508616 stripped
 CapsuleCollider:
   m_PrefabParentObject: {fileID: 136191047787171704, guid: a5ac4662396fe704dbe3171b63614700,
@@ -4520,11 +4526,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1231256126}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1286036151 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1085729161926210, guid: a5ac4662396fe704dbe3171b63614700,
-    type: 2}
-  m_PrefabInternal: {fileID: 1577896181}
 --- !u!1 &1410038811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,11 +4945,11 @@ Prefab:
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1286036151}
+      objectReference: {fileID: 368508613}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: UploadResultToDB
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
