@@ -7,6 +7,7 @@ public class UserData : ScriptableObject {
     public string username;
     public string password;
     public int highscore;
+    public bool isLoggedIn;
     public List<Dictionary<string, int>> scores = new List<Dictionary<string, int>>();
     public List<Dictionary<string, int>> globalScores = new List<Dictionary<string, int>>();
     public Dictionary<string, string> achievements;

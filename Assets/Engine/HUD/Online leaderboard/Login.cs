@@ -22,10 +22,16 @@ public class Login : MonoBehaviour {
     }
     public void LogIn() {
         StartCoroutine(LoginToDB(userdata.GetUsername(), userdata.password));
+        userdata.isLoggedIn = true;
+    }
+    public void LogOut() {
+        userdata.isLoggedIn = false;
     }
     public void changeToLogOut() {
-        buttonText.text = "Log out";
         infoBoard.text = "Sweeeeet....boi?";
+    }
+    public void changeToLogIn() {
+        infoBoard.text = "You're not logged in" + "\n\n" +"Log in to save your games.";
     }
 
     IEnumerator LoginToDB(string username, string password) {
