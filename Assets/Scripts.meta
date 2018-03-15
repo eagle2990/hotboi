@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 1750434891950774eb9fc71a4074bc38
-folderAsset: yes
-timeCreated: 1520359457
-=======
 guid: e5f9ff85640be8c4abfe8255b83708a0
 folderAsset: yes
 timeCreated: 1520871113
->>>>>>> enemy_spawner
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
