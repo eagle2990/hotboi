@@ -9,7 +9,6 @@ public class DeathScreenController : MonoBehaviour {
     public UserData userData;
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -17,14 +16,20 @@ public class DeathScreenController : MonoBehaviour {
     }
 
     public void ShowDeathScreen() {
+        
+        //dataLoader.LoadScores(10);
         //ShowUserScores();
-        ShowUserScores();
+        if (userData.isLoggedIn) {
+            ShowUserScores();
+        } else {
+            ShowGlobalScores();
+        }
         deathScreen.SetActive(true);
     }
     public void HideDeathScreen() {
         deathScreen.SetActive(false);
     }
-    //limit - max number of scores to be shown
+
     public void ShowUserScores() {
         string ScoreFieldText = "";
         List<Dictionary<string, int>> games = userData.GetScores();
@@ -34,6 +39,7 @@ public class DeathScreenController : MonoBehaviour {
         scoreTable.SetText(ScoreFieldText);
     }
     public void ShowGlobalScores() {
+
         string ScoreFieldText = "";
         List<Dictionary<string, int>> globalGames = userData.GetGlobalScores();
         for (int i = 0; i < globalGames.Count; i++) {

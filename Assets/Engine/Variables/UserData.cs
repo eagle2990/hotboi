@@ -10,7 +10,7 @@ public class UserData : ScriptableObject {
     public bool isLoggedIn;
     public List<Dictionary<string, int>> scores = new List<Dictionary<string, int>>();
     public List<Dictionary<string, int>> globalScores = new List<Dictionary<string, int>>();
-    public Dictionary<string, string> achievements;
+    public Dictionary<string, string> achievements = new Dictionary<string, string>();
     public int mostKills;
     public int highestLevelReached;
     public FloatVariable score;
@@ -30,8 +30,17 @@ public class UserData : ScriptableObject {
     public int GetHighscore() {
         return this.highscore;
     }
+    public void ResetLocalScores() {
+        this.scores.Clear();
+    }
+    public void ResetGlobalScores() {
+        this.globalScores.Clear();
+    }
     public void AddAchievement(string title, string description) {
         this.achievements.Add(title, description);
+    }
+    public void ResetLocalAchievements() {
+        this.achievements.Clear();
     }
     public Dictionary<string, string> getAchievements() {
         return achievements;
@@ -59,5 +68,18 @@ public class UserData : ScriptableObject {
     }
     public int GetHighestLevelReached() {
         return this.highestLevelReached;
+    }
+    public void ResetLocalUserData() {
+        isLoggedIn = false;
+        ResetGlobalScores(); //reset global scores
+        ResetLocalAchievements();
+        ResetLocalScores();
+        SetHighestLevelReached(0);
+        SetHighscore(0);
+        SetMostKills(0);
+        score.SetValue(0);
+        level.SetValue(0);
+        playtime.SetValue(0);
+        kills.SetValue(0);
     }
 }

@@ -15,12 +15,18 @@ public class DataLoader : MonoBehaviour {
     private string userAchievementsURL = "http://localhost/sweetboi/user_achievements.php?username=";
     private string userScoresURL = "http://localhost/sweetboi/user_scores.php?username=";
     private string globalScoresURL = "http://localhost/sweetboi/global_scores.php?score_limit=";
-    
+
     //private string JSONGameResultsURL = "http://localhost/sweetboi/game_results.php?username=";
+
+    private void Start() {
+        LoadPublicData();
+    }
 
     public void LoadData() {
         StartCoroutine(LoadAchievements());
         StartCoroutine(LoadScores(NumberOfTopScoresToLoad));
+    }
+    public void LoadPublicData() {
         StartCoroutine(LoadGlobalScores(NumberOfTopScoresToLoad));
     }
 
@@ -35,7 +41,11 @@ public class DataLoader : MonoBehaviour {
         foreach (string rawAchievement in rawAchievements) {
             string title = splitByString((splitByString((rawAchievement), "|||")[0]), ":::")[1];
             string description = splitByString((splitByString((rawAchievement), "|||")[1]), ":::")[1];
-            achievements.Add(title, description);
+            if (!achievements.ContainsKey(title)) {
+                achievements.Add(title, description);
+            } else {
+                Debug.Log("Tried to load same achievement multiple times ");
+            }
         }
         Debug.Log("..achievements loaded ");
     }
@@ -56,12 +66,12 @@ public class DataLoader : MonoBehaviour {
             games.Add(result);
           }
         userdata.SetHighscore(LoadUserHighscore(games));
-        userdata.SetHighscore(userdata.GetHighscore());
+        //userdata.SetHighscore(userdata.GetHighscore());
         userdata.SetScores(games);
         Debug.Log("..scores loaded and set ");
     }
     ////////////////////////////  GLOBAL SCORE LOADER  /////////////////////////////////////////////////
-    IEnumerator LoadGlobalScores(int limit) {
+    public IEnumerator LoadGlobalScores(int limit) {
         Debug.Log("Loading global scores.. ");
         WWW globalScores = new WWW(globalScoresURL + limit.ToString());
         yield return globalScores;
