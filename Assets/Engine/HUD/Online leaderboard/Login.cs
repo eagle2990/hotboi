@@ -24,9 +24,9 @@ public class Login : MonoBehaviour {
         yield return www;
         string result = www.text;
         if (result.ToLower().Trim() == "success".ToLower()) {
+            userdata.isLoggedIn = true;
             userdata.SetUsername(username);
             Debug.Log("Login success ");
-            userdata.isLoggedIn = true;
             dataloader.LoadData();
         } else {
             Debug.Log("Could not log in ");

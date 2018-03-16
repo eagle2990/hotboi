@@ -13,7 +13,6 @@ public class TimeController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timePlayed += Time.deltaTime;
-        print(timePlayed);
         userData.SetPlaytime(timePlayed);
 	}
 }

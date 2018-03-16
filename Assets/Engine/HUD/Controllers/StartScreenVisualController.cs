@@ -19,10 +19,10 @@ public class StartScreenVisualController : MonoBehaviour {
     private Login login;
     // Use this for initialization
     void Start () {
+        Time.timeScale = 0;
         userData.ResetLocalUserData();
         textToBeShowIfLoggedOut = "You're not logged in \n\nLogin to save your games.. \n..or don't";
         loginButton.onClick.AddListener(RefreshLogButton);
-        Time.timeScale = 0;
         playButton.onClick.AddListener(PlayGame);
     }
 	
@@ -31,6 +31,28 @@ public class StartScreenVisualController : MonoBehaviour {
         if (gameObject.activeSelf) {
 		    textToBeShowIfLoggedIn = "Welcome " + userData.GetUsername() + ", \n\npress Play to start game";
             RefreshInfoBoard();
+            if (userData.isLoggedIn) {
+                ChangeButtonToLogOut();
+            }
+            if(!userData.isLoggedIn) {
+                ChangeButtonToLogIn();
+            }
+            //make tab select other field
+            if (Input.GetKeyDown(KeyCode.Tab)) {
+                if (username.isFocused) {
+                    password.Select();
+                }
+                if (password.isFocused) {
+                    username.Select();
+                }
+            }
+            //press enter to log in
+            if (Input.GetKeyDown(KeyCode.Return)) {
+                //if logged in, disable using enter to log out
+                if (!userData.isLoggedIn) {
+                    RefreshLogButton();
+                }
+            }
         }
     }
 
@@ -49,16 +71,19 @@ public class StartScreenVisualController : MonoBehaviour {
 
     void RefreshLogButton() {
         login = gameObject.GetComponent<Login>();
+        if (userData.isLoggedIn) {
+            login.LogOut();
+            //username.text = null;
+            password.text = null;
+            ChangeButtonToLogIn();
+        }
         if (!userData.isLoggedIn) {
             userData.SetUsername(username.text);
             userData.password = password.text;
             login.LogIn();
-            ChangeButtonToLogOut();
-        }
-        if (userData.isLoggedIn) {
-
-            login.LogOut();
-            ChangeButtonToLogIn();
+            if (userData.isLoggedIn) {
+                ChangeButtonToLogOut();
+            }
         }
     }
 
@@ -71,7 +96,7 @@ public class StartScreenVisualController : MonoBehaviour {
 
     private void ChangeButtonToLogIn() {
         ChangeButtonText(loginButton, "Log in");
-        //remove form
+        //enable form
         loginForm.gameObject.SetActive(true);
     }
     public void PlayGame() {
