@@ -6,7 +6,7 @@ using TMPro;
 public class Login : MonoBehaviour {
     public UserData userdata;
     public DataLoader dataloader;
-    string LoginURL = "https://localhost/sweetboi/Login.php";
+    string LoginURL = "https://sweetboi.000webhostapp.com/login.php";
 
     public void LogIn() {
         StartCoroutine(LoginToDB(userdata.GetUsername(), userdata.password));

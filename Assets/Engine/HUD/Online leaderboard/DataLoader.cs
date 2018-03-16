@@ -12,9 +12,9 @@ public class DataLoader : MonoBehaviour {
     Dictionary<string, int> result;
     private List<Dictionary<string, int>> games = new List<Dictionary<string, int>>();
     private List<Dictionary<string, int>> globalGames = new List<Dictionary<string, int>>();
-    private string userAchievementsURL = "http://localhost/sweetboi/user_achievements.php?username=";
-    private string userScoresURL = "http://localhost/sweetboi/user_scores.php?username=";
-    private string globalScoresURL = "http://localhost/sweetboi/global_scores.php?score_limit=";
+    private string userAchievementsURL = "https://sweetboi.000webhostapp.com/user_achievements.php?username=";
+    private string userScoresURL = "https://sweetboi.000webhostapp.com/user_scores.php?username=";
+    private string globalScoresURL = "https://sweetboi.000webhostapp.com/global_scores.php?score_limit=";
 
     //private string JSONGameResultsURL = "http://localhost/sweetboi/game_results.php?username=";
 

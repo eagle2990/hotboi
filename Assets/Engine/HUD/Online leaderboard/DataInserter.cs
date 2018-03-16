@@ -12,8 +12,8 @@ public class DataInserter : MonoBehaviour {
     private int inputKills;
     private int inputPlaytime;
     private int inputLevels;
-    private string CreateUserURL = "https://localhost/sweetboi/insert_user.php";
-    private string InsertGameResultURL = "http://localhost/sweetboi/insert_game_result.php";
+    private string CreateUserURL = "https://sweetboi.000webhostapp.com/insert_user.php";
+    private string InsertGameResultURL = "https://sweetboi.000webhostapp.com/insert_game_result.php";
     // Use this for initialization
     void Start () {
 		
