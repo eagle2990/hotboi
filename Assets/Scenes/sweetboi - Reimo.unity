@@ -8584,6 +8584,7 @@ GameObject:
   - component: {fileID: 2041256549}
   - component: {fileID: 2041256550}
   - component: {fileID: 2041256551}
+  - component: {fileID: 2041256552}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -8763,6 +8764,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 783676767}
   resumeButton: {fileID: 1700601084}
+--- !u!114 &2041256552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041256540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26377161b08e34847a8475bf08da2a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!1 &2043308102
 GameObject:
   m_ObjectHideFlags: 0

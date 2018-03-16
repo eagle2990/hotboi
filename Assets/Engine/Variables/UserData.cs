@@ -18,6 +18,19 @@ public class UserData : ScriptableObject {
     public FloatVariable playtime;
     public FloatVariable level;
 
+    public void SetPlaytime(float playtime) {
+        this.playtime.Value = playtime;
+    }
+    public FloatVariable GetPlaytime() {
+        return playtime;
+    }
+    public void SetKills(float kills) {
+        this.kills.Value = kills;
+    }
+    public FloatVariable GetKills() {
+        return kills;
+    }
+
     public void SetUsername(string username) {
         this.username = username;
     }

@@ -10,7 +10,7 @@ public class DataInserter : MonoBehaviour {
     private string inputPassword;
     private int inputScore;
     private int inputKills;
-    private int inputPlaytime;
+    private float inputPlaytime;
     private int inputLevels;
     private string CreateUserURL = "https://sweetboi.000webhostapp.com/insert_user.php";
     private string InsertGameResultURL = "https://sweetboi.000webhostapp.com/insert_game_result.php";
@@ -34,7 +34,7 @@ public class DataInserter : MonoBehaviour {
     public void UploadResultToDB() {
         UploadResult(userdata.GetUsername(),
                 userdata.password, (int)userdata.score.Value,
-                (int)userdata.kills.Value, (int)userdata.playtime.Value, (int)userdata.level.Value);
+                (int)userdata.GetKills().Value, (int)userdata.GetPlaytime().Value, (int)userdata.level.Value);
     }
 
     private void CreateUser(string name, string username, string password) {
