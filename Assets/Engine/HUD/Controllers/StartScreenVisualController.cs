@@ -8,12 +8,21 @@ using System;
 public class StartScreenVisualController : MonoBehaviour {
     public TextMeshProUGUI infoBoard;
     public UserData userData;
-    public Button loginButton;
     public Button playButton;
     public GameObject loginForm;
     public GameObject startScreen;
+    //login form
+    public Button loginButton;
     public InputField username;
     public InputField password;
+    //reg form
+    public Button registerButton;
+    public InputField newUsername;
+    public InputField newPassword;
+    public InputField newRepeatPassword;
+    public InputField newName;
+
+    public DataInserter dataInserter;
     private string textToBeShowIfLoggedIn;
     private string textToBeShowIfLoggedOut;
     private Login login;
@@ -24,6 +33,8 @@ public class StartScreenVisualController : MonoBehaviour {
         textToBeShowIfLoggedOut = "You're not logged in \n\nLogin to save your games.. \n..or don't";
         loginButton.onClick.AddListener(RefreshLogButton);
         playButton.onClick.AddListener(PlayGame);
+        registerButton.onClick.AddListener(RegisterUser);
+        username.Select();
     }
 	
 	// Update is called once per frame
@@ -45,6 +56,18 @@ public class StartScreenVisualController : MonoBehaviour {
                 if (password.isFocused) {
                     username.Select();
                 }
+                if (newUsername.isFocused) {
+                    newPassword.Select();
+                }
+                if (newPassword.isFocused) {
+                    newRepeatPassword.Select();
+                }
+                if (newRepeatPassword.isFocused) {
+                    newName.Select();
+                }
+                if (newName.isFocused) {
+                    newUsername.Select();
+                }
             }
             //press enter to log in
             if (Input.GetKeyDown(KeyCode.Return)) {
@@ -65,6 +88,22 @@ public class StartScreenVisualController : MonoBehaviour {
             infoBoard.text = textToBeShowIfLoggedOut;
         }
     }
+    void RegisterUser() {
+        if (newPassword.text == newRepeatPassword.text) {
+            dataInserter.CreateUser(newName.text, newUsername.text, newPassword.text);
+            ResetRegisterFields();
+        }
+    }
+
+    void ResetRegisterFields() {
+        newName.text = null;
+        newUsername.text = null;
+        newPassword.text = null;
+        newRepeatPassword.text = null;
+    }
+
+
+
     void ChangeButtonText(Button button, string newText) {
         button.GetComponentInChildren<Text>().text = newText;
     }

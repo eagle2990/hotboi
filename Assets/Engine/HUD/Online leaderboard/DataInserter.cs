@@ -5,9 +5,6 @@ using UnityEngine;
 public class DataInserter : MonoBehaviour {
 
     public UserData userdata;
-    private string inputName;
-    private string inputUsername;
-    private string inputPassword;
     private int inputScore;
     private int inputKills;
     private float inputPlaytime;
@@ -37,12 +34,14 @@ public class DataInserter : MonoBehaviour {
                 (int)userdata.GetKills().Value, (int)userdata.GetPlaytime().Value, (int)userdata.level.Value);
     }
 
-    private void CreateUser(string name, string username, string password) {
+    public void CreateUser(string name, string username, string password) {
         WWWForm form = new WWWForm();
         form.AddField("namePost", name);
         form.AddField("usernamePost", username);
         form.AddField("passwordPost", password);
         WWW www = new WWW(CreateUserURL, form);
+        //TODO check if user with same username already exists
+        print("Maybe registered new user: " + username);
     }
 
     private void UploadResult(string username, string password, int score, int kills, int playtime, int level) {
