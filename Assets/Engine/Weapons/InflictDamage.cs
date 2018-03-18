@@ -18,11 +18,14 @@ public class InflictDamage : MonoBehaviour
         }
     }
 
-    //private IEnumerator OnTriggerStay(Collider other)
-    //{
-    //    yield return new WaitForSeconds(10);
-    //    Hitting(other.gameObject);
-    //}
+    private IEnumerator OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Characters"))
+        {
+            yield return new WaitForSeconds(10);
+            Hitting(other.gameObject);
+        }
+    }
 
     private void Hitting(GameObject other)
     {

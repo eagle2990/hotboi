@@ -46,11 +46,11 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Debug.Log(i);
+        //Debug.Log(i);
         for (int i = 0; i < spawnpoints.Length; i++)
         {
             Vector3 result = Camera.main.WorldToScreenPoint(spawnpoints[i].transform.position);
-            Debug.Log(string.Format("{0} ({1}) is inside the boundaries X: {2}, Y: {3}", spawnpoints[i].name, result, result.x < Screen.width && result.x > -Screen.width, result.y < Screen.height && result.y > -Screen.height));
+            //Debug.Log(string.Format("{0} ({1}) is inside the boundaries X: {2}, Y: {3}", spawnpoints[i].name, result, result.x < Screen.width && result.x > -Screen.width, result.y < Screen.height && result.y > -Screen.height));
         }
         i++;
     }
