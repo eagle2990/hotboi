@@ -112,7 +112,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 533a0dc8ae346e74b9748ea30b4ff06f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d1a5337109be1744b87efc60800efbff, type: 2}
 --- !u!1 &26837845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,6 +2091,7 @@ MonoBehaviour:
   score: {fileID: 11400000, guid: 76e9ed73e692de5498bf224f16db0682, type: 2}
   kills: {fileID: 11400000, guid: cd97b35802c09eb48bb19623bac38a93, type: 2}
   highScore: {fileID: 11400000, guid: 62d71f58d839c9845b06adf96c3acd71, type: 2}
+  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
   scoreText: {fileID: 676663158}
   killsText: {fileID: 1633748424}
   highScoreText: {fileID: 1327102738}
@@ -2530,6 +2531,34 @@ MonoBehaviour:
   Hash1_Fix2_0: []
   Hash2: []
   Hash3:
+  - list:
+    - {fileID: 703030569}
+    ActiveGameObject: {fileID: 703030569}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1327102737}
+    ActiveGameObject: {fileID: 1327102737}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 286372913}
+    ActiveGameObject: {fileID: 286372913}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 551960942}
+    ActiveGameObject: {fileID: 551960942}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
   - list:
     - {fileID: 1671183147}
     ActiveGameObject: {fileID: 1671183147}
