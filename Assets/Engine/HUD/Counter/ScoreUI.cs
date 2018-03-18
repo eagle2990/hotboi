@@ -9,6 +9,7 @@ public class ScoreUI : MonoBehaviour
     public FloatVariable score;
     public FloatVariable kills;
     public FloatVariable highScore;
+    public UserData userData;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI killsText;
@@ -21,31 +22,42 @@ public class ScoreUI : MonoBehaviour
 
     private void Start()
     {
-        scoreText.text = string.Format("Score: {0}", score.Value);
-        killsText.text = string.Format("Kills: {0}", kills.Value);
-        highScoreText.text = string.Format("Highscore: {0}", highScore.Value);
+        //reset score and kills when sweetboi gameobject starts
+        //highScore.Value = userData.GetHighscore();
+        score.Value = 0;
+        kills.Value = 0;
+        scoreText.text = string.Format("{0}", score.Value);
+        killsText.text = string.Format("x {0}", kills.Value);
+        highScoreText.text = string.Format("{0}", userData.GetHighscore());
         previousScoreValue = score.Value;
         previousKillsValue = kills.Value;
-        previousHighScoreValue = highScore.Value;
+        previousHighScoreValue = (float)(userData.GetHighscore());
     }
 
     private void Update()
     {
         if (IsDifferentFromPreviosValue(previousScoreValue, score))
         {
-            scoreText.text = string.Format("Score: {0}", score.Value);
+            scoreText.text = string.Format("{0}", score.Value);
         }
         if (IsDifferentFromPreviosValue(previousKillsValue, kills))
         {
-            killsText.text = string.Format("Kills: {0}", kills.Value);
+            killsText.text = string.Format("x {0}", kills.Value);
         }
         if (IsBiggerFromPreviousValue(previousHighScoreValue, highScore)) 
         {
-            highScoreText.text = string.Format("Highscore: {0}", highScore.Value);
+            highScoreText.text = string.Format("{0}", highScore.Value);
         }
         if (IsScoreBiggerThanHighScore(score.Value, highScore)) {
             highScore.SetValue(score);
         }
+        if (IsGlobalHighscoreBiggerThanLocalHighscore(userData.GetHighscore(), highScore)) {
+            highScore.SetValue(userData.GetHighscore());
+        }
+    }
+
+    private bool IsGlobalHighscoreBiggerThanLocalHighscore(int globalHighscore, FloatVariable highScore) {
+        return globalHighscore > highScore.Value;
     }
 
     private bool IsDifferentFromPreviosValue(float previousValue, FloatVariable current)
