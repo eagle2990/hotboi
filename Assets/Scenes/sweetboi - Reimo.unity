@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -416,7 +416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450.00003, y: -29.925003}
+  m_AnchoredPosition: {x: 447.00003, y: -29.175003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70790608
@@ -1295,11 +1295,17 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1577896181}
   m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
---- !u!136 &368508616 stripped
-CapsuleCollider:
-  m_PrefabParentObject: {fileID: 136191047787171704, guid: a5ac4662396fe704dbe3171b63614700,
-    type: 2}
-  m_PrefabInternal: {fileID: 1577896181}
+--- !u!114 &368508614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368508611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521dd41e45670064bbfe1abea378dbe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &368508617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,6 +3172,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974511985}
+--- !u!95 &988747624 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95259070479101118, guid: a5ac4662396fe704dbe3171b63614700,
+    type: 2}
+  m_PrefabInternal: {fileID: 1577896181}
 --- !u!4 &1001167717 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4685994902451640, guid: a5ac4662396fe704dbe3171b63614700,
@@ -3650,9 +3661,9 @@ RectTransform:
   m_Father: {fileID: 2041256543}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 513.5, y: 17}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -380.5, y: 17}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1129887438
@@ -4298,9 +4309,9 @@ RectTransform:
   m_Father: {fileID: 2041256543}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 447, y: -252}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1395946318
@@ -4677,7 +4688,7 @@ Prefab:
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ShowDeathScreen
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
@@ -4702,12 +4713,12 @@ Prefab:
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
@@ -4718,11 +4729,11 @@ Prefab:
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 368508616}
+      objectReference: {fileID: 368508614}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: set_enabled
+      value: Die
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
@@ -4737,14 +4748,30 @@ Prefab:
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 988747624}
+    - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114885908148131880, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1581471053
@@ -5489,7 +5516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450.00003, y: -89.77501}
+  m_AnchoredPosition: {x: 447.00003, y: -87.52501}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685883125
@@ -7320,9 +7347,9 @@ RectTransform:
   m_Father: {fileID: 2041256543}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 511.7, y: -50.7}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -382.3, y: -50.7}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2135240757

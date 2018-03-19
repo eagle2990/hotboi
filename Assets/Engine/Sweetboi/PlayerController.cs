@@ -56,4 +56,5 @@ public class PlayerController : MonoBehaviour
 
         _characterController.Move(_moveDir * Time.deltaTime);
     }
-}
+
+    }
