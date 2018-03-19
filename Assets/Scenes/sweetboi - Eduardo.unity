@@ -112,7 +112,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: d1a5337109be1744b87efc60800efbff, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 154fcf1e37082d44ba8cf17865cc5ace, type: 2}
 --- !u!1 &43707844
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +492,20 @@ MonoBehaviour:
   Hash2: []
   Hash3:
   - list:
+    - {fileID: 400828789}
+    ActiveGameObject: {fileID: 400828789}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1671183147}
+    ActiveGameObject: {fileID: 1671183147}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
     - {fileID: 2076872494}
     ActiveGameObject: {fileID: 2076872494}
     GUIDsList: []
@@ -529,20 +543,6 @@ MonoBehaviour:
   - list:
     - {fileID: 151036036}
     ActiveGameObject: {fileID: 151036036}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 400828789}
-    ActiveGameObject: {fileID: 400828789}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
-    - {fileID: 1671183147}
-    ActiveGameObject: {fileID: 1671183147}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
@@ -912,12 +912,12 @@ Prefab:
     - target: {fileID: 224886269584577404, guid: 172f84376a752734badbe8017da9d453,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224886269584577404, guid: 172f84376a752734badbe8017da9d453,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 172f84376a752734badbe8017da9d453, type: 2}

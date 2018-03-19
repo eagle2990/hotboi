@@ -14,5 +14,9 @@ MonoBehaviour:
   Name: 
   Damage:
     UseConstant: 1
-    ConstantValue: 50
+    ConstantValue: 10
+    Variable: {fileID: 0}
+  AttackSpeed:
+    UseConstant: 1
+    ConstantValue: 5
     Variable: {fileID: 0}

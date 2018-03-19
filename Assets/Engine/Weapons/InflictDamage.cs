@@ -7,24 +7,24 @@ using UnityEngine.Events;
 public class InflictDamage : MonoBehaviour
 {
     public WeaponBasicData weaponStats;
-    public float attackDelay = 2.0f;
     public UnitBasicData weaponHolder;
     public UnityEvent attackEvent;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Characters"))
-        {
-            Hitting(other.gameObject);
-        }
-    }
+    private float attackCooldown;
 
-    private IEnumerator OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Characters"))
         {
-            yield return new WaitForSeconds(attackDelay);
-            Hitting(other.gameObject);
+            if (attackCooldown < 0)
+            {
+                Hitting(other.gameObject);
+                attackCooldown = 1.0f / weaponStats.AttackSpeed;
+            }
+            else
+            {
+                attackCooldown -= Time.deltaTime;
+            }
         }
     }
 

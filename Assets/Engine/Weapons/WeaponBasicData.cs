@@ -7,4 +7,5 @@ public class WeaponBasicData : ScriptableObject
 {
     public string Name;
     public FloatReference Damage;
+    public FloatReference AttackSpeed;
 }
