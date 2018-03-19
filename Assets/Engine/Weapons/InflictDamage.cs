@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class InflictDamage : MonoBehaviour
 {
     public WeaponBasicData weaponStats;
+    public float attackDelay = 2.0f;
     public UnitBasicData weaponHolder;
     public UnityEvent attackEvent;
 
@@ -22,7 +23,7 @@ public class InflictDamage : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Characters"))
         {
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(attackDelay);
             Hitting(other.gameObject);
         }
     }

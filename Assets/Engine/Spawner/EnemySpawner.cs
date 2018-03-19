@@ -14,15 +14,17 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
+        invisibleSpawnpoints = new ArrayList();
+        
+
         // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
         InvokeRepeating("Spawn", spawnTime, spawnTime);
-        InvokeRepeating("SpawnEnemy", spawnTime, spawnTime);
+        //InvokeRepeating("SpawnEnemy", spawnTime, spawnTime);
     }
 
 
     void Spawn()
     {
-        invisibleSpawnpoints = new ArrayList();
         //Check if spawnpoint is visible
         foreach (Transform sp in spawnpoints)
         {
@@ -32,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
                 invisibleSpawnpoints.Add(sp);
             }
         }
+
         // Find a random index between zero and one less than the number of invisible spawn points.
         int spawnPointIndex = Random.Range(0, invisibleSpawnpoints.Count);
         //If there is at least 1 invisible spawnpoint, spawn an enemy
@@ -52,6 +55,5 @@ public class EnemySpawner : MonoBehaviour
             Vector3 result = Camera.main.WorldToScreenPoint(spawnpoints[i].transform.position);
             //Debug.Log(string.Format("{0} ({1}) is inside the boundaries X: {2}, Y: {3}", spawnpoints[i].name, result, result.x < Screen.width && result.x > -Screen.width, result.y < Screen.height && result.y > -Screen.height));
         }
-        i++;
     }
 }

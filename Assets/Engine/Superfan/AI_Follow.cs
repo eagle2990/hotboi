@@ -12,9 +12,9 @@ public class AI_Follow : MonoBehaviour
 
 	void Start () 
 	{
-        //doesnt work
-        if (GameObject.FindGameObjectsWithTag("Player")[0] != null) {
-            player = GameObject.FindGameObjectsWithTag("Player")[0];
+        GameObject[] playerList = FindPlayer();
+        if (playerList != null && playerList.Length > 0) {
+            player = playerList[0];
             isTracking = player.activeInHierarchy;
             myAgent = GetComponent<NavMeshAgent>();
             target = player.transform;
@@ -32,4 +32,10 @@ public class AI_Follow : MonoBehaviour
     {
         isTracking = false;
     }
+
+    private GameObject[] FindPlayer()
+    {
+        return GameObject.FindGameObjectsWithTag("Player");
+    }
+
 }

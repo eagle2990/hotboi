@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class deathController : MonoBehaviour {
+public class DeathController : MonoBehaviour {
     private Animator animator;
     private NavMeshAgent navMesh;
-    private CapsuleCollider collider;
+    private CapsuleCollider objectCollider;
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
         navMesh = GetComponent<NavMeshAgent>();
-        collider = GetComponent<CapsuleCollider>();
+        objectCollider = GetComponent<CapsuleCollider>();
 	}
 	
 	// Update is called once per frame
@@ -19,6 +19,6 @@ public class deathController : MonoBehaviour {
     public void Die() {
         animator.SetBool("death", true);
         navMesh.isStopped = true;
-        collider.enabled = false;
+        objectCollider.enabled = false;
     }
 }

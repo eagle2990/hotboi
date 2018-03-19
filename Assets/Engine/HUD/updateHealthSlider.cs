@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class updateHealthSlider : MonoBehaviour {
+public class UpdateHealthSlider : MonoBehaviour {
     public FloatVariable playerHealth;
     private Slider slider;
     public UnitBasicData playerStats;

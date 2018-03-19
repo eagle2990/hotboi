@@ -3,13 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class RecieveDamage : MonoBehaviour
 {
     public UnitBasicData UnitStats;
     public bool RestartHP;
+    public Image HealthBar;
+
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
+    
 
     private void Start()
     {
@@ -24,7 +28,16 @@ public class RecieveDamage : MonoBehaviour
         if (IsAnOppositeType(receivedDamage.weaponHolder.Type))
         {
             ApplyDamage(receivedDamage.weaponStats);
+            UpdateHealthBar();
             CheckDeath();
+        }
+    }
+
+    private void UpdateHealthBar()
+    {
+        if (HealthBar != null)
+        {
+            HealthBar.fillAmount = UnitStats.HP.Value / UnitStats.MaxHP.Value;
         }
     }
 
@@ -33,7 +46,7 @@ public class RecieveDamage : MonoBehaviour
         if (UnitStats.HP.Value <= 0.0f)
         {
             DeathEvent.Invoke();
-
+            SetToDefaultLayer();
         }
     }
 
@@ -57,5 +70,10 @@ public class RecieveDamage : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    private void SetToDefaultLayer()
+    {
+        gameObject.layer = 0;
     }
 }
