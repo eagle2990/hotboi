@@ -19,17 +19,22 @@ public class DataLoader : MonoBehaviour {
     //private string JSONGameResultsURL = "http://localhost/sweetboi/game_results.php?username=";
 
     private void Start() {
-        LoadPublicData();
     }
 
-    public void LoadData() {
+    public void LoadStartingData() {
         StartCoroutine(LoadAchievements());
+        StartCoroutine(LoadUserHighScoreAtStart());
+
+    }
+    public void LoadPrivateData() {
         StartCoroutine(LoadScores(NumberOfTopScoresToLoad));
     }
-    public void LoadPublicData() {
+    //To be called after death
+    public void LoadGlobalData() {
         StartCoroutine(LoadGlobalScores(NumberOfTopScoresToLoad));
     }
 
+    //For loading user achievements, must be done right after login.
     IEnumerator LoadAchievements() {
         Debug.Log("Loading achievements.. ");
         //wait until there is a user defined in userdata script
@@ -49,8 +54,10 @@ public class DataLoader : MonoBehaviour {
         }
         Debug.Log("..achievements loaded ");
     }
+
+    //For loading scores at the end of the game - after new score has been uploaded.
     IEnumerator LoadScores(int limit) {
-        Debug.Log("Loading scores.. ");
+        Debug.Log("Loading final scores.. ");
         //wait until there is a user defined in userdata script
         yield return new WaitUntil(() => !string.IsNullOrEmpty(userdata.GetUsername()));
         WWW userScores = new WWW(userScoresURL + userdata.GetUsername() + "&score_limit=" + limit.ToString());
@@ -65,13 +72,15 @@ public class DataLoader : MonoBehaviour {
             result.Add(splitByString((splitByString((rawScore), "|||")[3]), ":::")[0], Int32.Parse(splitByString((splitByString((rawScore), "|||")[3]), ":::")[1]));
             games.Add(result);
           }
+        //TODO
         userdata.SetHighscore(LoadUserHighscore(games));
         //userdata.SetHighscore(userdata.GetHighscore());
         userdata.SetScores(games);
-        Debug.Log("..scores loaded and set ");
+        Debug.Log(".. final scores loaded and set ");
     }
-    ////////////////////////////  GLOBAL SCORE LOADER  /////////////////////////////////////////////////
-    public IEnumerator LoadGlobalScores(int limit) {
+    
+    //Load global highscores. Only neccessary after death
+    private IEnumerator LoadGlobalScores(int limit) {
         Debug.Log("Loading global scores.. ");
         WWW globalScores = new WWW(globalScoresURL + limit.ToString());
         yield return globalScores;
@@ -85,13 +94,13 @@ public class DataLoader : MonoBehaviour {
         userdata.SetGlobalScores(globalGames);
         Debug.Log(".. global scores loaded and set ");
     }
-    /////////////////////////////////////////////////////////////////////////////
 
     private List<string> splitByString(string stringToSplit, string splitter) {
         List<string> splittedStrings = new List<string>(stringToSplit.Split(new[] { splitter }, StringSplitOptions.RemoveEmptyEntries));
         return splittedStrings;
     }
 
+    //This is meant for highscore to be found from loaded scores.
     private int LoadUserHighscore(List<Dictionary<string, int>> games) {
         Debug.Log("Loading " + userdata.GetUsername() + " highscore.. ");
         int maxScore = 0;
@@ -101,5 +110,17 @@ public class DataLoader : MonoBehaviour {
             }
         }
         return maxScore;
+    }
+
+    IEnumerator LoadUserHighScoreAtStart() {
+        Debug.Log("Loading user " + userdata.GetUsername() +  " highscore.. ");
+        //wait until there is a user defined in userdata script
+        yield return new WaitUntil(() => !string.IsNullOrEmpty(userdata.GetUsername()));
+        WWW userHighScore = new WWW(userScoresURL + userdata.GetUsername() + "&score_limit=1");
+        yield return userHighScore;
+        string userScoresString = userHighScore.text;
+        int result = Int32.Parse(splitByString((splitByString((userScoresString), "|||")[0]), ":::")[1]);
+        userdata.SetHighscore(result);
+        
     }
 }

@@ -1306,6 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521dd41e45670064bbfe1abea378dbe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  secondsBeforeDeathScreen: 5
 --- !u!114 &368508617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,6 +1321,19 @@ MonoBehaviour:
   deathScreen: {fileID: 946743876}
   scoreTable: {fileID: 388000465}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+--- !u!114 &368508618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368508611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe24247c80db4b42b984f4e1ddd9d5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  NumberOfTopScoresToLoad: 10
 --- !u!1 &377500444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,11 +3186,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974511985}
---- !u!95 &988747624 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95259070479101118, guid: a5ac4662396fe704dbe3171b63614700,
-    type: 2}
-  m_PrefabInternal: {fileID: 1577896181}
 --- !u!4 &1001167717 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4685994902451640, guid: a5ac4662396fe704dbe3171b63614700,
@@ -4626,7 +4635,7 @@ Prefab:
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4685994902451640, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4684,11 +4693,11 @@ Prefab:
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 368508617}
+      objectReference: {fileID: 368508618}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: LoadPrivateData
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
@@ -4759,16 +4768,21 @@ Prefab:
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 988747624}
+      objectReference: {fileID: 368508611}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: set_enabled
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114885908148131880, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
@@ -7011,9 +7025,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2041256543}
   - component: {fileID: 2041256542}
+  - component: {fileID: 2041256546}
   - component: {fileID: 2041256541}
   - component: {fileID: 2041256545}
-  - component: {fileID: 2041256546}
   - component: {fileID: 2041256548}
   - component: {fileID: 2041256547}
   - component: {fileID: 2041256544}

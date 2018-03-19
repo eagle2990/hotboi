@@ -27,7 +27,7 @@ public class Login : MonoBehaviour {
             userdata.isLoggedIn = true;
             userdata.SetUsername(username);
             Debug.Log("Login success ");
-            dataloader.LoadData();
+            dataloader.LoadStartingData();
         } else {
             Debug.Log("Could not log in ");
         }

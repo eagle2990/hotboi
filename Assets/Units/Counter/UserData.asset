@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2679629ff2c354bac6eae95f477bb0, type: 3}
   m_Name: UserData
   m_EditorClassIdentifier: 
-  username: eduardo
+  username: reimo110
   password: test123
-  highscore: 600
+  highscore: 300
   isLoggedIn: 1
   mostKills: 0
   highestLevelReached: 0
