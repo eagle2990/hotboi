@@ -71,9 +71,13 @@ public class StartScreenVisualController : MonoBehaviour {
             }
             //press enter to log in
             if (Input.GetKeyDown(KeyCode.Return)) {
-                //if logged in, disable using enter to log out
+                //if not logged in, return acts as "log in"
                 if (!userData.isLoggedIn) {
                     RefreshLogButton();
+                }
+                //if logged in, return acts as "play"
+                if (userData.isLoggedIn) {
+                    PlayGame();
                 }
             }
         }
@@ -92,10 +96,12 @@ public class StartScreenVisualController : MonoBehaviour {
         if (newPassword.text == newRepeatPassword.text) {
             dataInserter.CreateUser(newName.text, newUsername.text, newPassword.text);
             ResetRegisterFields();
+        } else {
+            Debug.Log("Passwords don't match!");
         }
     }
 
-    void ResetRegisterFields() {
+    private void ResetRegisterFields() {
         newName.text = null;
         newUsername.text = null;
         newPassword.text = null;

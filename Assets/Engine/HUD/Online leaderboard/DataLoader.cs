@@ -118,9 +118,13 @@ public class DataLoader : MonoBehaviour {
         yield return new WaitUntil(() => !string.IsNullOrEmpty(userdata.GetUsername()));
         WWW userHighScore = new WWW(userScoresURL + userdata.GetUsername() + "&score_limit=1");
         yield return userHighScore;
-        string userScoresString = userHighScore.text;
-        int result = Int32.Parse(splitByString((splitByString((userScoresString), "|||")[0]), ":::")[1]);
-        userdata.SetHighscore(result);
+        string userHighScoreString = userHighScore.text;
+        if (!string.IsNullOrEmpty(userHighScoreString)) {
+            int result = Int32.Parse(splitByString((splitByString((userHighScoreString), "|||")[0]), ":::")[1]);
+            userdata.SetHighscore(result);
+        } else {
+            userdata.SetHighscore(0);
+        }
         
     }
 }
