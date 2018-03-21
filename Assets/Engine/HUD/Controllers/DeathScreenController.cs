@@ -7,8 +7,11 @@ public class DeathScreenController : MonoBehaviour {
     public GameObject deathScreen;
     public TextMeshProUGUI scoreTable;
     public UserData userData;
-	// Use this for initialization
+    private DataLoader dataLoader;	
+    
+    // Use this for initialization
 	void Start () {
+        dataLoader = gameObject.GetComponent<DataLoader>();
 	}
 	
 	// Update is called once per frame
@@ -19,7 +22,9 @@ public class DeathScreenController : MonoBehaviour {
         
         //dataLoader.LoadScores(10);
         //ShowUserScores();
+        dataLoader.LoadGlobalData();
         if (userData.isLoggedIn) {
+            dataLoader.LoadPrivateData();
             ShowUserScores();
         } else {
             ShowGlobalScores();
