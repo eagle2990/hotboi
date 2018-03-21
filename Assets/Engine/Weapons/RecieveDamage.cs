@@ -8,18 +8,23 @@ using UnityEngine.UI;
 public class RecieveDamage : MonoBehaviour
 {
     public UnitBasicData UnitStats;
-    public bool RestartHP;
+    private float currentHP;
+    private PlayerBaseData PlayerData;
+    public bool isUsingExternalHPVariable;
     public Image HealthBar;
 
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
-    
 
     private void Start()
     {
-        if (UnitStats.HP.Value <= 0 || RestartHP)
+        if (isUsingExternalHPVariable)
         {
-            UnitStats.HP.SetValue(UnitStats.MaxHP.Value);
+            PlayerData = (PlayerBaseData)UnitStats;
+        }
+        else
+        {
+            currentHP = UnitStats.MaxHP.Value;
         }
     }
 
@@ -28,22 +33,23 @@ public class RecieveDamage : MonoBehaviour
         if (IsAnOppositeType(receivedDamage.weaponHolder.Type))
         {
             ApplyDamage(receivedDamage.weaponStats);
-            UpdateHealthBar();
             CheckDeath();
         }
     }
 
     private void UpdateHealthBar()
     {
+        float hp = isUsingExternalHPVariable ? PlayerData.HP.Value : currentHP;
         if (HealthBar != null)
         {
-            HealthBar.fillAmount = UnitStats.HP.Value / UnitStats.MaxHP.Value;
+            HealthBar.fillAmount = hp / UnitStats.MaxHP.Value;
         }
     }
 
     private void CheckDeath()
     {
-        if (UnitStats.HP.Value <= 0.0f)
+        float hp = isUsingExternalHPVariable ? PlayerData.HP.Value : currentHP;
+        if (hp <= 0.0f)
         {
             DeathEvent.Invoke();
             SetToDefaultLayer();
@@ -52,7 +58,15 @@ public class RecieveDamage : MonoBehaviour
 
     private void ApplyDamage(WeaponBasicData weaponStats)
     {
-        UnitStats.HP.Add(-weaponStats.Damage);
+        if (isUsingExternalHPVariable)
+        {
+            PlayerData.HP.Add(-weaponStats.Damage);
+        }
+        else
+        {
+            currentHP -= weaponStats.Damage;
+        }
+        UpdateHealthBar();
         DamageEvent.Invoke();
     }
 
@@ -66,7 +80,8 @@ public class RecieveDamage : MonoBehaviour
         if (gameObject.transform.parent != null)
         {
             gameObject.transform.parent.gameObject.SetActive(false);
-        } else
+        }
+        else
         {
             gameObject.SetActive(false);
         }
