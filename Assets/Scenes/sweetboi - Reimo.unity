@@ -416,7 +416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 447.00003, y: -29.175003}
+  m_AnchoredPosition: {x: 448.00003, y: -29.425003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70790608
@@ -4635,7 +4635,7 @@ Prefab:
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4685994902451640, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4693,11 +4693,11 @@ Prefab:
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 368508618}
+      objectReference: {fileID: 368508614}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadPrivateData
+      value: Die
       objectReference: {fileID: 0}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
@@ -4782,8 +4782,13 @@ Prefab:
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114550260034235236, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: dataLoader
+      value: 
+      objectReference: {fileID: 368508618}
     m_RemovedComponents:
     - {fileID: 114885908148131880, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
@@ -5045,6 +5050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataLoader: {fileID: 0}
   userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &1625024708
 MonoBehaviour:
@@ -5530,7 +5536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 447.00003, y: -87.52501}
+  m_AnchoredPosition: {x: 448.00003, y: -88.27501}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685883125
@@ -7167,6 +7173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataLoader: {fileID: 2041256547}
   userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &2041256549
 MonoBehaviour:

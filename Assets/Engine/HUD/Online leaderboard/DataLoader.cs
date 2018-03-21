@@ -113,7 +113,7 @@ public class DataLoader : MonoBehaviour {
     }
 
     IEnumerator LoadUserHighScoreAtStart() {
-        Debug.Log("Loading user " + userdata.GetUsername() +  " highscore.. ");
+        Debug.Log("Loading user " + userdata.GetUsername() +  "starting highscore.. ");
         //wait until there is a user defined in userdata script
         yield return new WaitUntil(() => !string.IsNullOrEmpty(userdata.GetUsername()));
         WWW userHighScore = new WWW(userScoresURL + userdata.GetUsername() + "&score_limit=1");

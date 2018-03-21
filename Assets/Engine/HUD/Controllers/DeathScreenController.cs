@@ -23,11 +23,12 @@ public class DeathScreenController : MonoBehaviour {
         //dataLoader.LoadScores(10);
         //ShowUserScores();
         dataLoader.LoadGlobalData();
-        if (userData.isLoggedIn) {
-            dataLoader.LoadPrivateData();
-            ShowUserScores();
-        } else {
+        if (!userData.isLoggedIn) {
             ShowGlobalScores();
+        } else {
+            print("private data loaded");
+            //dataLoader.LoadPrivateData();
+            ShowUserScores();
         }
         deathScreen.SetActive(true);
     }

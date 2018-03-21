@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DataInserter : MonoBehaviour {
-
+    public DataLoader dataLoader;
     public UserData userdata;
     private int inputScore;
     private int inputKills;
@@ -50,5 +50,8 @@ public class DataInserter : MonoBehaviour {
         WWW www = new WWW(InsertGameResultURL, form);
         yield return www;
         print("Upload result text: " + www.text);
+        if (www.text == "everything ok") {
+            dataLoader.LoadPrivateData();
+        }
     }
 }

@@ -94,8 +94,12 @@ public class StartScreenVisualController : MonoBehaviour {
     }
     void RegisterUser() {
         if (newPassword.text == newRepeatPassword.text) {
-            dataInserter.CreateUser(newName.text, newUsername.text, newPassword.text);
-            ResetRegisterFields();
+            if (newUsername.text.Length < 8) {
+                dataInserter.CreateUser(newName.text, newUsername.text, newPassword.text);
+                ResetRegisterFields();
+            } else {
+                Debug.Log("Username max length is 8");
+            }
         } else {
             Debug.Log("Passwords don't match!");
         }
