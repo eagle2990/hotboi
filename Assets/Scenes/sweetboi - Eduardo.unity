@@ -487,13 +487,6 @@ MonoBehaviour:
   Hash2: []
   Hash3:
   - list:
-    - {fileID: 1671183147}
-    ActiveGameObject: {fileID: 1671183147}
-    GUIDsList: []
-    GUIDsActiveGameObject: 
-    wasInit: 0
-    CashedBool: 0
-  - list:
     - {fileID: 1066736454}
     ActiveGameObject: {fileID: 1066736454}
     GUIDsList: []
@@ -503,6 +496,13 @@ MonoBehaviour:
   - list:
     - {fileID: 214087713}
     ActiveGameObject: {fileID: 214087713}
+    GUIDsList: []
+    GUIDsActiveGameObject: 
+    wasInit: 0
+    CashedBool: 0
+  - list:
+    - {fileID: 1671183147}
+    ActiveGameObject: {fileID: 1671183147}
     GUIDsList: []
     GUIDsActiveGameObject: 
     wasInit: 0
