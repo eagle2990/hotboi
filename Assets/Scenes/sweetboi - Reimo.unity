@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 70790609}
   - component: {fileID: 70790608}
   m_Layer: 5
-  m_Name: Play
+  m_Name: PlayAgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,8 +470,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 70790608}
-        m_MethodName: LoadByIndex
-        m_Mode: 3
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1320,6 +1320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 946743876}
   scoreTable: {fileID: 388000465}
+  playAgainButton: {fileID: 70790609}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &368508618
 MonoBehaviour:
@@ -1334,6 +1335,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
   NumberOfTopScoresToLoad: 10
+--- !u!114 &368508619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368508611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b27548a41235b479e893d6e48fb018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  dataloader: {fileID: 368508618}
 --- !u!1 &377500444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,6 +1967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 946743876}
   scoreTable: {fileID: 388000465}
+  playAgainButton: {fileID: 70790609}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &479695560
 MonoBehaviour:
@@ -2748,6 +2763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 946743876}
   scoreTable: {fileID: 388000465}
+  playAgainButton: {fileID: 70790609}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &796781428
 MonoBehaviour:
@@ -4112,7 +4128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 319.9, y: -345.4}
+  m_AnchoredPosition: {x: 319.65, y: -280.3}
   m_SizeDelta: {x: 160, y: 54.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1227173134
@@ -7188,6 +7204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 946743876}
   scoreTable: {fileID: 388000465}
+  playAgainButton: {fileID: 70790609}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &2041256550
 MonoBehaviour:
