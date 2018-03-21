@@ -6,12 +6,13 @@ using UnityEngine;
 public class PlayerBaseData : UnitBasicData
 {
     public FloatVariable HP;
-    private void Start()
+
+    private void OnEnable()
     {
         if (HP == null)
         {
             HP = CreateInstance<FloatVariable>();
         }
-        HP.SetValue(MaxHP.Value);
+        HP.SetValue(MaxHP);
     }
 }
