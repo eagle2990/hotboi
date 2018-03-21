@@ -9,9 +9,5 @@ public class EnemyBaseData : UnitBasicData
 
     private void OnEnable()
     {
-        if (HP == null)
-        {
-            HP = ScriptableObject.CreateInstance<FloatVariable>();
-        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class EnemySpawner : MonoBehaviour
     private SpawnpointChecker spawnpoint;
     private ArrayList invisibleSpawnpoints;
     Transform spawnplace;
+
+    public List<GameObject> enemies;
 
     int i = 0;
 
@@ -41,19 +44,9 @@ public class EnemySpawner : MonoBehaviour
         if (invisibleSpawnpoints.Count != 0)
         {
             spawnplace = (Transform)invisibleSpawnpoints[spawnPointIndex];
-            Instantiate(enemy, spawnplace.position, spawnplace.rotation);
+            enemies.Add(Instantiate(enemy, spawnplace.position, spawnplace.rotation));
         }
 
 
-    }
-
-    void SpawnEnemy()
-    {
-        //Debug.Log(i);
-        for (int i = 0; i < spawnpoints.Length; i++)
-        {
-            Vector3 result = Camera.main.WorldToScreenPoint(spawnpoints[i].transform.position);
-            //Debug.Log(string.Format("{0} ({1}) is inside the boundaries X: {2}, Y: {3}", spawnpoints[i].name, result, result.x < Screen.width && result.x > -Screen.width, result.y < Screen.height && result.y > -Screen.height));
-        }
     }
 }

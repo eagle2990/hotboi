@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitStats: {fileID: 11400000, guid: 720fa79d4b737b84ba80ce3620fd36a1, type: 2}
-  RestartHP: 1
+  isUsingExternalHPVariable: 0
   HealthBar: {fileID: 114809107449393862}
   DamageEvent:
     m_PersistentCalls:
