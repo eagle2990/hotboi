@@ -6,11 +6,19 @@ using UnityEngine.Events;
 public class PowerUp : MonoBehaviour
 {
     public LayerMask collisionLayer;
-    public float lifetimeMiliseconds = 2;
+    public float lifetimeSeconds = 2;
     private float currentLifetime;
+    private Collider collider;
     public UnityEvent appearsEvent;
     public UnityEvent consumedEvent;
     public UnityEvent dissapearsEvent;
+
+    private void Start()
+    {
+        Appears();
+        collider = GetComponent<Collider>();
+    }
+
 
     void Appears()
     {
@@ -25,31 +33,31 @@ public class PowerUp : MonoBehaviour
     void Dissapears()
     {
         dissapearsEvent.Invoke();
+        collider.enabled = false;
         Destroy(gameObject, 2.0f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer.Equals(collisionLayer.value))
+        //print(other.gameObject.layer);
+        if (IsObjectFromLayer(other.gameObject))
         {
             GetConsumed();
             Dissapears();
         }
     }
 
-
-
     private void FixedUpdate()
     {
         currentLifetime += Time.fixedDeltaTime;
-        if (currentLifetime >= lifetimeMiliseconds)
+        if (currentLifetime >= lifetimeSeconds)
         {
             Dissapears();
         }
     }
 
-    private void Start()
+    private bool IsObjectFromLayer(GameObject other)
     {
-        Appears();
+        return (collisionLayer.value & 1 << other.layer) != 0;
     }
 }

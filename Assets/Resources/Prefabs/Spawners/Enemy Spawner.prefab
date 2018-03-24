@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 23582761356192372}
   - component: {fileID: 114920659644282274}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Enemy Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

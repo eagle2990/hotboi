@@ -331,8 +331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 0
-  lifetimeMiliseconds: 10
+    m_Bits: 256
+  lifetimeSeconds: 2
   appearsEvent:
     m_PersistentCalls:
       m_Calls:
