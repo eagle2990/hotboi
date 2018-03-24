@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimationController : MonoBehaviour {
     public int secondsBeforeDeathScreen;
     private Animator animator;
+    public GameObject GameUI;
     private DeathScreenController deathScreenController;
     //private CapsuleCollider collider;
     private PlayerController playerController;
@@ -13,13 +14,10 @@ public class AnimationController : MonoBehaviour {
 	void Start () {
         animator = gameObject.GetComponentInParent<Animator>();
         charController = gameObject.GetComponentInParent<CharacterController>();
-        deathScreenController = gameObject.GetComponent<DeathScreenController>();
+        deathScreenController = GameUI.GetComponent<DeathScreenController>();
         playerController = gameObject.GetComponentInParent<PlayerController>();
     }
 	
-	// Update is called once per frame
-	void Update () {
-    }
 
     public void Die() {
         StartCoroutine(DeathSequence(secondsBeforeDeathScreen));
