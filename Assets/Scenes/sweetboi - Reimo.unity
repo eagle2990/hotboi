@@ -392,7 +392,6 @@ GameObject:
   - component: {fileID: 70790611}
   - component: {fileID: 70790610}
   - component: {fileID: 70790609}
-  - component: {fileID: 70790608}
   m_Layer: 5
   m_Name: PlayAgainButton
   m_TagString: Untagged
@@ -419,17 +418,6 @@ RectTransform:
   m_AnchoredPosition: {x: 448.00003, y: -29.425003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &70790608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 70790606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47018bf866b430d4380992b88706c14b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &70790609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,18 +456,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 70790610}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 70790608}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &70790610
@@ -1322,6 +1299,8 @@ MonoBehaviour:
   scoreTable: {fileID: 388000465}
   playAgainButton: {fileID: 70790609}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  SweetboiHP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
+  SweetboiStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
 --- !u!114 &368508618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,6 +1948,8 @@ MonoBehaviour:
   scoreTable: {fileID: 388000465}
   playAgainButton: {fileID: 70790609}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  SweetboiHP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
+  SweetboiStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
 --- !u!114 &479695560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2765,6 +2746,8 @@ MonoBehaviour:
   scoreTable: {fileID: 388000465}
   playAgainButton: {fileID: 70790609}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  SweetboiHP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
+  SweetboiStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
 --- !u!114 &796781428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4731,7 +4714,7 @@ Prefab:
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685994902451640, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
       propertyPath: m_LocalPosition.x
@@ -7280,7 +7263,6 @@ GameObject:
   - component: {fileID: 2041256547}
   - component: {fileID: 2041256544}
   - component: {fileID: 2041256549}
-  - component: {fileID: 2041256550}
   - component: {fileID: 2041256551}
   - component: {fileID: 2041256552}
   m_Layer: 0
@@ -7432,31 +7414,8 @@ MonoBehaviour:
   scoreTable: {fileID: 388000465}
   playAgainButton: {fileID: 70790609}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
---- !u!114 &2041256550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2041256540}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4577f007f500ce140974b6df322ee26f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  infoBoard: {fileID: 310151726}
-  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  playButton: {fileID: 2015938032}
-  loginForm: {fileID: 675168301}
-  startScreen: {fileID: 14765469}
-  loginButton: {fileID: 1223562368}
-  username: {fileID: 1877150179}
-  password: {fileID: 1581471055}
-  registerButton: {fileID: 1625024708}
-  newUsername: {fileID: 98235399}
-  newPassword: {fileID: 417778649}
-  newRepeatPassword: {fileID: 1669535679}
-  newName: {fileID: 1051106082}
-  dataInserter: {fileID: 2041256548}
+  SweetboiHP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
+  SweetboiStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
 --- !u!114 &2041256551
 MonoBehaviour:
   m_ObjectHideFlags: 0
