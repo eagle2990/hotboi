@@ -1548,13 +1548,7 @@ GameObject:
   - component: {fileID: 368508612}
   - component: {fileID: 368508622}
   - component: {fileID: 368508621}
-  - component: {fileID: 368508613}
   - component: {fileID: 368508614}
-  - component: {fileID: 368508617}
-  - component: {fileID: 368508618}
-  - component: {fileID: 368508619}
-  - component: {fileID: 368508620}
-  - component: {fileID: 368508615}
   - component: {fileID: 368508616}
   m_Layer: 8
   m_Name: Player
@@ -1581,20 +1575,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &368508613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114550260034235236, guid: a5ac4662396fe704dbe3171b63614700,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 368508611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataLoader: {fileID: 368508618}
-  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &368508614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,97 +1587,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsBeforeDeathScreen: 5
---- !u!114 &368508615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 368508611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.68235296, g: 0.68235296, b: 0.68235296, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 28311c896c3aad1418f62776a1a3b632, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  GameUI: {fileID: 2041256540}
 --- !u!222 &368508616
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 368508611}
---- !u!114 &368508617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 368508611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3916a69b58e1c3648bc472340f095403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathScreen: {fileID: 946743876}
-  scoreTable: {fileID: 388000465}
-  playAgainButton: {fileID: 70790609}
-  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  SweetboiHP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
-  SweetboiStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
---- !u!114 &368508618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 368508611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe24247c80db4b42b984f4e1ddd9d5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  NumberOfTopScoresToLoad: 10
---- !u!114 &368508619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 368508611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78b27548a41235b479e893d6e48fb018, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  dataloader: {fileID: 368508618}
---- !u!114 &368508620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 368508611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2966724baeb80cb4abd7a76b87d4c81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashDamage: {fileID: 1432388026}
-  startColor: {r: 1, g: 1, b: 1, a: 0}
-  blinkCount: 1
-  blinkDuration: 0.5
 --- !u!114 &368508621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,7 +1612,7 @@ MonoBehaviour:
   DamageEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 368508620}
+      - m_Target: {fileID: 1432388028}
         m_MethodName: Flash
         m_Mode: 1
         m_Arguments:
@@ -1732,7 +1628,7 @@ MonoBehaviour:
   DeathEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 368508613}
+      - m_Target: {fileID: 2041256548}
         m_MethodName: UploadResultToDB
         m_Mode: 1
         m_Arguments:
@@ -5594,6 +5490,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1432388027}
+  - component: {fileID: 1432388028}
   m_Layer: 0
   m_Name: FlashDamage
   m_TagString: Untagged
@@ -5620,6 +5517,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1432388028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432388026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2966724baeb80cb4abd7a76b87d4c81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDamage: {fileID: 1432388026}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  blinkCount: 1
+  blinkDuration: 0.5
 --- !u!1 &1493871119
 GameObject:
   m_ObjectHideFlags: 0
