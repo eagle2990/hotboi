@@ -6580,6 +6580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e62d2e17f68bf4aacd0e5cf064b4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
+  playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
 --- !u!114 &1849761496
 MonoBehaviour:
   m_ObjectHideFlags: 0
