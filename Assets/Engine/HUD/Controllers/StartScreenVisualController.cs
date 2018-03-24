@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class StartScreenVisualController : MonoBehaviour {
     public TextMeshProUGUI infoBoard;
@@ -28,7 +29,6 @@ public class StartScreenVisualController : MonoBehaviour {
     private Login login;
     // Use this for initialization
     void Start () {
-        Time.timeScale = 0;
         userData.ResetLocalUserData();
         textToBeShowIfLoggedOut = "You're not logged in \n\nLogin to save your games.. \n..or don't";
         loginButton.onClick.AddListener(RefreshLogButton);
@@ -149,8 +149,7 @@ public class StartScreenVisualController : MonoBehaviour {
         loginForm.gameObject.SetActive(true);
     }
     public void PlayGame() {
-        startScreen.SetActive(false);
-        Time.timeScale = 1;
+        SceneManager.LoadSceneAsync(0);
     }
 
     
