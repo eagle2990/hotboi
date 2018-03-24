@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DataInserter : MonoBehaviour {
-
+    public DataLoader dataLoader;
     public UserData userdata;
     private int inputScore;
     private int inputKills;
@@ -22,16 +22,11 @@ public class DataInserter : MonoBehaviour {
             //Test user creation
         }
     }
-    public void Register() {
-        Debug.Log("Make a user registration form");
-            //CreateUser(inputName, inputUsername, inputPassword);
-
-    }
 
     public void UploadResultToDB() {
-        UploadResult(userdata.GetUsername(),
+        StartCoroutine(UploadResult(userdata.GetUsername(),
                 userdata.password, (int)userdata.score.Value,
-                (int)userdata.GetKills().Value, (int)userdata.GetPlaytime().Value, (int)userdata.level.Value);
+                (int)userdata.GetKills().Value, (int)userdata.GetPlaytime().Value, (int)userdata.level.Value));
     }
 
     public void CreateUser(string name, string username, string password) {
@@ -44,7 +39,7 @@ public class DataInserter : MonoBehaviour {
         print("Maybe registered new user: " + username);
     }
 
-    private void UploadResult(string username, string password, int score, int kills, int playtime, int level) {
+    IEnumerator UploadResult(string username, string password, int score, int kills, int playtime, int level) {
         WWWForm form = new WWWForm();
         form.AddField("usernamePost", username);
         form.AddField("passwordPost", password);
@@ -53,5 +48,10 @@ public class DataInserter : MonoBehaviour {
         form.AddField("playtimePost", playtime);
         form.AddField("levelPost", level);
         WWW www = new WWW(InsertGameResultURL, form);
+        yield return www;
+        print("Upload result text: " + www.text);
+        if (www.text == "everything ok") {
+            dataLoader.LoadPrivateData();
+        }
     }
 }

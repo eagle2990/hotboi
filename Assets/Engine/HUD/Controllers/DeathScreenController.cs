@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DeathScreenController : MonoBehaviour {
     public GameObject deathScreen;
     public TextMeshProUGUI scoreTable;
+    public Button playAgainButton;
     public UserData userData;
-    private DataLoader dataLoader;	
+    private DataLoader dataLoader;
     
     // Use this for initialization
 	void Start () {
+        playAgainButton.onClick.AddListener(PlayAgain);
         dataLoader = gameObject.GetComponent<DataLoader>();
 	}
 	
@@ -23,11 +27,12 @@ public class DeathScreenController : MonoBehaviour {
         //dataLoader.LoadScores(10);
         //ShowUserScores();
         dataLoader.LoadGlobalData();
-        if (userData.isLoggedIn) {
-            dataLoader.LoadPrivateData();
-            ShowUserScores();
-        } else {
+        if (!userData.isLoggedIn) {
             ShowGlobalScores();
+        } else {
+            print("private data loaded");
+            //dataLoader.LoadPrivateData();
+            ShowUserScores();
         }
         deathScreen.SetActive(true);
     }
@@ -55,6 +60,10 @@ public class DeathScreenController : MonoBehaviour {
             }
         }
         scoreTable.SetText(ScoreFieldText);
+    }
+    private void PlayAgain() {
+        deathScreen.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
