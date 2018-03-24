@@ -8,7 +8,7 @@ public class FlashDamage : MonoBehaviour {
     public float flashSpeed = 5f;
     //public float flashSpeed;
     bool isIncrementing;
-    private float timer = 0.4f;
+    //private float timer = 0.4f;
 
     //public void flashBlood() {
     //    StartCoroutine(quickFlash());

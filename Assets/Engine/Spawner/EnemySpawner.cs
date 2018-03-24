@@ -13,8 +13,6 @@ public class EnemySpawner : MonoBehaviour
 
     public List<GameObject> enemies;
 
-    int i = 0;
-
     void Start()
     {
         invisibleSpawnpoints = new ArrayList();
