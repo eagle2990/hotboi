@@ -11,6 +11,8 @@ public class DeathScreenController : MonoBehaviour {
     public Button playAgainButton;
     public UserData userData;
     private DataLoader dataLoader;
+    public FloatVariable SweetboiHP;
+    public PlayerBaseData SweetboiStats;
     
     // Use this for initialization
 	void Start () {
@@ -61,9 +63,18 @@ public class DeathScreenController : MonoBehaviour {
         }
         scoreTable.SetText(ScoreFieldText);
     }
+
+    private void ResetPlayerHealth() {
+        SweetboiHP.Value = SweetboiStats.MaxHP.Value;
+        SweetboiStats.HP.Value = SweetboiStats.MaxHP.Value;
+    }
+
     private void PlayAgain() {
-        deathScreen.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ResetPlayerHealth();
+        //userData.
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+        
     }
 
 }
