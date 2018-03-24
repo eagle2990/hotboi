@@ -11,17 +11,6 @@ public class DataInserter : MonoBehaviour {
     private int inputLevels;
     //private string CreateUserURL = "https://sweetboi.000webhostapp.com/insert_user.php";
     private string InsertGameResultURL = "https://sweetboi.000webhostapp.com/insert_game_result.php";
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            //Test user creation
-        }
-    }
 
     public void UploadResultToDB() {
         StartCoroutine(UploadResult(userdata.GetUsername(),
@@ -49,7 +38,7 @@ public class DataInserter : MonoBehaviour {
         form.AddField("levelPost", level);
         WWW www = new WWW(InsertGameResultURL, form);
         yield return www;
-        print("Upload result text: " + www.text);
+        print("Upload result: " + www.text);
         if (www.text == "everything ok") {
             dataLoader.LoadPrivateData();
         }
