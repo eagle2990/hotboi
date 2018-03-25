@@ -8,8 +8,8 @@ public class HealthPowerUp: MonoBehaviour
     public float healingAmount = 5;
     public GameObject initialExplotion;
     public GameObject icon;
-    public bool playerCanConsume;
-    public bool enemiesCanConsume;
+    //public bool playerCanConsume;
+    //public bool enemiesCanConsume;
 
     public void Appear()
     {

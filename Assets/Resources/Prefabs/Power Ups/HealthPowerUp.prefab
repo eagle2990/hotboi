@@ -332,7 +332,7 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
-  lifetimeSeconds: 2
+  lifetimeSeconds: 10
   appearsEvent:
     m_PersistentCalls:
       m_Calls:
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
-  healingAmount: 5
+  healingAmount: 25
   initialExplotion: {fileID: 1361665837437062}
   icon: {fileID: 1565635550150006}
 --- !u!135 &135426416003270944

@@ -26,7 +26,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   Damage:
     UseConstant: 1
-    ConstantValue: 11
+    ConstantValue: 50
     Variable: {fileID: 0}
   Type: {fileID: 11400000, guid: 1682776d5c284084abd18e66600f8e41, type: 2}
   SprintSpeed:
