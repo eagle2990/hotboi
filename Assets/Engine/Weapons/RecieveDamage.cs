@@ -44,6 +44,10 @@ public class RecieveDamage : MonoBehaviour
         {
             HealthBar.fillAmount = hp / UnitStats.MaxHP.Value;
         }
+        if (HealthBar != null && HealthBar.fillAmount <= 0f) 
+        {
+            HealthBar.gameObject.transform.parent.parent.gameObject.SetActive(false);
+        }
     }
 
     private void CheckDeath()
