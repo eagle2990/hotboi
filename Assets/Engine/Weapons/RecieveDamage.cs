@@ -43,10 +43,10 @@ public class RecieveDamage : MonoBehaviour
         if (HealthBar != null)
         {
             HealthBar.fillAmount = hp / UnitStats.MaxHP.Value;
-        }
-        if (HealthBar != null && HealthBar.fillAmount <= 0f) 
-        {
-            HealthBar.gameObject.transform.parent.parent.gameObject.SetActive(false);
+            if (hp <= 0f) 
+            {
+                HealthBar.gameObject.transform.parent.parent.gameObject.SetActive(false);
+            }
         }
     }
 

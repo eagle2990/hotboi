@@ -39,7 +39,6 @@ public class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //print(other.gameObject.layer);
         if (IsObjectFromLayer(other.gameObject))
         {
             GetConsumed();
