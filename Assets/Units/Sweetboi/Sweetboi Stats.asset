@@ -33,4 +33,9 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 10
     Variable: {fileID: 0}
+  MaxSprintAmount:
+    UseConstant: 1
+    ConstantValue: 100
+    Variable: {fileID: 0}
+  SprintAmount: {fileID: 11400000, guid: b7121e4fd2a0ea346a9c9ee1be961e0f, type: 2}
   HP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
