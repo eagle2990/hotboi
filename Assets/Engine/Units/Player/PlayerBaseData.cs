@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PlayerBaseData : UnitBasicData
 {
+    public FloatReference SprintSpeed;
     public FloatVariable HP;
 
     private void OnEnable()

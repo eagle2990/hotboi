@@ -864,6 +864,16 @@ Prefab:
       propertyPath: GameUI
       value: 
       objectReference: {fileID: 1637605041}
+    - target: {fileID: 135490725039976666, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: m_Center.y
+      value: -3.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 135966092343262396, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: m_Center.y
+      value: -3.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
   m_IsPrefabParent: 0
