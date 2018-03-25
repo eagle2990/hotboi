@@ -650,10 +650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2966724baeb80cb4abd7a76b87d4c81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashDamage: {fileID: 1425942689213232}
+  flashDamage: {fileID: 0}
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  blinkCount: 1
-  blinkDuration: 0.5
+  blinkCount: 0
+  blinkDuration: 0
 --- !u!114 &114683702252402952
 MonoBehaviour:
   m_ObjectHideFlags: 1
