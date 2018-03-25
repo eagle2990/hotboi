@@ -8,7 +8,7 @@ public class PowerUp : MonoBehaviour
     public LayerMask collisionLayer;
     public float lifetimeSeconds = 2;
     private float currentLifetime;
-    private Collider collider;
+    private Collider objCollider;
     public UnityEvent appearsEvent;
     public UnityEvent consumedEvent;
     public UnityEvent dissapearsEvent;
@@ -16,7 +16,7 @@ public class PowerUp : MonoBehaviour
     private void Start()
     {
         Appears();
-        collider = GetComponent<Collider>();
+        objCollider = GetComponent<Collider>();
     }
 
 
@@ -33,7 +33,7 @@ public class PowerUp : MonoBehaviour
     void Dissapears()
     {
         dissapearsEvent.Invoke();
-        collider.enabled = false;
+        objCollider.enabled = false;
         Destroy(gameObject, 2.0f);
     }
 
