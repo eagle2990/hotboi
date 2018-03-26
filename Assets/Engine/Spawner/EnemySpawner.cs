@@ -30,9 +30,11 @@ public class EnemySpawner : MonoBehaviour
         foreach (Transform sp in spawnpoints)
         {
             //if a spawnpoint is not visible, add it to the list
-            if (!sp.GetComponent<SpawnpointChecker>().isVisible)
-            {
+            if (!sp.GetComponent<SpawnpointChecker>().isVisible) {
                 invisibleSpawnpoints.Add(sp);
+            }
+            if (sp.GetComponent<SpawnpointChecker>().isVisible) {
+                invisibleSpawnpoints.Remove(sp);
             }
         }
 

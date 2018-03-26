@@ -12,7 +12,6 @@ public class RecieveDamage : MonoBehaviour
     private PlayerBaseData PlayerData;
     public bool isUsingExternalHPVariable;
     public Image HealthBar;
-
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
 

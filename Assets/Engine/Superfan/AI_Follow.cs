@@ -14,7 +14,7 @@ public class AI_Follow : MonoBehaviour
 	{
         GameObject[] playerList = FindPlayer();
         if (playerList != null && playerList.Length > 0) {
-            player = playerList[0];
+            player = playerList[2];
             isTracking = player.activeInHierarchy;
             myAgent = GetComponent<NavMeshAgent>();
             target = player.transform;

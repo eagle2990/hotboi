@@ -851,7 +851,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085729161926210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.95, y: 0.85, z: -7.72}
+  m_LocalPosition: {x: -9.521037, y: 1.8479677e-16, z: -8.322507}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4062017141099204}
@@ -1116,7 +1116,8 @@ MonoBehaviour:
   DamageEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114666284065071790, guid: a18cb8323404e3d48bd8dc557823ffe6,
+          type: 2}
         m_MethodName: Flash
         m_Mode: 1
         m_Arguments:
@@ -1132,7 +1133,8 @@ MonoBehaviour:
   DeathEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114857364503014426, guid: a18cb8323404e3d48bd8dc557823ffe6,
+          type: 2}
         m_MethodName: UploadResultToDB
         m_Mode: 1
         m_Arguments:
@@ -1227,7 +1229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsBeforeDeathScreen: 5
-  GameUI: {fileID: 0}
+  GameUI: {fileID: 1122033498801698, guid: a18cb8323404e3d48bd8dc557823ffe6, type: 2}
 --- !u!114 &114818351803534370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1263,7 +1265,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -3.71, z: 0}
 --- !u!135 &135966092343262396
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1275,7 +1277,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 5
-  m_Center: {x: 0.050135136, y: -0.14263964, z: -0.114923}
+  m_Center: {x: 0.050135136, y: -3.7, z: -0.114923}
 --- !u!136 &136191047787171704
 CapsuleCollider:
   m_ObjectHideFlags: 1

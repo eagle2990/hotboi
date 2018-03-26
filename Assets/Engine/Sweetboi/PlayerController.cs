@@ -50,11 +50,11 @@ public class PlayerController : MonoBehaviour
             //If left shift is held down, SPRINT madafakaaaaa
             if (Input.GetKey(KeyCode.LeftShift) && unitData.SprintAmount.Value > 0) {
                 //TODO when sweetboi animation
-                //_animator.SetBool("sprint", true);
+                _animator.SetBool("sprint", true);
                     
                 _moveDir *= unitData.SprintSpeed.Value;
             } else {
-                //_animator.SetBool("sprint", false);
+                _animator.SetBool("sprint", false);
                 _moveDir *= unitData.MoveSpeed.Value;
             }
 
