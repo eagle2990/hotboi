@@ -31,7 +31,6 @@ public class UpdateSprintSlider : MonoBehaviour {
         }
         else if (playerSprintAmount.Value < playerStats.MaxSprintAmount && !Input.GetKey(KeyCode.LeftShift)) {
             playerSprintAmount.Value += Time.deltaTime * sprintRechargeMultiplier;
-            print(sprintRechargeMultiplier);
 
         }
     }
