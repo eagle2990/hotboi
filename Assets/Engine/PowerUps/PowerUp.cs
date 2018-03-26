@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class PowerUp : MonoBehaviour
 {
     public LayerMask collisionLayer;
-    public float lifetimeSeconds = 2;
+    [TagSelector]
+    public string tagFilter;
+    public float lifetimeSeconds = 10;
     private float currentLifetime;
     private Collider objCollider;
     public UnityEvent appearsEvent;
@@ -39,8 +39,7 @@ public class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //print(other.gameObject.layer);
-        if (IsObjectFromLayer(other.gameObject))
+        if (IsObjectFromLayer(other.gameObject) && DoesObjHasTag(other.gameObject))
         {
             GetConsumed();
             Dissapears();
@@ -59,5 +58,10 @@ public class PowerUp : MonoBehaviour
     private bool IsObjectFromLayer(GameObject other)
     {
         return (collisionLayer.value & 1 << other.layer) != 0;
+    }
+
+    private bool DoesObjHasTag(GameObject other)
+    {
+        return tagFilter.Length > 0 ? other.CompareTag(tagFilter) : true;
     }
 }
