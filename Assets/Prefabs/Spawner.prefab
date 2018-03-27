@@ -401,3 +401,4 @@ MonoBehaviour:
   - {fileID: 4292795658646552}
   - {fileID: 4508106487659974}
   - {fileID: 4369731395753616}
+  enemies: []
