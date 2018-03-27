@@ -202,7 +202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1350921343304918
 GameObject:
   m_ObjectHideFlags: 1
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 4676525670087282}
   - component: {fileID: 136191047787171704}
   - component: {fileID: 114189923989151058}
-  - component: {fileID: 114550260034235236}
+  - component: {fileID: 114838258296424664}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1334,7 +1334,18 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   DamageEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Flash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   DeathEvent:
@@ -1351,9 +1362,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1085729161926210}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 114838258296424664}
+        m_MethodName: Die
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1405,19 +1416,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114550260034235236
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1475667340965518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataLoader: {fileID: 0}
-  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &114560761584208742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1447,6 +1445,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16727dc74e02cb40b4acaeefc37a7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114838258296424664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475667340965518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521dd41e45670064bbfe1abea378dbe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsBeforeDeathScreen: 5
+  GameUI: {fileID: 0}
 --- !u!114 &114992403653399792
 MonoBehaviour:
   m_ObjectHideFlags: 1
