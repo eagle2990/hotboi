@@ -734,22 +734,22 @@ Prefab:
     - target: {fileID: 224743700670873802, guid: a18cb8323404e3d48bd8dc557823ffe6,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224743700670873802, guid: a18cb8323404e3d48bd8dc557823ffe6,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224729689469735294, guid: a18cb8323404e3d48bd8dc557823ffe6,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224729689469735294, guid: a18cb8323404e3d48bd8dc557823ffe6,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a18cb8323404e3d48bd8dc557823ffe6, type: 2}
