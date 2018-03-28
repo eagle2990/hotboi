@@ -2,29 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPowerUp: MonoBehaviour
-{
+public class SprintPowerUp : MonoBehaviour {
     public PlayerBaseData playerStats;
-    public float healingAmount = 5;
+    public float sprintAddAmount = 35;
     public GameObject initialExplotion;
     public GameObject icon;
     //public bool playerCanConsume;
     //public bool enemiesCanConsume;
 
-    public void Appear()
-    {
+    public void Appear() {
         initialExplotion.SetActive(true);
         icon.SetActive(true);
     }
 
-    public void Consumed()
-    {
-        float healedHP = playerStats.HP.Value + healingAmount;
-        playerStats.HP.SetValue(healedHP > playerStats.MaxHP.Value ? playerStats.MaxHP.Value : healedHP);
+    public void Consumed() {
+        float addedSprintAmount = playerStats.SprintAmount.Value + sprintAddAmount;
+        playerStats.SprintAmount.SetValue(addedSprintAmount > playerStats.MaxSprintAmount.Value ? playerStats.MaxSprintAmount.Value : addedSprintAmount);
     }
 
-    public void Dissapear()
-    {
+    public void Dissapear() {
         initialExplotion.SetActive(false);
         icon.SetActive(false);
     }

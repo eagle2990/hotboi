@@ -63,5 +63,5 @@ public class PowerUp : MonoBehaviour
     private bool DoesObjHasTag(GameObject other)
     {
         return tagFilter.Length > 0 ? other.CompareTag(tagFilter) : true;
-    }
+}
 }

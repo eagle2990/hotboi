@@ -14,7 +14,7 @@ MonoBehaviour:
   Name: Fanboiy attack
   Damage:
     UseConstant: 1
-    ConstantValue: 10
+    ConstantValue: 15
     Variable: {fileID: 0}
   AttackSpeed:
     UseConstant: 1

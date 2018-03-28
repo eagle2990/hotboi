@@ -12,7 +12,6 @@ public class RecieveDamage : MonoBehaviour
     private PlayerBaseData PlayerData;
     public bool isUsingExternalHPVariable;
     public Image HealthBar;
-
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
 
@@ -43,6 +42,10 @@ public class RecieveDamage : MonoBehaviour
         if (HealthBar != null)
         {
             HealthBar.fillAmount = hp / UnitStats.MaxHP.Value;
+            if (hp <= 0f) 
+            {
+                HealthBar.gameObject.transform.parent.parent.gameObject.SetActive(false);
+            }
         }
     }
 
