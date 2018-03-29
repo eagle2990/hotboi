@@ -15,7 +15,7 @@ public class FlashDamage : MonoBehaviour {
         canFlash = true;
         blinkImages = flashDamage.GetComponentsInChildren<Image>();
     }
-    
+
     public void Flash() {
         if (canFlash) {
             canFlash = false;
@@ -26,10 +26,10 @@ public class FlashDamage : MonoBehaviour {
     }
 
     public IEnumerator ColorLerpTo(Color _color, float _duration) {
-        
+
         float elapsedTime = 0.0f;
         while (elapsedTime < _duration) {
-            blinkImage.color = Color.Lerp(blinkImage.color, _color, (elapsedTime / _duration));
+            blinkImage.color = Color.Lerp(blinkImage.color, _color, (elapsedTime / _duration * 0.5f));
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
@@ -50,4 +50,5 @@ public class FlashDamage : MonoBehaviour {
         }
         canFlash = true;
 
-}}
+    }
+}
