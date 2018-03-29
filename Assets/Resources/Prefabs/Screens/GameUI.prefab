@@ -1926,8 +1926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714a658f1c3a2af4d80d28307fc2f562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseScreen: {fileID: 1951108051833002}
-  resumeButton: {fileID: 114622624989338514}
+  pauseScreen: {fileID: 0}
+  resumeButton: {fileID: 0}
 --- !u!114 &114686178008763496
 MonoBehaviour:
   m_ObjectHideFlags: 1
