@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444718838301402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.24862, y: 2.07, z: 10.709462}
+  m_LocalPosition: {x: -34.91, y: 2.07, z: -8.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4158819825171494}
@@ -121,10 +121,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveform: 0
   delay: 0
-  baseStart: 0.5
-  amplitude: 1
+  baseStart: 1
+  amplitude: 0.15
   phase: 0
-  frequency: 0.5
+  frequency: 1.2
 --- !u!198 &198236979985217480
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -185,7 +185,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1506935888
+  randomSeed: 124302195
   InitialModule:
     serializedVersion: 3
     enabled: 1
