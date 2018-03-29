@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224276895690369030}
-  - component: {fileID: 114666284065071790}
+  - component: {fileID: 114098798556916750}
   m_Layer: 0
   m_Name: FlashDamage
   m_TagString: Untagged
@@ -347,6 +347,21 @@ MonoBehaviour:
   sprintDepletionMultiplier: 20
   sprintRechargeMultiplier: 20
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
+--- !u!114 &114098798556916750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425942689213232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97ac6a246f1a754f8ec074f4a449595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDamage: {fileID: 1425942689213232}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  blinkCount: 1
+  blinkDuration: 0.5
 --- !u!114 &114099829117832356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -789,21 +804,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114666284065071790
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1425942689213232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2966724baeb80cb4abd7a76b87d4c81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashDamage: {fileID: 1425942689213232}
-  startColor: {r: 0, g: 0, b: 0, a: 0}
-  blinkCount: 1
-  blinkDuration: 0.5
 --- !u!114 &114683702252402952
 MonoBehaviour:
   m_ObjectHideFlags: 1
