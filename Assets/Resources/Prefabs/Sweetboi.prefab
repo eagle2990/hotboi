@@ -1293,9 +1293,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.9705882, g: 0.6537197, b: 0.17841695, a: 1}
-  m_Intensity: 8
-  m_Range: 12
+  m_Color: {r: 1, g: 0.64624745, b: 0.19852942, a: 1}
+  m_Intensity: 6
+  m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -21822,7 +21822,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4017af15e1bdc264784c77a95613f169, type: 2}
+  - {fileID: 2100000, guid: 3a8d49ba87478e44c9511ddf9b1743cd, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -21984,7 +21984,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7f098ed9997e714193be5e86df013f4, type: 2}
+  - {fileID: 2100000, guid: 785d342d039461b43881ac6909e1f3f2, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

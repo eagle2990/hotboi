@@ -6065,8 +6065,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4556614990117074}
-  - component: {fileID: 82741238158227262}
-  - component: {fileID: 82411677101620690}
+  - component: {fileID: 114276977577625998}
+  - component: {fileID: 82479116652616484}
+  - component: {fileID: 82593488910837736}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -39221,7 +39222,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000007, y: 0.020000009, z: 0.02}
   m_Center: {x: -4.656613e-10, y: -9.313226e-10, z: 0}
---- !u!82 &82411677101620690
+--- !u!82 &82479116652616484
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -39301,7 +39302,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!82 &82741238158227262
+--- !u!82 &82593488910837736
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -40545,6 +40546,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AdditionalVertexStreamMesh: {fileID: 0}
+--- !u!114 &114276977577625998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618334665228028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e2c64f80665df40aa5f5b63cfb6e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leastSecondsBetweenEvents: 2
+  mostSecondsBetweenEvents: 5
+  randomEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114281140693008970
 MonoBehaviour:
   m_ObjectHideFlags: 1
