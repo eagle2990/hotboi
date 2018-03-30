@@ -18,5 +18,5 @@ MonoBehaviour:
     Variable: {fileID: 0}
   AttackSpeed:
     UseConstant: 1
-    ConstantValue: 1
+    ConstantValue: 3
     Variable: {fileID: 0}

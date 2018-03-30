@@ -52,6 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpPrefabs:
-  - {fileID: 1251486262768152, guid: a98801ffb7f0b0c49ac438daa9849bff, type: 2}
-  - {fileID: 1469155653605928, guid: 02539536b7340a74da84b4b13e46ea1e, type: 2}
+  - {fileID: 1512554244620082, guid: fe84e8e55eb0e99428c6397b20fa9a4d, type: 2}
+  - {fileID: 1150347174177464, guid: 87ac0324d1843234f8486ea32c453ebd, type: 2}
   range: 30

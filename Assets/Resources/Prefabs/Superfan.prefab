@@ -822,7 +822,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1588241364190656}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4af495006e4e57941a8763f3b05ef6a2, type: 3}
@@ -1224,7 +1224,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 7
+  m_Speed: 8.5
   m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 10000000
