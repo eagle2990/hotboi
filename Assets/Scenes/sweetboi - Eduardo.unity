@@ -1106,6 +1106,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114838258296424664, guid: a5ac4662396fe704dbe3171b63614700,
+        type: 2}
+      propertyPath: GameUI
+      value: 
+      objectReference: {fileID: 936351136}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1116,11 +1121,6 @@ Prefab:
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1637605048}
-    - target: {fileID: 114838258296424664, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: GameUI
-      value: 
-      objectReference: {fileID: 936351136}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
   m_IsPrefabParent: 0
