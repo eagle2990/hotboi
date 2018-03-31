@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3a7a29a10ba0c428ea2d0c7fe4cb00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magnitude: 2
-  Roughness: 5
+  Magnitude: 0.8
+  Roughness: 6
   FadeInTime: 0
   FadeOutTime: 3
 --- !u!114 &114876385293158268

@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -158,21 +158,6 @@ Prefab:
       propertyPath: PlayerTransform
       value: 
       objectReference: {fileID: 1276312603}
-    - target: {fileID: 114847925294165810, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
-        type: 2}
-      propertyPath: FadeOutTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114847925294165810, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
-        type: 2}
-      propertyPath: Magnitude
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114847925294165810, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
-        type: 2}
-      propertyPath: Roughness
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64f440da7e22f6a48a6d4adb2d3d8978, type: 2}
   m_IsPrefabParent: 0
@@ -326,11 +311,6 @@ Prefab:
       propertyPath: randomEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 62235176}
-    - target: {fileID: 114704446541788802, guid: d9816f47730ad5d42941720752140c02,
-        type: 2}
-      propertyPath: randomEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ShakeOnce
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9816f47730ad5d42941720752140c02, type: 2}
   m_IsPrefabParent: 0
@@ -823,16 +803,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4587900428517568, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd, type: 2}
       propertyPath: m_LocalPosition.x
       value: -14.41
@@ -865,68 +835,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayOneShot
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 8300000, guid: 4af495006e4e57941a8763f3b05ef6a2, type: 3}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.AudioClip, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PlayOneShot
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 8300000, guid: 1baf5684feed89144bf00f2d3e4e5969, type: 3}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.AudioClip, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114860366823968266, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 82523094062099842, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1709762594 stripped

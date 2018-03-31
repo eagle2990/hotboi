@@ -33,20 +33,20 @@ MonoBehaviour:
     m_Settings:
       method: 0
       fxaaSettings:
-        preset: 2
+        preset: 3
       taaSettings:
         jitterSpread: 0.75
         sharpen: 0.3
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      intensity: 0.25
-      radius: 0.9
+      intensity: 0.5
+      radius: 1
       sampleCount: 10
       downsampling: 1
-      forceForwardCompatibility: 0
+      forceForwardCompatibility: 1
       ambientOnly: 0
       highPrecision: 1
   screenSpaceReflection:
@@ -55,7 +55,7 @@ MonoBehaviour:
       reflection:
         blendType: 0
         reflectionQuality: 2
-        maxDistance: 115
+        maxDistance: 109.8
         iterationCount: 256
         stepSize: 3
         widthModifier: 0.5
@@ -69,45 +69,45 @@ MonoBehaviour:
       screenEdgeMask:
         intensity: 0.293
   depthOfField:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      focusDistance: 10
-      aperture: 29
-      focalLength: 217
+      focusDistance: 35.54
+      aperture: 1.52
+      focalLength: 150
       useCameraFov: 0
-      kernelSize: 1
+      kernelSize: 0
   motionBlur:
     m_Enabled: 0
     m_Settings:
       shutterAngle: 360
-      sampleCount: 29
-      frameBlending: 0.07
+      sampleCount: 32
+      frameBlending: 0.078
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
       lowPercent: 1
       highPercent: 78.22478
-      minLuminance: -3.89
+      minLuminance: -2.66
       maxLuminance: -3.82
       keyValue: 0.25
       dynamicKeyValue: 1
       adaptationType: 0
-      speedUp: 2.66
+      speedUp: 4.02
       speedDown: 1.83
       logMin: -16
-      logMax: 7
+      logMax: 6
   bloom:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.5
-        threshold: 1.1
-        softKnee: 0.196
-        radius: 2.05
+        intensity: 0.03
+        threshold: 0
+        softKnee: 0
+        radius: 4.1
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
-        intensity: 3
+        intensity: 1
   colorGrading:
     m_Enabled: 0
     m_Settings:
@@ -284,16 +284,16 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0
+      intensity: 0.2
   grain:
     m_Enabled: 0
     m_Settings:
       colored: 1
-      intensity: 0
-      size: 0.32
-      luminanceContribution: 0.563
+      intensity: 0.3
+      size: 0.3
+      luminanceContribution: 0
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
