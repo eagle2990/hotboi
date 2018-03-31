@@ -595,7 +595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1595978158244010
 GameObject:
   m_ObjectHideFlags: 1
@@ -780,7 +780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1799394344016492
 GameObject:
   m_ObjectHideFlags: 1
@@ -1525,7 +1525,7 @@ Transform:
   m_GameObject: {fileID: 1583213982938172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children:
   - {fileID: 4741607074163466}
   - {fileID: 4429268815286584}
@@ -2051,7 +2051,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085729161926210}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 39b7b50a4365a8140a84280e458f36cd, type: 3}
+  m_Avatar: {fileID: 9000000, guid: b661d77a0ca07a045ac0623668fed786, type: 3}
   m_Controller: {fileID: 9100000, guid: 2c7cb11248f8be747a69a6d2f4560c1b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -2070,8 +2070,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.64624745, b: 0.19852942, a: 1}
-  m_Intensity: 6
-  m_Range: 10
+  m_Intensity: 6.5
+  m_Range: 11.5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -2949,7 +2949,7 @@ ParticleSystem:
     m_MeshNormalOffset: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
-    m_SkinnedMeshRenderer: {fileID: 137923381726916492}
+    m_SkinnedMeshRenderer: {fileID: 137304255802460166}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
@@ -6310,7 +6310,7 @@ ParticleSystem:
     m_MeshNormalOffset: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
-    m_SkinnedMeshRenderer: {fileID: 137923381726916492}
+    m_SkinnedMeshRenderer: {fileID: 137304255802460166}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 0
     alignToDirection: 1
@@ -9671,7 +9671,7 @@ ParticleSystem:
     m_MeshNormalOffset: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
-    m_SkinnedMeshRenderer: {fileID: 137923381726916492}
+    m_SkinnedMeshRenderer: {fileID: 137304255802460166}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 0
     alignToDirection: 1
@@ -12526,7 +12526,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -12727,7 +12727,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.02
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -13027,14 +13027,14 @@ ParticleSystem:
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
-    placementMode: 0
+    placementMode: 2
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
-    m_SkinnedMeshRenderer: {fileID: 137923381726916492}
+    m_SkinnedMeshRenderer: {fileID: 137304255802460166}
     m_UseMeshMaterialIndex: 0
-    m_UseMeshColors: 1
+    m_UseMeshColors: 0
     alignToDirection: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0

@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.30147058, g: 0.26037765, b: 0.20836937, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
@@ -158,6 +158,26 @@ Prefab:
       propertyPath: PlayerTransform
       value: 
       objectReference: {fileID: 1276312603}
+    - target: {fileID: 20403671058436014, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
+        type: 2}
+      propertyPath: m_RenderingPath
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 20403671058436014, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
+        type: 2}
+      propertyPath: m_OcclusionCulling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20403671058436014, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
+        type: 2}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20403671058436014, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
+        type: 2}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64f440da7e22f6a48a6d4adb2d3d8978, type: 2}
   m_IsPrefabParent: 0
@@ -743,11 +763,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1050442581}
   m_Script: {fileID: 11500000, guid: 8ac2a28cb9506a34caa6c5429ce56d67, type: 3}
---- !u!137 &1640601180 stripped
-SkinnedMeshRenderer:
-  m_PrefabParentObject: {fileID: 137304255802460166, guid: a5ac4662396fe704dbe3171b63614700,
-    type: 2}
-  m_PrefabInternal: {fileID: 2112538386}
 --- !u!114 &1648807951 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114697688153548170, guid: 8f2f0a10889d91341b557fcef4d86463,
@@ -983,11 +998,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114838258296424664, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: GameUI
-      value: 
-      objectReference: {fileID: 936351136}
     - target: {fileID: 114189923989151058, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
       propertyPath: DamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -998,101 +1008,11 @@ Prefab:
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1637605048}
-    - target: {fileID: 1583213982938172, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552490464928178, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552490464928178, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552490464928178, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 95259070479101118, guid: a5ac4662396fe704dbe3171b63614700,
+    - target: {fileID: 114838258296424664, guid: a5ac4662396fe704dbe3171b63614700,
         type: 2}
-      propertyPath: m_Avatar
+      propertyPath: GameUI
       value: 
-      objectReference: {fileID: 9000000, guid: b661d77a0ca07a045ac0623668fed786, type: 3}
-    - target: {fileID: 198472717453288502, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: ShapeModule.m_SkinnedMeshRenderer
-      value: 
-      objectReference: {fileID: 1640601180}
-    - target: {fileID: 198472717453288502, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1332247533
-      objectReference: {fileID: 0}
-    - target: {fileID: 1796300959364090, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198429903735699118, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: ShapeModule.m_SkinnedMeshRenderer
-      value: 
-      objectReference: {fileID: 1640601180}
-    - target: {fileID: 198429903735699118, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: randomSeed
-      value: -28034609
-      objectReference: {fileID: 0}
-    - target: {fileID: 198696812991225948, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: ShapeModule.m_SkinnedMeshRenderer
-      value: 
-      objectReference: {fileID: 1640601180}
-    - target: {fileID: 198696812991225948, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1379190126
-      objectReference: {fileID: 0}
-    - target: {fileID: 198500968776512904, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: ShapeModule.m_SkinnedMeshRenderer
-      value: 
-      objectReference: {fileID: 1640601180}
-    - target: {fileID: 198500968776512904, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1202879448
-      objectReference: {fileID: 0}
-    - target: {fileID: 198696812991225948, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198696812991225948, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: ShapeModule.placementMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198696812991225948, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: ShapeModule.m_UseMeshColors
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198696812991225948, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: ShapeModule.m_UseMeshMaterialIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198696812991225948, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: ShapeModule.alignToDirection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198696812991225948, guid: a5ac4662396fe704dbe3171b63614700,
-        type: 2}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.03
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 936351136}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ac4662396fe704dbe3171b63614700, type: 2}
   m_IsPrefabParent: 0
