@@ -20,11 +20,11 @@ public class BombFlasher : MonoBehaviour {
     //Flash is always out of camera view
     [Range(0f, 100f)]
     public float MaxFlashDistance;
-    [Range(0f, 2f)]
-    public float MinFlashDistance;
     [Range(0f, 100f)]
+    public float MinFlashDistance;
+    [Range(0f, 500f)]
     public float MaxFlashHeight;
-    [Range(0f, 2f)]
+    [Range(0f, 500f)]
     public float MinFlashHeight;
     [Range(1f, 300f)]
     public float DistanceRatio;
