@@ -344,7 +344,12 @@ Prefab:
     - target: {fileID: 114704446541788802, guid: d9816f47730ad5d42941720752140c02,
         type: 2}
       propertyPath: mostSecondsBetweenEvents
-      value: 4
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114704446541788802, guid: d9816f47730ad5d42941720752140c02,
+        type: 2}
+      propertyPath: leastSecondsBetweenEvents
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9816f47730ad5d42941720752140c02, type: 2}
@@ -397,6 +402,56 @@ Prefab:
         type: 2}
       propertyPath: DistanceRatio
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193984258960070, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: MinFlashHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193984258960070, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: MaxFlashHeight
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 108681276076222612, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1.0147059
+      objectReference: {fileID: 0}
+    - target: {fileID: 108681276076222612, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.7481655
+      objectReference: {fileID: 0}
+    - target: {fileID: 108681276076222612, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.46258652
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193984258960070, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: MaxIntensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108681276076222612, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108681276076222612, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193984258960070, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: MinFlashDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193984258960070, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: MaxFlashDistance
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad3049022855cc240a2a21699ec8c9ae, type: 2}
