@@ -5,7 +5,7 @@ using System.Collections;
 public class CameraShake : MonoBehaviour {
     [Range(0f, 4f)]
     public float Magnitude = 2f;
-    [Range(0f, 1f)]
+    [Range(0f, 10f)]
     public float Roughness = 10f;
     [Range(0f, 10f)]
     public float FadeInTime = 5f;

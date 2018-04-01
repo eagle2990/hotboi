@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ef0674804bedd4da062f4290f177a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
   BombFlashLight: {fileID: 108681276076222612}
   MaxIntensity: 2.18
   TimeFromZeroToFlash: 0.045
@@ -96,3 +97,4 @@ MonoBehaviour:
   MinFlashDistance: 0.993
   MaxFlashHeight: 10.5
   MinFlashHeight: 0.117
+  DistanceRatio: 192

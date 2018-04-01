@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BombFlasher : MonoBehaviour {
-    
+
+    //public Camera MainCamera;
+    public GameObject Camera;
     public Light BombFlashLight;
     //Flash settings
     [Range(0f, 10f)]
@@ -24,13 +26,16 @@ public class BombFlasher : MonoBehaviour {
     public float MaxFlashHeight;
     [Range(0f, 2f)]
     public float MinFlashHeight;
-
+    [Range(1f, 300f)]
+    public float DistanceRatio;
 
     private float randX;
     private float randY;
     private float randZ;
     private Vector3 randPos;
     private Transform target;
+    private float magnitude = 1f;
+    private float roughness = 1f;
 
     private IEnumerator FlashNow() {
         //Find a random place out of sight to make a flash
@@ -38,20 +43,21 @@ public class BombFlasher : MonoBehaviour {
         randX = Random.Range(MinFlashDistance, MaxFlashDistance);
         randY = Random.Range(MinFlashHeight, MaxFlashHeight);
         randZ = Random.Range(MinFlashDistance, MaxFlashDistance);
-        randPos = Camera.main.ViewportToWorldPoint(new Vector3(randX, 0f, randZ));
-        randPos.x = randPos.x * GetRandSign();
+        randPos = UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(randX, 0f, randZ));
+        randPos.x *= GetRandSign();
         randPos.y = randY;
-        randPos.z = randPos.z * GetRandSign();
+        randPos.z *= GetRandSign();
 
-        //change bomblight post
+        //change bomblight pos
         BombFlashLight.transform.position = randPos;
         //Find player to point light at him
        target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         BombFlashLight.intensity = minIntensity;
         print(randPos);
-        print(GetDistanceToBomb());
+        print(GetDistanceToFlash(Camera));
 
         BombFlashLight.transform.LookAt(target);
+        SetCameraShakeRelativeToBombDistance();
         while (BombFlashLight.intensity < MaxIntensity) {
             BombFlashLight.intensity += Time.deltaTime / TimeFromZeroToFlash;        // Increase intensity
             yield return null;
@@ -70,7 +76,17 @@ public class BombFlasher : MonoBehaviour {
     private int GetRandSign() {
         return Random.Range(0, 2) * 2 - 1;
     }
-    private float GetDistanceToBomb() {
-        return Vector3.Distance(gameObject.transform.position, Camera.main.transform.position);
+    private float GetDistanceToFlash(GameObject go) {
+        return Vector3.Distance(go.transform.position, BombFlashLight.transform.position);
+    }
+    private void SetCameraShakeRelativeToBombDistance() {
+        //calc multiplier
+        print("DistanceRatio: " + DistanceRatio + "\nGetDistanceToFlash(Camera): " + GetDistanceToFlash(Camera));
+        magnitude = DistanceRatio / GetDistanceToFlash(Camera);
+        roughness = DistanceRatio / GetDistanceToFlash(Camera);
+        //update camerashake stats
+        Camera.GetComponent<CameraShake>().Magnitude = magnitude;
+        Camera.GetComponent<CameraShake>().Roughness = roughness;
+
     }
 }

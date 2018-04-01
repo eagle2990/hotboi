@@ -158,26 +158,6 @@ Prefab:
       propertyPath: PlayerTransform
       value: 
       objectReference: {fileID: 1276312603}
-    - target: {fileID: 20403671058436014, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
-        type: 2}
-      propertyPath: m_RenderingPath
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 20403671058436014, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
-        type: 2}
-      propertyPath: m_OcclusionCulling
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20403671058436014, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
-        type: 2}
-      propertyPath: m_AllowMSAA
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20403671058436014, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
-        type: 2}
-      propertyPath: m_Depth
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64f440da7e22f6a48a6d4adb2d3d8978, type: 2}
   m_IsPrefabParent: 0
@@ -408,11 +388,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 108681276076222612, guid: ad3049022855cc240a2a21699ec8c9ae,
+    - target: {fileID: 114193984258960070, guid: ad3049022855cc240a2a21699ec8c9ae,
         type: 2}
-      propertyPath: m_Intensity
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 719877194}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad3049022855cc240a2a21699ec8c9ae, type: 2}
   m_IsPrefabParent: 0
@@ -483,6 +463,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00e3061d1a7ae6e4daa4e1062740ff73, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &719877194 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1447800538256388, guid: 64f440da7e22f6a48a6d4adb2d3d8978,
+    type: 2}
+  m_PrefabInternal: {fileID: 21543229}
 --- !u!114 &762259745 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114098798556916750, guid: a18cb8323404e3d48bd8dc557823ffe6,

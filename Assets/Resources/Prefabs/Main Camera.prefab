@@ -163,12 +163,12 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -220,9 +220,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Magnitude: 0.8
-  Roughness: 6
+  Roughness: 6.2
   FadeInTime: 0
   FadeOutTime: 3
+  DelayTime: 0.1
 --- !u!114 &114876385293158268
 MonoBehaviour:
   m_ObjectHideFlags: 1
