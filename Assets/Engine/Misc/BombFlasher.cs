@@ -86,7 +86,7 @@ public class BombFlasher : MonoBehaviour {
         roughness = DistanceRatio / GetDistanceToFlash(Camera);
         //update camerashake stats
         Camera.GetComponent<CameraShake>().Magnitude = magnitude;
-        Camera.GetComponent<CameraShake>().Roughness = roughness;
+        //Camera.GetComponent<CameraShake>().Roughness = roughness;
 
     }
 }

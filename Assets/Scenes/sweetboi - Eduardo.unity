@@ -393,6 +393,11 @@ Prefab:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 719877194}
+    - target: {fileID: 114193984258960070, guid: ad3049022855cc240a2a21699ec8c9ae,
+        type: 2}
+      propertyPath: DistanceRatio
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad3049022855cc240a2a21699ec8c9ae, type: 2}
   m_IsPrefabParent: 0
