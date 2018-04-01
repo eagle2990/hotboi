@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3a7a29a10ba0c428ea2d0c7fe4cb00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magnitude: 0.8
-  Roughness: 6.2
+  Magnitude: 0.6
+  Roughness: 4
   FadeInTime: 0
   FadeOutTime: 3
   DelayTime: 0.1
@@ -403,8 +403,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.78039217, g: 0.6901961, b: 0.64705884, a: 0.0627451}
-      maxColor: {r: 0.7794118, g: 0.69123393, b: 0.6475995, a: 0.101960786}
+      minColor: {r: 0.78039217, g: 0.6901961, b: 0.64705884, a: 0.19607843}
+      maxColor: {r: 0.7794118, g: 0.69123393, b: 0.6475995, a: 0.27450982}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3675,7 +3675,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 87231527
+  randomSeed: -2066585095
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4199,7 +4199,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 300
+      scalar: 500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4542,9 +4542,9 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.2784314, g: 0.2509804, b: 0.21960784, a: 0}
-        key1: {r: 0.5735294, g: 0.4748777, b: 0.35002163, a: 0.2312769}
-        key2: {r: 0.2784314, g: 0.2509804, b: 0.21960784, a: 0.27450982}
-        key3: {r: 0, g: 0, b: 0, a: 0.23622994}
+        key1: {r: 0.5735294, g: 0.4748777, b: 0.35002163, a: 0.39215687}
+        key2: {r: 0.2784314, g: 0.2509804, b: 0.21960784, a: 0.47058824}
+        key3: {r: 0, g: 0, b: 0, a: 0.39215687}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -4558,9 +4558,9 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 21781
+        atime1: 18311
         atime2: 31611
-        atime3: 43947
+        atime3: 44140
         atime4: 65535
         atime5: 0
         atime6: 0
