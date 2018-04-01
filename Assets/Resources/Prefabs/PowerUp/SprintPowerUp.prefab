@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
-  sprintAddAmount: 35
+  sprintAddAmount: 50
   initialExplotion: {fileID: 1598575217732444}
   icon: {fileID: 1598575217732444}
 --- !u!135 &135480879005922690

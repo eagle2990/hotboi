@@ -53,8 +53,6 @@ public class BombFlasher : MonoBehaviour {
         //Find player to point light at him
        target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         BombFlashLight.intensity = minIntensity;
-        print(randPos);
-        print(GetDistanceToFlash(Camera));
 
         BombFlashLight.transform.LookAt(target);
         SetCameraShakeRelativeToBombDistance();
@@ -81,7 +79,6 @@ public class BombFlasher : MonoBehaviour {
     }
     private void SetCameraShakeRelativeToBombDistance() {
         //calc multiplier
-        print("DistanceRatio: " + DistanceRatio + "\nGetDistanceToFlash(Camera): " + GetDistanceToFlash(Camera));
         magnitude = DistanceRatio / GetDistanceToFlash(Camera);
         roughness = DistanceRatio / GetDistanceToFlash(Camera);
         //update camerashake stats

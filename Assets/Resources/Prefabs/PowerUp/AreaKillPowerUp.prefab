@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4993734591387796}
   - component: {fileID: 114242660961309256}
   - component: {fileID: 114312114711656080}
+  - component: {fileID: 114056173050780098}
   - component: {fileID: 135039754972866024}
   m_Layer: 0
   m_Name: AreaKillPowerUp
@@ -84,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288921546195208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.49, y: 0, z: -7.53}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4457773242789488}
@@ -97,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030916696530562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.35, y: 2, z: 0}
+  m_LocalPosition: {x: -20.27, y: 2, z: -8.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4457773242789488}
@@ -113,8 +114,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.45588237, g: 0, b: 0, a: 1}
-  m_Intensity: 7
+  m_Color: {r: 0.71323526, g: 0.07378296, b: 0, a: 1}
+  m_Intensity: 5
   m_Range: 6
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -140,6 +141,24 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114056173050780098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030916696530562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083809f8e607c5b43934702f25949ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponStats: {fileID: 11400000, guid: 5176f3a42821b624998008b76082e6ce, type: 2}
+  weaponHolder: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
+  attackEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114242660961309256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,20 +174,53 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   tagFilter: 
-  lifetimeSeconds: 10
+  lifetimeSeconds: 20
   appearsEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114312114711656080}
+        m_MethodName: Appear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   consumedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114312114711656080}
+        m_MethodName: Consumed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   dissapearsEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114312114711656080}
+        m_MethodName: Dissapear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114312114711656080
@@ -182,10 +234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbf9ecf7d1d25f47b6f9253148532f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 0}
-  killRadius: 10
-  initialExplosion: {fileID: 0}
-  icon: {fileID: 0}
+  EnemiesToBeKilled:
+  - {fileID: 1588241364190656, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd, type: 2}
+  KillRadius: 10
+  initialExplosion: {fileID: 1030916696530562}
+  icon: {fileID: 1030916696530562}
 --- !u!114 &114336673779962856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,7 +328,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 738139655
+  randomSeed: -217603220
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -365,7 +418,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.77079105, b: 0.16911763, a: 1}
+      maxColor: {r: 0.7647059, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
