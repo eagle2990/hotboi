@@ -22,6 +22,9 @@ public class DeathScreenController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (deathScreen.activeSelf == true && Input.GetKeyDown(KeyCode.R)) {
+            PlayAgain();
+        }
     }
 
     public void ShowDeathScreen() {
