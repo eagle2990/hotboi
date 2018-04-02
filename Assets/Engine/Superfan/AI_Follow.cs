@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class AI_Follow : MonoBehaviour 
 {
     public EnemyBaseData enemyStats;
-    public Transform target;
     [Range(0f, 100f)]
     public float alertDistance;
     [Range(0f, 100f)]
@@ -14,6 +13,7 @@ public class AI_Follow : MonoBehaviour
     [Range(0f, 10f)]
     public float wanderTimer;
 
+    private Transform target;
     private bool isChasing;
     private NavMeshAgent myAgent;
     bool isTracking;

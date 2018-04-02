@@ -884,10 +884,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: 720fa79d4b737b84ba80ce3620fd36a1, type: 2}
-  target: {fileID: 0}
-  alertDistance: 6.9
-  wanderRadius: 9.8
-  wanderTimer: 1.17
+  alertDistance: 10.5
+  wanderRadius: 43.4
+  wanderTimer: 3.35
 --- !u!114 &114592787319334438
 MonoBehaviour:
   m_ObjectHideFlags: 1
