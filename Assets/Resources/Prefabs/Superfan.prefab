@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 114834193882182718}
   - component: {fileID: 114031899147471080}
   - component: {fileID: 114979964142169060}
+  - component: {fileID: 114526287363693056}
   m_Layer: 8
   m_Name: Superfan
   m_TagString: Untagged
@@ -934,6 +935,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16727dc74e02cb40b4acaeefc37a7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114526287363693056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1588241364190656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1faef6bcdd64e4f95d05afa4134632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftStepDust: {fileID: 198814293492975994}
+  rightStepDust: {fileID: 198479470572617918}
 --- !u!114 &114546731348000988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1253,7 +1267,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: -1556962882
@@ -4659,10 +4673,10 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1205126376
+  randomSeed: -64154530
   InitialModule:
     serializedVersion: 3
     enabled: 1
