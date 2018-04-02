@@ -42,9 +42,11 @@ public class AI_Follow : MonoBehaviour
         if (Vector3.Distance(gameObject.transform.position, target.transform.position) <= alertDistance) {
             isChasing = true;
             gameObject.GetComponent<Animator>().SetBool("chasing", true);
+            UpdateSpeed(enemyStats.MoveSpeed, myAgent);
         } else {
             isChasing = false;
             gameObject.GetComponent<Animator>().SetBool("chasing", false);
+            UpdateSpeed(enemyStats.WanderSpeed, myAgent);
         }
         if (isTracking && isChasing)
         {
@@ -79,6 +81,12 @@ public class AI_Follow : MonoBehaviour
         NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
 
         return navHit.position;
+    }
+
+    void UpdateSpeed(float newSpeed, NavMeshAgent agent) {
+        if (agent.speed != newSpeed) {
+            agent.speed = newSpeed;
+        }
     }
 
 }
