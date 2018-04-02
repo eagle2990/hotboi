@@ -50132,8 +50132,8 @@ MonoBehaviour:
   MaxIntensity: 1
   TimeFromZeroToFlash: 0.045
   TimeFromFlashToZero: 1.5
-  MaxFlashDistance: 20
-  MinFlashDistance: 15
+  MaxFlashDistance: 30
+  MinFlashDistance: 20
   MaxFlashHeight: 350
   MinFlashHeight: 250
   DistanceRatio: 300

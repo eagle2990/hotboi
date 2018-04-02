@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e2c64f80665df40aa5f5b63cfb6e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leastSecondsBetweenEvents: 2
-  mostSecondsBetweenEvents: 8
+  leastSecondsBetweenEvents: 3
+  mostSecondsBetweenEvents: 15
   randomEvent:
     m_PersistentCalls:
       m_Calls:
