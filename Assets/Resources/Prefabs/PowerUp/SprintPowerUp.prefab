@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114197826006287182}
   - component: {fileID: 114880540439544204}
   - component: {fileID: 135480879005922690}
+  - component: {fileID: 95514204668177824}
   m_Layer: 0
   m_Name: SprintPowerUp
   m_TagString: Untagged
@@ -104,6 +105,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95514204668177824
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512554244620082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db95da0a52e2edd4ab3906429390578d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108305593012336680
 Light:
   m_ObjectHideFlags: 1
@@ -114,8 +132,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0, g: 0.75172424, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 6
+  m_Intensity: 0
+  m_Range: 7
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -308,7 +326,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -480848299
+  randomSeed: -1561886767
   InitialModule:
     serializedVersion: 3
     enabled: 1

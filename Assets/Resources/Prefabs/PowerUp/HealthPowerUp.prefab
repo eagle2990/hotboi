@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114249859170473206}
   - component: {fileID: 114605577372936812}
   - component: {fileID: 135516749068850768}
+  - component: {fileID: 95503196103686002}
   m_Layer: 0
   m_Name: HealthPowerUp
   m_TagString: Untagged
@@ -104,6 +105,23 @@ Transform:
   m_Father: {fileID: 4600156929316994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95503196103686002
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1150347174177464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eaed62fa315f7ad49aab177b9ff90342, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108593373482838904
 Light:
   m_ObjectHideFlags: 1
@@ -114,8 +132,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.77254903, b: 0.16862746, a: 1}
-  m_Intensity: 5
-  m_Range: 6
+  m_Intensity: 0
+  m_Range: 7
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -308,7 +326,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -203535302
+  randomSeed: -1788846011
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1076,7 +1094,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -3654,7 +3672,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.05
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2

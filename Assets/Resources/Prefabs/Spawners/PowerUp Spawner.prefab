@@ -55,4 +55,4 @@ MonoBehaviour:
   - {fileID: 1512554244620082, guid: fe84e8e55eb0e99428c6397b20fa9a4d, type: 2}
   - {fileID: 1150347174177464, guid: 87ac0324d1843234f8486ea32c453ebd, type: 2}
   - {fileID: 1030916696530562, guid: 50fad2f2384578249b2fb70a078a3bc5, type: 2}
-  range: 100
+  range: 5

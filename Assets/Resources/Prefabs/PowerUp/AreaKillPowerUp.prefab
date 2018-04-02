@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114312114711656080}
   - component: {fileID: 114056173050780098}
   - component: {fileID: 135039754972866024}
+  - component: {fileID: 95248577145968126}
   m_Layer: 0
   m_Name: AreaKillPowerUp
   m_TagString: Untagged
@@ -105,6 +106,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95248577145968126
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030916696530562}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30b950e5ec55d2e4ab53e1155fcf0a56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108806226103288154
 Light:
   m_ObjectHideFlags: 1
@@ -115,8 +133,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.71323526, g: 0.07378296, b: 0, a: 1}
-  m_Intensity: 5
-  m_Range: 6
+  m_Intensity: 0
+  m_Range: 7
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
