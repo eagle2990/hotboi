@@ -179,14 +179,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.15423226
+      - time: 0.10778656
         functionName: LeftStep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.6272721
+      - time: 0.6087101
         functionName: RightStep
         data: 
         objectReferenceParameter: {instanceID: 0}
