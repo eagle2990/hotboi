@@ -27,7 +27,7 @@ public class RecieveDamage : MonoBehaviour
         }
     }
 
-    public void DamageCalculation(InflictDamage receivedDamage)
+    public void DamageCalculation(InflictDamage receivedDamage) 
     {
         if (IsAnOppositeType(receivedDamage.weaponHolder.Type))
         {
@@ -61,6 +61,7 @@ public class RecieveDamage : MonoBehaviour
 
     private void ApplyDamage(WeaponBasicData weaponStats)
     {
+
         if (isUsingExternalHPVariable)
         {
             PlayerData.HP.Add(-weaponStats.Damage);

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InjuredBy:
   - {fileID: 11400000, guid: c431c3c535e9a39418b6a8be2e0812f3, type: 2}
+  - {fileID: 11400000, guid: 40511befc8f719c40ace2dfde1ed8477, type: 2}
   AdvantageOver: []

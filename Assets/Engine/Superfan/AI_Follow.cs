@@ -8,6 +8,7 @@ public class AI_Follow : MonoBehaviour
 {
 
     public EnemyBaseData enemyStats;
+    public bool isAlwaysWalking;
     public bool isAlwaysChasing;
     [Range(0f, 100f)]
     public float alertDistance;
@@ -43,15 +44,18 @@ public class AI_Follow : MonoBehaviour
 	void Update () {
         if (Vector3.Distance(gameObject.transform.position, target.transform.position) <= alertDistance || isAlwaysChasing) {
             isChasing = true;
-            gameObject.GetComponent<Animator>().SetBool("chasing", true);
+            if (isAlwaysWalking) {
+                gameObject.GetComponent<Animator>().SetBool("chasing", false);
+            } else {
+                gameObject.GetComponent<Animator>().SetBool("chasing", true);
+            }
             UpdateSpeed(chaseSpeed, myAgent);
         } else {
             isChasing = false;
             gameObject.GetComponent<Animator>().SetBool("chasing", false);
             UpdateSpeed(wanderSpeed, myAgent);
         }
-        if (isTracking && isChasing)
-        {
+        if (isTracking && isChasing) {
             myAgent.SetDestination(target.position);
         }
         if (isTracking && !isChasing) {
