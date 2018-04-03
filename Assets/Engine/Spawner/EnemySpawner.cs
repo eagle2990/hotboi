@@ -44,13 +44,13 @@ public class EnemySpawner : MonoBehaviour
         if (invisibleSpawnpoints.Count != 0)
         {
             spawnplace = (Transform)invisibleSpawnpoints[spawnPointIndex];
-            enemies.Add(Instantiate(GetRandomEnemy(enemies), spawnplace.position, spawnplace.rotation));
+            Instantiate(GetRandomEnemy(enemies), spawnplace.position, spawnplace.rotation);
         }
 
 
     }
     private GameObject GetRandomEnemy(List<GameObject> enemies) {
-        int randInt = Random.Range(0, enemies.Count-1);
+        int randInt = Random.Range(0, enemies.Count);
         return enemies[randInt];
     }
 }
