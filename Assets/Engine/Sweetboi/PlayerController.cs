@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
+
 {
+    [Range(0f, 1f)]
+    public float dampTime = 0.2f;
     private Animator _animator;
 
     private CharacterController _characterController;
@@ -44,19 +47,18 @@ public class PlayerController : MonoBehaviour
 
         if (_characterController.isGrounded)
         {
-            _animator.SetBool("run", move.magnitude > 0);
-
             _moveDir = transform.forward * move.magnitude;
             //If left shift is held down, SPRINT madafakaaaaa
-            if (Input.GetKey(KeyCode.LeftShift) && unitData.SprintAmount.Value > 0) {
-                //TODO when sweetboi animation
-                _animator.SetBool("sprint", true);
-                    
+            if (unitData.SprintAmount.Value > 0 && Input.GetKey(KeyCode.LeftShift)) {
                 _moveDir *= unitData.SprintSpeed.Value;
-            } else {
-                _animator.SetBool("sprint", false);
+                _animator.SetFloat("forwardSpeed", unitData.SprintSpeed.Value, dampTime, Time.deltaTime);
+            } if (move.magnitude > 0 && !Input.GetKey(KeyCode.LeftShift)) {
                 _moveDir *= unitData.MoveSpeed.Value;
+                _animator.SetFloat("forwardSpeed", unitData.MoveSpeed.Value, dampTime, Time.deltaTime);
+            } if (move.magnitude == 0) {
+                _animator.SetFloat("forwardSpeed", 0f, dampTime, Time.deltaTime);
             }
+
 
 
         }
