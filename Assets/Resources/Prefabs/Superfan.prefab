@@ -960,6 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: 720fa79d4b737b84ba80ce3620fd36a1, type: 2}
+  isAlwaysChasing: 0
   alertDistance: 10.5
   wanderRadius: 43.4
   wanderTimer: 3.35

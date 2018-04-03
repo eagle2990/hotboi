@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemy;                // The enemy prefab to be spawned.
+    //public GameObject enemy;                // The enemy prefab to be spawned.
     public float spawnTime = 3f;            // How long between each spawn.
     public Transform[] spawnpoints;         // An array of the spawn points this enemy can spawn from.
     private SpawnpointChecker spawnpoint;
     private ArrayList invisibleSpawnpoints;
     Transform spawnplace;
-
-    public List<GameObject> enemies;
+    //TODO add spawn settings for each enemy
+    public List<GameObject> enemies; //List of enemy prefabs to be spawned
 
     void Start()
     {
@@ -44,9 +44,13 @@ public class EnemySpawner : MonoBehaviour
         if (invisibleSpawnpoints.Count != 0)
         {
             spawnplace = (Transform)invisibleSpawnpoints[spawnPointIndex];
-            enemies.Add(Instantiate(enemy, spawnplace.position, spawnplace.rotation));
+            enemies.Add(Instantiate(GetRandomEnemy(enemies), spawnplace.position, spawnplace.rotation));
         }
 
 
+    }
+    private GameObject GetRandomEnemy(List<GameObject> enemies) {
+        int randInt = Random.Range(0, enemies.Count-1);
+        return enemies[randInt];
     }
 }

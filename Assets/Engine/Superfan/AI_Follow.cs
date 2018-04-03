@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class AI_Follow : MonoBehaviour 
 {
+
     public EnemyBaseData enemyStats;
+    public bool isAlwaysChasing;
     [Range(0f, 100f)]
     public float alertDistance;
     [Range(0f, 100f)]
@@ -22,7 +25,7 @@ public class AI_Follow : MonoBehaviour
     private float chaseSpeed;
     private float wanderSpeed;
 
-	void Start () 
+    void Start () 
 	{
         chaseSpeed = enemyStats.MoveSpeed;
         wanderSpeed = enemyStats.WanderSpeed;
@@ -37,16 +40,15 @@ public class AI_Follow : MonoBehaviour
 
     }
 
-	void Update () 
-	{
-        if (Vector3.Distance(gameObject.transform.position, target.transform.position) <= alertDistance) {
+	void Update () {
+        if (Vector3.Distance(gameObject.transform.position, target.transform.position) <= alertDistance || isAlwaysChasing) {
             isChasing = true;
             gameObject.GetComponent<Animator>().SetBool("chasing", true);
-            UpdateSpeed(enemyStats.MoveSpeed, myAgent);
+            UpdateSpeed(chaseSpeed, myAgent);
         } else {
             isChasing = false;
             gameObject.GetComponent<Animator>().SetBool("chasing", false);
-            UpdateSpeed(enemyStats.WanderSpeed, myAgent);
+            UpdateSpeed(wanderSpeed, myAgent);
         }
         if (isTracking && isChasing)
         {
@@ -61,25 +63,19 @@ public class AI_Follow : MonoBehaviour
             }
         }
     }
-    public void StopNavAgent()
-    {
+    public void StopNavAgent(){
         isTracking = false;
     }
 
-    private GameObject[] FindPlayer()
-    {
+    private GameObject[] FindPlayer(){
         return GameObject.FindGameObjectsWithTag("Player");
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) {
         Vector3 randDirection = Random.insideUnitSphere * dist;
-
         randDirection += origin;
-
         NavMeshHit navHit;
-
         NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-
         return navHit.position;
     }
 
