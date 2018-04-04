@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
                 _moveDir *= unitData.SprintSpeed.Value;
                 _animator.SetFloat("forwardSpeed", unitData.SprintSpeed.Value, dampTime, Time.deltaTime);
             }
-            if (!Input.GetKey(KeyCode.LeftShift)) {
+            if (!Input.GetKey(KeyCode.LeftShift) || unitData.SprintAmount.Value <= 0) {
                 _moveDir *= unitData.MoveSpeed.Value;
                 _animator.SetFloat("forwardSpeed", unitData.MoveSpeed.Value, dampTime, Time.deltaTime);
             }
