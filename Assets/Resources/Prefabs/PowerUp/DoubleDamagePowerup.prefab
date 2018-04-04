@@ -176,6 +176,7 @@ MonoBehaviour:
   amplitude: 0.15
   phase: 0
   frequency: 1.2
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114356386857946064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,6 +193,16 @@ MonoBehaviour:
   damageMultiplier: 2
   initialExplotion: {fileID: 1964111420290322}
   icon: {fileID: 1964111420290322}
+  movingFireColor: {r: 1, g: 1, b: 1, a: 1}
+  sparksColor: {r: 1, g: 1, b: 1, a: 1}
+  baseFireColor: {r: 1, g: 1, b: 1, a: 1}
+  smokeColor: {r: 0.08088237, g: 0.08088237, b: 0.08088237, a: 0.053}
+  fireLightColor: {r: 1, g: 1, b: 1, a: 1}
+  movingFire: {fileID: 0}
+  sparks: {fileID: 0}
+  baseFire: {fileID: 0}
+  smoke: {fileID: 0}
+  fireLight: {fileID: 0}
 --- !u!114 &114533446981886850
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Light))]
 public class FlickeringLight : MonoBehaviour {
 
     public enum WaveForm { sin, tri, sqr, saw, inv, noise };
@@ -14,14 +15,13 @@ public class FlickeringLight : MonoBehaviour {
     public float frequency = 0.5f; // cycle frequency per second
 
     //keep a copy of the orignal color
-    private Color originalColor;
+    public Color originalColor;
     private Light light;
 
     private int x = 0;
     //Store the original color 
 	void Start () {
         light = GetComponent<Light>();
-        originalColor = light.color;
 	}
 	
 	// Update is called once per frame

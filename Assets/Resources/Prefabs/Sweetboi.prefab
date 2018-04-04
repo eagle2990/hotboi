@@ -2214,6 +2214,7 @@ MonoBehaviour:
   amplitude: 0.2
   phase: 0
   frequency: 1.5
+  originalColor: {r: 1, g: 0.64624745, b: 0.19852942, a: 1}
 --- !u!114 &114975236959913502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12576,7 +12577,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1379190126
+  randomSeed: 1486227114
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -9,6 +9,16 @@ public class DoubleDamagePowerUp : MonoBehaviour {
     public float damageMultiplier = 2f;
     public GameObject initialExplotion;
     public GameObject icon;
+    public Color movingFireColor; 
+    public Color sparksColor;
+    public Color baseFireColor;
+    public Color smokeColor;
+    public Color fireLightColor;
+    public GameObject movingFire;
+    public GameObject sparks;
+    public GameObject baseFire;
+    public GameObject smoke;
+    public GameObject fireLight;
     //public bool playerCanConsume;
     //public bool enemiesCanConsume;
 
@@ -20,6 +30,13 @@ public class DoubleDamagePowerUp : MonoBehaviour {
     }
 
     public void Consumed() {
+        //TODO change particle system light + point light color to white
+
+        movingFire.GetComponent<ParticleSystem>().startColor = movingFireColor;
+        sparks.GetComponent<ParticleSystem>().startColor = sparksColor;
+        baseFire.GetComponent<ParticleSystem>().startColor = baseFireColor;
+        smoke.GetComponent<ParticleSystem>().startColor = smokeColor;
+        fireLight.GetComponent<FlickeringLight>().originalColor = fireLightColor;
         //TODO change enemy attack
     }
 
@@ -28,7 +45,7 @@ public class DoubleDamagePowerUp : MonoBehaviour {
         icon.SetActive(false);
     }
 
-    public void DoDamage() {
-  
+    private GameObject[] FindPlayer() {
+        return GameObject.FindGameObjectsWithTag("Player");
     }
 }
