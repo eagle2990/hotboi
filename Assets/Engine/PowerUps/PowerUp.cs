@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-
+[RequireComponent(typeof(ParticleSystem))]
 public class PowerUp : MonoBehaviour
 {
     public LayerMask collisionLayer;
@@ -32,9 +32,14 @@ public class PowerUp : MonoBehaviour
 
     void Dissapears()
     {
-        dissapearsEvent.Invoke();
-        objCollider.enabled = false;
-        Destroy(gameObject, 2.0f);
+        if (gameObject.GetComponentInChildren<ParticleSystem>() != null) {
+            gameObject.GetComponentInChildren<ParticleSystem>().enableEmission = false;
+            gameObject.GetComponentInChildren<ParticleSystem>().GetComponentInChildren<Light>().intensity = 0f;
+            gameObject.GetComponentInChildren<ParticleSystem>().transform.parent = null;
+            objCollider.enabled = false;
+            dissapearsEvent.Invoke();
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -63,5 +68,5 @@ public class PowerUp : MonoBehaviour
     private bool DoesObjHasTag(GameObject other)
     {
         return tagFilter.Length > 0 ? other.CompareTag(tagFilter) : true;
-}
+    }
 }

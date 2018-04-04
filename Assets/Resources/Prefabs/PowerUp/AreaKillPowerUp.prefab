@@ -134,8 +134,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.71323526, g: 0.07378296, b: 0, a: 1}
-  m_Intensity: 0
+  m_Color: {r: 0.7647059, g: 0, b: 0, a: 1}
+  m_Intensity: 5
   m_Range: 7
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -254,6 +254,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  fadeTimeOnDisappear: 1
 --- !u!114 &114279407426406954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -461,7 +462,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -217603220
+  randomSeed: -472418959
   InitialModule:
     serializedVersion: 3
     enabled: 1
