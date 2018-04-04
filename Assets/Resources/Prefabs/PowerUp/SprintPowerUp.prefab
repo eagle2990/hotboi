@@ -239,6 +239,7 @@ MonoBehaviour:
   amplitude: 0.15
   phase: 0
   frequency: 1.2
+  originalColor: {r: 0, g: 0.75294125, b: 1, a: 1}
 --- !u!114 &114880540439544204
 MonoBehaviour:
   m_ObjectHideFlags: 1

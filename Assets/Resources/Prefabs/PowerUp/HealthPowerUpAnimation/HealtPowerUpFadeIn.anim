@@ -35,7 +35,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Intensity
-    path: LifePowerup/Point light
+    path: ParticleSystem/Point light
     classID: 108
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -47,7 +47,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2372463368
+      path: 3211706496
       attribute: 898800009
       script: {fileID: 0}
       typeID: 108
@@ -94,7 +94,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Intensity
-    path: LifePowerup/Point light
+    path: ParticleSystem/Point light
     classID: 108
     script: {fileID: 0}
   m_EulerEditorCurves: []
