@@ -7,8 +7,6 @@ public class SprintPowerUp : MonoBehaviour {
     public float sprintAddAmount = 35;
     public GameObject initialExplotion;
     public GameObject icon;
-    //public bool playerCanConsume;
-    //public bool enemiesCanConsume;
 
     public void Appear() {
         initialExplotion.SetActive(true);

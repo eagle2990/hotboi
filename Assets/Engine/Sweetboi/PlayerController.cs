@@ -48,14 +48,17 @@ public class PlayerController : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _moveDir = transform.forward * move.magnitude;
+            //TODO after sprint depleted, shit goes down
             //If left shift is held down, SPRINT madafakaaaaa
-            if (unitData.SprintAmount.Value > 0 && Input.GetKey(KeyCode.LeftShift)) {
+            if (Input.GetKey(KeyCode.LeftShift) && unitData.SprintAmount.Value > 0) {
                 _moveDir *= unitData.SprintSpeed.Value;
                 _animator.SetFloat("forwardSpeed", unitData.SprintSpeed.Value, dampTime, Time.deltaTime);
-            } if (move.magnitude > 0 && !Input.GetKey(KeyCode.LeftShift)) {
+            }
+            if (!Input.GetKey(KeyCode.LeftShift)) {
                 _moveDir *= unitData.MoveSpeed.Value;
                 _animator.SetFloat("forwardSpeed", unitData.MoveSpeed.Value, dampTime, Time.deltaTime);
-            } if (move.magnitude == 0) {
+            }
+            if (move.magnitude == 0) {
                 _animator.SetFloat("forwardSpeed", 0f, dampTime, Time.deltaTime);
             }
 

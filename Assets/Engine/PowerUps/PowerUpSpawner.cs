@@ -6,12 +6,16 @@ using UnityEngine.AI;
 public class PowerUpSpawner : MonoBehaviour
 {
 
-    public List<GameObject> PowerUpPrefabs;
     public float range = 10.0f;
+    [Range(1f, 30f)]
+    public float appearTime = 10f;
+    [Range(0f, 10f)]
+    public float powerUpHeightFromGround = 1f;
+    public List<GameObject> PowerUpPrefabs;
 
     private void Start()
     {
-        InvokeRepeating("SpawnPowerUp", 5.0f, 10.0f);
+        InvokeRepeating("SpawnPowerUp", 5.0f, appearTime);
     }
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
@@ -22,7 +26,9 @@ public class PowerUpSpawner : MonoBehaviour
             NavMeshHit hit;
             if (NavMesh.SamplePosition(randomPoint, out hit, 2.0f, NavMesh.AllAreas))
             {
+                print(hit.position.y);
                 result = hit.position;
+                //result.y = powerUpHeightFromGround;
                 return true;
             }
         }

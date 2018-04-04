@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DoubleDamagePowerUp : MonoBehaviour {
     public PlayerBaseData playerStats;
@@ -9,20 +7,29 @@ public class DoubleDamagePowerUp : MonoBehaviour {
     public float damageMultiplier = 2f;
     public GameObject initialExplotion;
     public GameObject icon;
-    public Color movingFireColor; 
-    public Color sparksColor;
-    public Color baseFireColor;
-    public Color smokeColor;
-    public Color fireLightColor;
-    public GameObject movingFire;
-    public GameObject sparks;
-    public GameObject baseFire;
-    public GameObject smoke;
-    public GameObject fireLight;
-    //public bool playerCanConsume;
-    //public bool enemiesCanConsume;
+    private GameObject fireParticleEffect;
+    public Color newMovingFireColor; 
+    public Color newSparksColor;
+    public Color newBaseFireColor;
+    public Color newSmokeColor;
+    public Color newFireLightColor;
+
+    private ParticleSystem.MainModule movingFire;
+    private ParticleSystem.MainModule sparks;
+    private ParticleSystem.MainModule baseFire;
+    private ParticleSystem.MainModule smoke;
+    private FlickeringLight fireLight;
 
     private WeaponBasicData weaponStats;
+
+    private void Start() {
+        fireParticleEffect = FindPlayer()[0].transform.parent.transform.Find("FireParticleEffect").gameObject;
+        movingFire = fireParticleEffect.transform.Find("MovingFire").GetComponent<ParticleSystem>().main;
+        sparks = fireParticleEffect.transform.Find("Sparks").GetComponent<ParticleSystem>().main;
+        baseFire = fireParticleEffect.transform.Find("BaseFire").GetComponent<ParticleSystem>().main;
+        smoke = fireParticleEffect.transform.Find("Smoke").GetComponent<ParticleSystem>().main;
+        fireLight = fireParticleEffect.transform.Find("FireLight").GetComponent<FlickeringLight>();
+    }
 
     public void Appear() {
         initialExplotion.SetActive(true);
@@ -30,13 +37,11 @@ public class DoubleDamagePowerUp : MonoBehaviour {
     }
 
     public void Consumed() {
-        //TODO change particle system light + point light color to white
-
-        movingFire.GetComponent<ParticleSystem>().startColor = movingFireColor;
-        sparks.GetComponent<ParticleSystem>().startColor = sparksColor;
-        baseFire.GetComponent<ParticleSystem>().startColor = baseFireColor;
-        smoke.GetComponent<ParticleSystem>().startColor = smokeColor;
-        fireLight.GetComponent<FlickeringLight>().originalColor = fireLightColor;
+        movingFire.startColor = newMovingFireColor;
+        sparks.startColor = newSparksColor;
+        baseFire.startColor = newBaseFireColor;
+        smoke.startColor = newSmokeColor;
+        fireLight.originalColor = newFireLightColor;
         //TODO change enemy attack
     }
 

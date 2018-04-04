@@ -9,8 +9,7 @@ public class AreaKillPowerUp : MonoBehaviour {
     public float KillRadius = 10f;
     public GameObject initialExplosion;
     public GameObject icon;
-    //public bool playerCanConsume;
-    //public bool enemiesCanConsume;
+    public bool showDebugRadius;
 
     public void Appear() {
         initialExplosion.SetActive(true);
@@ -26,9 +25,11 @@ public class AreaKillPowerUp : MonoBehaviour {
         icon.SetActive(false);
     }
     // Display the explosion radius
-    void OnDrawGizmos() {
-        Gizmos.color = new Color(1, 1, 0, 0.5F);
-        Gizmos.DrawSphere(gameObject.transform.position, KillRadius);
+    void OnDrawGizmosSelected() {
+        if (showDebugRadius) {
+            Gizmos.color = new Color(1, 1, 0, 0.5F);
+            Gizmos.DrawSphere(gameObject.transform.position, KillRadius);
+        }
     }
 
     void DoAreaDamage(Vector3 center, float radius) {

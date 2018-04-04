@@ -1,28 +1,43 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
+
 [RequireComponent(typeof(ParticleSystem))]
 public class PowerUp : MonoBehaviour
 {
-    public LayerMask collisionLayer;
     [TagSelector]
     public string tagFilter;
     public float lifetimeSeconds = 10;
-    private float currentLifetime;
-    private Collider objCollider;
+    [Range(0f, 10f)]
+    public float beginIntensity = 0f;
+    [Range(0f, 10f)]
+    public float finishIntensity = 5f;
+    [Range(0f, 10f)]
+    public float lightAppearTime = 4f;
+    [Range(0f, 5f)]
+    public float lightDisappearTime = 2f;
+    public LayerMask collisionLayer;
     public UnityEvent appearsEvent;
     public UnityEvent consumedEvent;
     public UnityEvent dissapearsEvent;
 
+    private Collider objCollider;
+    private float currentLifetime;
+    private new ParticleSystem.EmissionModule particleSystem;
+    private Light pointLight;
+
     private void Start()
     {
+        particleSystem = gameObject.GetComponentInChildren<ParticleSystem>().emission;
+        pointLight = gameObject.GetComponentInChildren<ParticleSystem>().GetComponentInChildren<Light>();
         Appears();
         objCollider = GetComponent<Collider>();
     }
 
-
     void Appears()
     {
         appearsEvent.Invoke();
+        StartCoroutine(FadeLight(beginIntensity, finishIntensity, lightAppearTime));
     }
 
     void GetConsumed()
@@ -33,10 +48,10 @@ public class PowerUp : MonoBehaviour
     void Dissapears()
     {
         if (gameObject.GetComponentInChildren<ParticleSystem>() != null) {
-            gameObject.GetComponentInChildren<ParticleSystem>().enableEmission = false;
-            gameObject.GetComponentInChildren<ParticleSystem>().GetComponentInChildren<Light>().intensity = 0f;
-            gameObject.GetComponentInChildren<ParticleSystem>().transform.parent = null;
+            particleSystem.enabled = false;
             objCollider.enabled = false;
+            pointLight.GetComponentInParent<ParticleSystemAutoDestroy>().FadeOut();
+            gameObject.GetComponentInChildren<ParticleSystem>().transform.parent = null;
             dissapearsEvent.Invoke();
             Destroy(gameObject);
         }
@@ -68,5 +83,17 @@ public class PowerUp : MonoBehaviour
     private bool DoesObjHasTag(GameObject other)
     {
         return tagFilter.Length > 0 ? other.CompareTag(tagFilter) : true;
+    }
+
+    IEnumerator FadeLight(float startIntensity, float endIntensity, float time) {
+
+        float elapsed = 0f;
+
+        while (elapsed < time) {
+            pointLight.intensity = Mathf.Lerp(startIntensity, endIntensity, elapsed / time);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        pointLight.intensity = endIntensity;
     }
 }

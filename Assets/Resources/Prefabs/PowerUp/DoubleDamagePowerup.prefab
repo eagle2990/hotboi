@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4470863191912086}
   - component: {fileID: 198382723251154460}
+  - component: {fileID: 114050170750007428}
   - component: {fileID: 199292358239908800}
   m_Layer: 0
   m_Name: ParticleSystem
@@ -72,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053357039868992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4918039675332664}
@@ -86,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964111420290322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -8.5}
+  m_LocalPosition: {x: -0.02, y: 0, z: -8.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470863191912086}
@@ -159,6 +160,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114050170750007428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053357039868992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightDisappearTime: 3.5
 --- !u!114 &114069571196468782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,7 +189,7 @@ MonoBehaviour:
   amplitude: 0.15
   phase: 0
   frequency: 1.2
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 0.853}
 --- !u!114 &114356386857946064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,16 +206,11 @@ MonoBehaviour:
   damageMultiplier: 2
   initialExplotion: {fileID: 1964111420290322}
   icon: {fileID: 1964111420290322}
-  movingFireColor: {r: 1, g: 1, b: 1, a: 1}
-  sparksColor: {r: 1, g: 1, b: 1, a: 1}
-  baseFireColor: {r: 1, g: 1, b: 1, a: 1}
-  smokeColor: {r: 0.08088237, g: 0.08088237, b: 0.08088237, a: 0.053}
-  fireLightColor: {r: 1, g: 1, b: 1, a: 1}
-  movingFire: {fileID: 0}
-  sparks: {fileID: 0}
-  baseFire: {fileID: 0}
-  smoke: {fileID: 0}
-  fireLight: {fileID: 0}
+  newMovingFireColor: {r: 1, g: 1, b: 1, a: 1}
+  newSparksColor: {r: 1, g: 1, b: 1, a: 1}
+  newBaseFireColor: {r: 1, g: 1, b: 1, a: 1}
+  newSmokeColor: {r: 0, g: 0, b: 0, a: 0.134}
+  newFireLightColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114533446981886850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,11 +240,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1189a3ec4135245a4a20d233283014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagFilter: 
+  lifetimeSeconds: 10
+  beginIntensity: 0
+  finishIntensity: 5
+  lightAppearTime: 4
+  lightDisappearTime: 0.2
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
-  tagFilter: 
-  lifetimeSeconds: 10
   appearsEvent:
     m_PersistentCalls:
       m_Calls:
@@ -357,7 +369,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1561886767
+  randomSeed: -521312367
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1012,17 +1024,23 @@ ParticleSystem:
           time: 0
           value: 0
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 0.49910337
+          value: 1
+          inSlope: 0.6866455
+          outSlope: 0.6866455
           tangentMode: 0
         - serializedVersion: 2
           time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
+          value: 0
+          inSlope: 0.052589178
+          outSlope: 0.052589178
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 4
+        m_RotationOrder: 0
       minCurve:
         serializedVersion: 2
         m_Curve:

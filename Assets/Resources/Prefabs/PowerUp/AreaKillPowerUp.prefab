@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4457773242789488}
   - component: {fileID: 198876329563090174}
+  - component: {fileID: 114229789105446048}
   - component: {fileID: 199448816585233100}
   m_Layer: 0
   m_Name: ParticleSystem
@@ -74,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1038021271086902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4788717579952224}
@@ -101,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030916696530562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.27, y: 2, z: -8.07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4457773242789488}
@@ -179,6 +180,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114229789105446048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038021271086902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightDisappearTime: 3.5
 --- !u!114 &114242660961309256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,11 +203,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1189a3ec4135245a4a20d233283014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagFilter: 
+  lifetimeSeconds: 20
+  beginIntensity: 0
+  finishIntensity: 5
+  lightAppearTime: 4
+  lightDisappearTime: 0.2
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
-  tagFilter: 
-  lifetimeSeconds: 20
   appearsEvent:
     m_PersistentCalls:
       m_Calls:
@@ -301,6 +318,7 @@ MonoBehaviour:
   amplitude: 0.15
   phase: 0
   frequency: 1.2
+  originalColor: {r: 0.76470596, g: 0, b: 0, a: 0.816}
 --- !u!120 &120714649152484550
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -461,7 +479,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1076263105
+  randomSeed: -1376034017
   InitialModule:
     serializedVersion: 3
     enabled: 1

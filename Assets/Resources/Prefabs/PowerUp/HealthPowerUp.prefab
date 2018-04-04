@@ -39,6 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4830823524466582}
   - component: {fileID: 198383512855356090}
+  - component: {fileID: 114298328237312492}
   - component: {fileID: 199966870359440728}
   m_Layer: 0
   m_Name: ParticleSystem
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150347174177464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.47, y: 1.86, z: -0.65}
+  m_LocalPosition: {x: -10.08, y: 0, z: -0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4830823524466582}
@@ -98,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1683502824050172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4644170778766044}
@@ -169,11 +170,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1189a3ec4135245a4a20d233283014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagFilter: 
+  lifetimeSeconds: 10
+  beginIntensity: 0
+  finishIntensity: 5
+  lightAppearTime: 4
+  lightDisappearTime: 0.2
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
-  tagFilter: 
-  lifetimeSeconds: 10
   appearsEvent:
     m_PersistentCalls:
       m_Calls:
@@ -222,6 +227,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114298328237312492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683502824050172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightDisappearTime: 3.5
 --- !u!114 &114501928588625790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -327,7 +344,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 668191107
+  randomSeed: -55166327
   InitialModule:
     serializedVersion: 3
     enabled: 1
