@@ -222,7 +222,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  fadeTimeOnDisappear: 1
 --- !u!114 &114430854562411692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,8 +252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
   sprintAddAmount: 50
-  initialExplotion: {fileID: 1598575217732444}
-  icon: {fileID: 1598575217732444}
+  initialExplotion: {fileID: 1512554244620082}
+  icon: {fileID: 1512554244620082}
 --- !u!135 &135480879005922690
 SphereCollider:
   m_ObjectHideFlags: 1

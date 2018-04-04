@@ -222,7 +222,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  fadeTimeOnDisappear: 1
 --- !u!114 &114501928588625790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,8 +252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
   healingAmount: 25
-  initialExplotion: {fileID: 1683502824050172}
-  icon: {fileID: 1683502824050172}
+  initialExplotion: {fileID: 1150347174177464}
+  icon: {fileID: 1150347174177464}
 --- !u!135 &135516749068850768
 SphereCollider:
   m_ObjectHideFlags: 1
