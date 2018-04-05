@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class PauseScreenController : MonoBehaviour {
     public GameObject pauseScreen;
     public Button resumeButton;
-	// Use this for initialization
-	void Start () {
+
+    void Start () {
         resumeButton.onClick.AddListener(ResumeGame);
 	}
 	
-	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.P)) {
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) {
             if (Time.timeScale != 0) {
                 PauseGame();
             } else {
@@ -27,6 +26,7 @@ public class PauseScreenController : MonoBehaviour {
         pauseScreen.SetActive(false);
         Time.timeScale = 1;
     }
+
     private void PauseGame() {
         Time.timeScale = 0;
         pauseScreen.SetActive(true);
