@@ -10,7 +10,7 @@ public class PowerUpSpawner : MonoBehaviour
     [Range(1f, 30f)]
     public float appearTime = 10f;
     [Range(0f, 10f)]
-    public float powerUpHeightFromGround = 1f;
+    public float powerUpHeight = 1f;
     public List<GameObject> PowerUpPrefabs;
 
     private void Start()
@@ -26,9 +26,8 @@ public class PowerUpSpawner : MonoBehaviour
             NavMeshHit hit;
             if (NavMesh.SamplePosition(randomPoint, out hit, 2.0f, NavMesh.AllAreas))
             {
-                print(hit.position.y);
                 result = hit.position;
-                //result.y = powerUpHeightFromGround;
+                result.y += powerUpHeight;
                 return true;
             }
         }

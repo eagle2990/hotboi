@@ -1350,6 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a932abb27ee0c46b35708b7673d16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  burnAnimatorParent: {fileID: 1920190112061210}
 --- !u!114 &114637798799604242
 MonoBehaviour:
   m_ObjectHideFlags: 1

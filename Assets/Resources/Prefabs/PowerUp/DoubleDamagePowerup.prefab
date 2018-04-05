@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964111420290322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0, z: -8.04}
+  m_LocalPosition: {x: 1.12, y: 0, z: -8.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470863191912086}
@@ -204,13 +204,16 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
   damageDuration: 15
   damageMultiplier: 2
-  initialExplotion: {fileID: 1964111420290322}
-  icon: {fileID: 1964111420290322}
   newMovingFireColor: {r: 1, g: 1, b: 1, a: 1}
   newSparksColor: {r: 1, g: 1, b: 1, a: 1}
   newBaseFireColor: {r: 1, g: 1, b: 1, a: 1}
   newSmokeColor: {r: 0, g: 0, b: 0, a: 0.134}
   newFireLightColor: {r: 1, g: 1, b: 1, a: 1}
+  movingFire: {fileID: 0}
+  sparks: {fileID: 0}
+  baseFire: {fileID: 0}
+  smoke: {fileID: 0}
+  fireLight: {fileID: 0}
 --- !u!114 &114533446981886850
 MonoBehaviour:
   m_ObjectHideFlags: 1
