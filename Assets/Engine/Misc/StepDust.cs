@@ -6,8 +6,6 @@ public class StepDust : MonoBehaviour {
 
     public ParticleSystem leftStepDust;
     public ParticleSystem rightStepDust;
-    Animation animation;
-    // Use this for initialization
     void Start() {
     }
 

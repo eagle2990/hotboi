@@ -16,7 +16,7 @@ public class FlickeringLight : MonoBehaviour {
 
     //keep a copy of the orignal color
     public Color originalColor;
-    private Light light;
+    private new Light light;
 
     private int x = 0;
     //Store the original color 
