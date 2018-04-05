@@ -6,21 +6,21 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class DeathScreenController : MonoBehaviour {
+
     public GameObject deathScreen;
     public TextMeshProUGUI scoreTable;
     public Button playAgainButton;
     public UserData userData;
-    private DataLoader dataLoader;
     public FloatVariable SweetboiHP;
     public PlayerBaseData SweetboiStats;
     
-    // Use this for initialization
+    private DataLoader dataLoader;
+
 	void Start () {
         playAgainButton.onClick.AddListener(PlayAgain);
         dataLoader = gameObject.GetComponent<DataLoader>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
         if (deathScreen.activeSelf == true && Input.GetKeyDown(KeyCode.R)) {
             PlayAgain();
@@ -28,19 +28,16 @@ public class DeathScreenController : MonoBehaviour {
     }
 
     public void ShowDeathScreen() {
-        
-        //dataLoader.LoadScores(10);
-        //ShowUserScores();
         dataLoader.LoadGlobalData();
+
         if (!userData.isLoggedIn) {
             ShowGlobalScores();
         } else {
-            print("private data loaded");
-            //dataLoader.LoadPrivateData();
             ShowUserScores();
         }
         deathScreen.SetActive(true);
     }
+
     public void HideDeathScreen() {
         deathScreen.SetActive(false);
     }
@@ -53,8 +50,8 @@ public class DeathScreenController : MonoBehaviour {
         }
         scoreTable.SetText(ScoreFieldText);
     }
-    public void ShowGlobalScores() {
 
+    public void ShowGlobalScores() {
         string ScoreFieldText = "";
         List<Dictionary<string, int>> globalGames = userData.GetGlobalScores();
         for (int i = 0; i < globalGames.Count; i++) {
@@ -77,7 +74,6 @@ public class DeathScreenController : MonoBehaviour {
         //userData.
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
-        
     }
 
 }
