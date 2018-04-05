@@ -162,7 +162,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1410366692012336
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -447,6 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4687814979005110}
   - component: {fileID: 137763476691013824}
+  - component: {fileID: 95857881670397112}
   m_Layer: 0
   m_Name: Teddy
   m_TagString: Untagged
@@ -629,12 +630,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1410366692012336}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4430413967896306}
-  m_RootOrder: 3
+  m_Father: {fileID: 4687814979005110}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4430413967896306
 Transform:
@@ -649,7 +650,6 @@ Transform:
   - {fileID: 4415133787587096}
   - {fileID: 4687814979005110}
   - {fileID: 224359292944467160}
-  - {fileID: 4427170355486950}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -776,7 +776,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4427170355486950}
   m_Father: {fileID: 4430413967896306}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -920,6 +921,23 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: f0541f4e022461740b4b89453fd34557, type: 3}
   m_Controller: {fileID: 9100000, guid: a37f27f67ee98344d9843fb68473b79a, type: 2}
   m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95857881670397112
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920190112061210}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7d8948401f6a2244b73f626f10184a1, type: 2}
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -8127,7 +8145,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -207357633
+  randomSeed: 1066502323
   InitialModule:
     serializedVersion: 3
     enabled: 1
