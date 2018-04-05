@@ -394,6 +394,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4552490464928178}
+  - component: {fileID: 95620247787222076}
   m_Layer: 0
   m_Name: BurningMan
   m_TagString: Untagged
@@ -528,7 +529,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1821331389588084
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -844,15 +845,15 @@ Transform:
   m_GameObject: {fileID: 1821331389588084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.625, y: 0.625, z: 0.625}
   m_Children:
   - {fileID: 4227115065807910}
   - {fileID: 4820274499592326}
   - {fileID: 4955578550360412}
   - {fileID: 4368670253095906}
   - {fileID: 4277460000038896}
-  m_Father: {fileID: 4685994902451640}
-  m_RootOrder: 3
+  m_Father: {fileID: 4552490464928178}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4519607549466892
 Transform:
@@ -894,6 +895,7 @@ Transform:
   m_Children:
   - {fileID: 4741607074163466}
   - {fileID: 4429268815286584}
+  - {fileID: 4503200417965738}
   m_Father: {fileID: 4685994902451640}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -978,7 +980,6 @@ Transform:
   - {fileID: 4808866922915256}
   - {fileID: 4676525670087282}
   - {fileID: 4552490464928178}
-  - {fileID: 4503200417965738}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1210,6 +1211,23 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b661d77a0ca07a045ac0623668fed786, type: 3}
   m_Controller: {fileID: 9100000, guid: 2c7cb11248f8be747a69a6d2f4560c1b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95620247787222076
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1583213982938172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62700fc0f8b410b4b807a9155dd978e3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1566,7 +1584,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 467697170
+  randomSeed: 1502700186
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4933,7 +4951,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1207565423
+  randomSeed: -1278121436
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5837,7 +5855,7 @@ ParticleSystem:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 0.6117647}
-        key2: {r: 0.45588237, g: 0.2966472, b: 0.17430797, a: 0}
+        key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0.58823526, g: 0.10953345, b: 0, a: 0}
         key4: {r: 1, g: 0.6413793, b: 0, a: 1}
         key5: {r: 1, g: 0.6413793, b: 0, a: 0}
@@ -11655,7 +11673,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -335963624
+  randomSeed: -1786526478
   InitialModule:
     serializedVersion: 3
     enabled: 1
