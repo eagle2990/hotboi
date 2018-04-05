@@ -115,7 +115,7 @@ Animator:
   m_GameObject: {fileID: 1512554244620082}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db95da0a52e2edd4ab3906429390578d, type: 2}
+  m_Controller: {fileID: 9100000, guid: c6af061ae248c734ea093169b83d1ba6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightDisappearTime: 3.5
 --- !u!114 &114197826006287182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,12 +182,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1189a3ec4135245a4a20d233283014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagFilter: 
+  lifetimeSeconds: 10
+  beginIntensity: 0
+  finishIntensity: 5
+  lightAppearTime: 4
+  lightDisappearTime: 2
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
-  tagFilter: 
-  lifetimeSeconds: 10
-  startingIntensity: 5
   appearsEvent:
     m_PersistentCalls:
       m_Calls:

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114249859170473206}
   - component: {fileID: 114605577372936812}
   - component: {fileID: 135516749068850768}
-  - component: {fileID: 95503196103686002}
+  - component: {fileID: 95230635889200412}
   m_Layer: 0
   m_Name: HealthPowerUp
   m_TagString: Untagged
@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 198383512855356090}
   - component: {fileID: 114298328237312492}
   - component: {fileID: 199966870359440728}
+  - component: {fileID: 95105675983299056}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -72,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150347174177464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.08, y: 0, z: -0.65}
+  m_LocalPosition: {x: -10.08, y: 1.5, z: -0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4830823524466582}
@@ -99,14 +100,31 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1683502824050172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4644170778766044}
   m_Father: {fileID: 4600156929316994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95503196103686002
+--- !u!95 &95105675983299056
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683502824050172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eaed62fa315f7ad49aab177b9ff90342, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95230635889200412
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -115,7 +133,7 @@ Animator:
   m_GameObject: {fileID: 1150347174177464}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eaed62fa315f7ad49aab177b9ff90342, type: 2}
+  m_Controller: {fileID: 9100000, guid: d06c1978023b2ef488c3add51f7c2d09, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

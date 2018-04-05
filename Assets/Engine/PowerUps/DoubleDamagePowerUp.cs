@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-[RequireComponent(typeof(Animator))]
+
 public class DoubleDamagePowerUp : MonoBehaviour {
     public PlayerBaseData playerStats;
     [Range(5f, 30f)]
@@ -24,26 +24,20 @@ public class DoubleDamagePowerUp : MonoBehaviour {
     private WeaponBasicData weaponStats;
 
     private void Start() {
-        animator = GetComponent<Animator>();
+
         fireParticleEffect = FindPlayer()[0].transform.parent.transform.Find("FireParticleEffect").gameObject;
         movingFire = fireParticleEffect.transform.Find("MovingFire").GetComponent<ParticleSystem>().main;
         sparks = fireParticleEffect.transform.Find("Sparks").GetComponent<ParticleSystem>().main;
         baseFire = fireParticleEffect.transform.Find("BaseFire").GetComponent<ParticleSystem>().main;
         smoke = fireParticleEffect.transform.Find("Smoke").GetComponent<ParticleSystem>().main;
         fireLight = fireParticleEffect.transform.Find("FireLight").GetComponent<FlickeringLight>();
-        animator.SetBool("appear", false);
-        animator.SetBool("consumed", false);
-        animator.SetBool("disappear", false);
+
     }
 
     public void Appear() {
-        animator.SetBool("appear", true);
-        //initialExplotion.SetActive(true);
-        //icon.SetActive(true);
     }
 
     public void Consumed() {
-        animator.SetBool("consumed", true);
         movingFire.startColor = newMovingFireColor;
         sparks.startColor = newSparksColor;
         baseFire.startColor = newBaseFireColor;
@@ -53,9 +47,6 @@ public class DoubleDamagePowerUp : MonoBehaviour {
     }
 
     public void Dissapear() {
-        animator.SetBool("disappear", true);
-        //initialExplotion.SetActive(false);
-        //icon.SetActive(false);
     }
 
     private GameObject[] FindPlayer() {

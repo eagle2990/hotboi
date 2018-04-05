@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(ParticleSystem))]
+[RequireComponent(typeof(Animator))]
 public class PowerUp : MonoBehaviour
 {
     [TagSelector]
@@ -21,6 +22,7 @@ public class PowerUp : MonoBehaviour
     public UnityEvent consumedEvent;
     public UnityEvent dissapearsEvent;
 
+    private Animator animator;
     private Collider objCollider;
     private float currentLifetime;
     private new ParticleSystem.EmissionModule particleSystem;
@@ -32,6 +34,9 @@ public class PowerUp : MonoBehaviour
         pointLight = gameObject.GetComponentInChildren<ParticleSystem>().GetComponentInChildren<Light>();
         Appears();
         objCollider = GetComponent<Collider>();
+        animator = GetComponent<Animator>();
+        animator.SetBool("consumed", false);
+        animator.SetBool("disappear", false);
     }
 
     void Appears()
@@ -42,11 +47,13 @@ public class PowerUp : MonoBehaviour
 
     void GetConsumed()
     {
+        animator.SetBool("consumed", true);
         consumedEvent.Invoke();
     }
 
     void Dissapears()
     {
+        animator.SetBool("disappear", true);
         if (gameObject.GetComponentInChildren<ParticleSystem>() != null) {
             particleSystem.enabled = false;
             objCollider.enabled = false;
