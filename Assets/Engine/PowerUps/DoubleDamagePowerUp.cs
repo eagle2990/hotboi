@@ -24,6 +24,7 @@ public class DoubleDamagePowerUp : MonoBehaviour {
     private WeaponBasicData weaponStats;
 
     private void Start() {
+        animator = GetComponent<Animator>();
         fireParticleEffect = FindPlayer()[0].transform.parent.transform.Find("FireParticleEffect").gameObject;
         movingFire = fireParticleEffect.transform.Find("MovingFire").GetComponent<ParticleSystem>().main;
         sparks = fireParticleEffect.transform.Find("Sparks").GetComponent<ParticleSystem>().main;
