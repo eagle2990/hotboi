@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 224729689469735294}
   - component: {fileID: 222369768559538308}
   - component: {fileID: 114869679245948334}
+  - component: {fileID: 114581578287373038}
   m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
@@ -331,6 +332,7 @@ MonoBehaviour:
   sprintDepletionMultiplier: 20
   sprintRechargeMultiplier: 20
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
+  timer: 0
 --- !u!114 &114098798556916750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -750,7 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49275517, g: 0.66801095, b: 0.6838235, a: 0.23529412}
+  m_Color: {r: 0.49275517, g: 0.66801095, b: 0.6838235, a: 0.317}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -809,6 +811,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114581578287373038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1652344422287614}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9383c1ba7af62f349b26ea61c718144c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveform: 0
+  delay: 0
+  baseStart: 2
+  amplitude: 1
+  phase: 1
+  frequency: 3
 --- !u!114 &114683702252402952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1008,7 +1027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47794116, g: 0.8919877, b: 1, a: 0.23529412}
+  m_Color: {r: 0.47794116, g: 0.8919877, b: 1, a: 0.378}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

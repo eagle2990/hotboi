@@ -59,13 +59,9 @@ public class PlayerController : MonoBehaviour
             if (move.magnitude == 0) {
                 _animator.SetFloat("forwardSpeed", 0f, dampTime, Time.deltaTime);
             }
-
-
-
         }
 
         _moveDir.y -= Gravity * Time.deltaTime;
-
         _characterController.Move(_moveDir * Time.deltaTime);
     }
 

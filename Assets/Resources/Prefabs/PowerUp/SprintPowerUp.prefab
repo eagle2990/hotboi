@@ -271,6 +271,7 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
   sprintDuration: 5
   sprintBar: {fileID: 1873638114485732, guid: a18cb8323404e3d48bd8dc557823ffe6, type: 2}
+  fill: {fileID: 0}
 --- !u!135 &135480879005922690
 SphereCollider:
   m_ObjectHideFlags: 1
