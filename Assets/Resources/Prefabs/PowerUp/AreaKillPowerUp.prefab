@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 198876329563090174}
   - component: {fileID: 199448816585233100}
   - component: {fileID: 95005838200464668}
+  - component: {fileID: 114214048537275478}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -210,6 +211,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114214048537275478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038021271086902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightDisappearTime: 3.5
 --- !u!114 &114242660961309256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -498,7 +511,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1880426699
+  randomSeed: -907092315
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3904,7 +3917,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -131773214
+  randomSeed: -1259652704
   InitialModule:
     serializedVersion: 3
     enabled: 1
