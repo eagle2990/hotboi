@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114704446541788802}
   - component: {fileID: 114722253938173782}
   - component: {fileID: 82590611536099238}
+  - component: {fileID: 114658810851957524}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -142,6 +143,20 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!114 &114658810851957524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576941407162164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb505a997e92e76439824791d1951449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToAdd: 1
+  addScoreTimer: 2
+  score: {fileID: 11400000, guid: 76e9ed73e692de5498bf224f16db0682, type: 2}
 --- !u!114 &114704446541788802
 MonoBehaviour:
   m_ObjectHideFlags: 1
