@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7352941, g: 0.3145508, b: 0.24329586, a: 0.19607843}
+  m_Color: {r: 0.7352941, g: 0.3145508, b: 0.24329586, a: 0.27450982}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.14509805, b: 0, a: 0.11764706}
+  m_Color: {r: 1, g: 0.14509805, b: 0, a: 0.09803922}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47794116, g: 0.8919877, b: 1, a: 0.078431375}
+  m_Color: {r: 0.47794116, g: 0.8919877, b: 1, a: 0.11764706}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1268,8 +1268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.34997, y: -0.000015020814}
-  m_SizeDelta: {x: -0.70001, y: 0}
+  m_AnchoredPosition: {x: -67.1, y: -0.000015020814}
+  m_SizeDelta: {x: -135.6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224276895690369030
 RectTransform:
@@ -1322,10 +1322,10 @@ RectTransform:
   m_Father: {fileID: 224067578740761892}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -634.2, y: -486.5}
-  m_SizeDelta: {x: 547.1, y: 55.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 319, y: 51.5}
+  m_SizeDelta: {x: 547.1, y: 55.799988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224441040999250010
 RectTransform:
@@ -1491,10 +1491,10 @@ RectTransform:
   m_Father: {fileID: 224067578740761892}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -634.2, y: -450.3}
-  m_SizeDelta: {x: 547.1, y: 55.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 319, y: 86.8}
+  m_SizeDelta: {x: 547.1, y: 55.799988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224906823930227450
 RectTransform:
