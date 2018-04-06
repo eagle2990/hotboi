@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 114249859170473206}
   - component: {fileID: 114605577372936812}
   - component: {fileID: 135516749068850768}
-  - component: {fileID: 95230635889200412}
   m_Layer: 0
   m_Name: HealthPowerUp
   m_TagString: Untagged
@@ -113,23 +112,6 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1683502824050172}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d06c1978023b2ef488c3add51f7c2d09, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95230635889200412
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1150347174177464}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d06c1978023b2ef488c3add51f7c2d09, type: 2}
@@ -349,7 +331,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 485753882
+  randomSeed: 661618716
   InitialModule:
     serializedVersion: 3
     enabled: 1

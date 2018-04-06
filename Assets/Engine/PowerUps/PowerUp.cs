@@ -2,8 +2,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(ParticleSystem))]
-[RequireComponent(typeof(Animator))]
 public class PowerUp : MonoBehaviour
 {
     [TagSelector]
@@ -35,7 +33,6 @@ public class PowerUp : MonoBehaviour
         Appears();
         objCollider = GetComponent<Collider>();
         animator = GetComponentInChildren<Animator>();
-        print(animator);
         animator.SetBool("consumed", false);
         animator.SetBool("disappear", false);
     }

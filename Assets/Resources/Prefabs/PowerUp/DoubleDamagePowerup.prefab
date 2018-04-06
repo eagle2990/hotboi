@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4470863191912086}
   - component: {fileID: 198382723251154460}
-  - component: {fileID: 114050170750007428}
   - component: {fileID: 199292358239908800}
+  - component: {fileID: 95312597643431752}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 4817287298856968}
   - component: {fileID: 114561594029489052}
   - component: {fileID: 135414799564476232}
-  - component: {fileID: 95053570685882848}
   - component: {fileID: 114356386857946064}
   - component: {fileID: 114533446981886850}
   m_Layer: 0
@@ -107,13 +106,13 @@ Transform:
   m_Father: {fileID: 4470863191912086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95053570685882848
+--- !u!95 &95312597643431752
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964111420290322}
+  m_GameObject: {fileID: 1053357039868992}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: db95da0a52e2edd4ab3906429390578d, type: 2}
@@ -160,18 +159,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114050170750007428
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1053357039868992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightDisappearTime: 3.5
 --- !u!114 &114069571196468782
 MonoBehaviour:
   m_ObjectHideFlags: 1
