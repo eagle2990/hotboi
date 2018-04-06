@@ -784,6 +784,7 @@ MonoBehaviour:
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
   SweetboiHP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
   SweetboiStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
+  latestScore: {fileID: 0}
 --- !u!114 &114431373077163396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1015,6 +1016,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataLoader: {fileID: 114967134351521232}
   userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  latestScore: {fileID: 0}
+  comment: {fileID: 0}
 --- !u!114 &114869679245948334
 MonoBehaviour:
   m_ObjectHideFlags: 1

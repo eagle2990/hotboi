@@ -13,6 +13,7 @@ public class DeathScreenController : MonoBehaviour {
     public UserData userData;
     public FloatVariable SweetboiHP;
     public PlayerBaseData SweetboiStats;
+    public TextMeshProUGUI latestScore;
     
     private DataLoader dataLoader;
 

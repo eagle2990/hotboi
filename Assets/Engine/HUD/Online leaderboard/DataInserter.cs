@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DataInserter : MonoBehaviour {
     public DataLoader dataLoader;
     public UserData userdata;
+    public TextMeshProUGUI latestScore;
+    public TextMeshProUGUI comment;
+
     private int inputScore;
     private int inputKills;
     private float inputPlaytime;
@@ -29,6 +33,7 @@ public class DataInserter : MonoBehaviour {
     }
 
     IEnumerator UploadResult(string username, string password, int score, int kills, int playtime, int level) {
+        SendScore(score);
         WWWForm form = new WWWForm();
         form.AddField("usernamePost", username);
         form.AddField("passwordPost", password);
@@ -42,5 +47,19 @@ public class DataInserter : MonoBehaviour {
         if (www.text == "everything ok") {
             dataLoader.LoadPrivateData();
         }
+    }
+
+    public void SendScore(int score) {
+        latestScore.text = score.ToString();
+        comment.text = GetComment(score);
+    }
+
+    private string GetComment(int score) {
+        if (score > 1000) return "okay, that was pretty nice";
+        if (score > 500) return "tell your mother I said hi";
+        if (score > 200) return "quite an achievement.. or is it?";
+        if (score > 100) return "nice, but can do better..";
+        if (score > 10) return "was that it?";
+        return "how's that even possible?";
     }
 }
