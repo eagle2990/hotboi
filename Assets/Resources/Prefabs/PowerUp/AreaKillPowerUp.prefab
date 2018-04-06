@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114312114711656080}
   - component: {fileID: 114056173050780098}
   - component: {fileID: 135039754972866024}
-  - component: {fileID: 95248577145968126}
+  - component: {fileID: 95869290406865806}
   - component: {fileID: 114279407426406954}
   - component: {fileID: 120714649152484550}
+  - component: {fileID: 95425954559648890}
   m_Layer: 0
   m_Name: AreaKillPowerUp
   m_TagString: Untagged
@@ -43,6 +44,7 @@ GameObject:
   - component: {fileID: 4457773242789488}
   - component: {fileID: 198876329563090174}
   - component: {fileID: 199448816585233100}
+  - component: {fileID: 95005838200464668}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -139,7 +141,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95248577145968126
+--- !u!95 &95005838200464668
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038021271086902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d7ed6225c9e8f048821d786839e2f2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95425954559648890
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -148,7 +167,24 @@ Animator:
   m_GameObject: {fileID: 1030916696530562}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d7ed6225c9e8f048821d786839e2f2a, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95869290406865806
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030916696530562}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3904,7 +3940,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -311478193
+  randomSeed: 369829760
   InitialModule:
     serializedVersion: 3
     enabled: 1

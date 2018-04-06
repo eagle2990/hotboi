@@ -2,8 +2,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(ParticleSystem))]
-[RequireComponent(typeof(Animator))]
 public class PowerUp : MonoBehaviour
 {
     [TagSelector]
