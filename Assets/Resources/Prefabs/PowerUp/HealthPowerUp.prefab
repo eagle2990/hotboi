@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 198383512855356090}
   - component: {fileID: 199966870359440728}
   - component: {fileID: 95105675983299056}
-  - component: {fileID: 114752376822475446}
+  - component: {fileID: 114995202930408012}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -172,10 +172,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagFilter: 
   lifetimeSeconds: 10
-  beginIntensity: 0
+  beginIntensity: 5
   finishIntensity: 5
-  lightAppearTime: 4
-  lightDisappearTime: 0.2
+  lightAppearTime: 5
+  lightDisappearTime: 2
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -260,7 +260,7 @@ MonoBehaviour:
   healingAmount: 25
   initialExplotion: {fileID: 1150347174177464}
   icon: {fileID: 1150347174177464}
---- !u!114 &114752376822475446
+--- !u!114 &114995202930408012
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -344,7 +344,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -466399021
+  randomSeed: -1315283099
   InitialModule:
     serializedVersion: 3
     enabled: 1
