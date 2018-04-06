@@ -31,7 +31,7 @@ public class PowerUp : MonoBehaviour
     private void Start()
     {
         particleSystem = gameObject.GetComponentInChildren<ParticleSystem>().emission;
-        pointLight = gameObject.GetComponentInChildren<ParticleSystem>().GetComponentInChildren<Light>();
+        pointLight = gameObject.GetComponentInChildren<ParticleSystem>().gameObject.GetComponentInChildren<Light>();
         Appears();
         objCollider = GetComponent<Collider>();
         animator = GetComponentInChildren<Animator>();
@@ -56,7 +56,7 @@ public class PowerUp : MonoBehaviour
     {
         animator.SetBool("disappear", true);
         if (gameObject.GetComponentInChildren<ParticleSystem>() != null) {
-            particleSystem.enabled = false;
+            //particleSystem.enabled = false;
             objCollider.enabled = false;
             pointLight.GetComponentInParent<ParticleSystemAutoDestroy>().FadeOut();
             gameObject.GetComponentInChildren<ParticleSystem>().transform.parent = null;

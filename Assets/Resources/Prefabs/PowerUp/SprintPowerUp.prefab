@@ -56,7 +56,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4182016966919592}
   - component: {fileID: 198818777917807150}
-  - component: {fileID: 114172708621853342}
   - component: {fileID: 199198384167280078}
   m_Layer: 0
   m_Name: ParticleSystem
@@ -159,18 +158,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114172708621853342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598575217732444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightDisappearTime: 3.5
 --- !u!114 &114197826006287182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,8 +257,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
   sprintDuration: 5
-  sprintBar: {fileID: 1873638114485732, guid: a18cb8323404e3d48bd8dc557823ffe6, type: 2}
-  fill: {fileID: 0}
+  sprintAddAmount: 5
+  sprintBar: {fileID: 0}
+  sprintPowerUpByAddition: 0
 --- !u!135 &135480879005922690
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -344,7 +332,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -202828160
+  randomSeed: 250360684
   InitialModule:
     serializedVersion: 3
     enabled: 1
