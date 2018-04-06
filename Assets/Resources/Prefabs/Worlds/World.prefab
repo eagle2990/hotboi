@@ -7147,6 +7147,8 @@ GameObject:
   - component: {fileID: 114276977577625998}
   - component: {fileID: 82479116652616484}
   - component: {fileID: 82593488910837736}
+  - component: {fileID: 114012762819835468}
+  - component: {fileID: 114905700993038906}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -46636,7 +46638,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e184d2a6a4458b4ea04c8f88568e849, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
@@ -46882,6 +46884,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AdditionalVertexStreamMesh: {fileID: 0}
+--- !u!114 &114012762819835468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618334665228028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b529d527cf47aff40af32bd96d045092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 82479116652616484}
 --- !u!114 &114013016645282354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51145,6 +51159,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AdditionalVertexStreamMesh: {fileID: 0}
+--- !u!114 &114905700993038906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618334665228028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b529d527cf47aff40af32bd96d045092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 82593488910837736}
 --- !u!114 &114906352539863092
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -34,7 +34,8 @@ public class PowerUp : MonoBehaviour
         pointLight = gameObject.GetComponentInChildren<ParticleSystem>().GetComponentInChildren<Light>();
         Appears();
         objCollider = GetComponent<Collider>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
+        print(animator);
         animator.SetBool("consumed", false);
         animator.SetBool("disappear", false);
     }
