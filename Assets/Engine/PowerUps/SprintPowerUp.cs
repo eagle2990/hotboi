@@ -7,13 +7,12 @@ public class SprintPowerUp : MonoBehaviour {
     public PlayerBaseData playerStats;
     public float sprintDuration = 5f;
     public float sprintAddAmount = 5f;
-    public GameObject sprintBar;
     public bool sprintPowerUpByAddition;
 
     private UpdateSprintSlider sprintSliderScript;
 
     private void Start() {
-        sprintSliderScript = sprintBar.transform.GetChild(0).GetComponent<UpdateSprintSlider>();
+        sprintSliderScript = GameObject.FindGameObjectWithTag("SprintBar").transform.GetChild(0).GetComponent<UpdateSprintSlider>();
     }
 
     public void Appear() {
