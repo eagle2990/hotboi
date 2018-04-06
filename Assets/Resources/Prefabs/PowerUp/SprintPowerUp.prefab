@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 198818777917807150}
   - component: {fileID: 199198384167280078}
   - component: {fileID: 95562056783569118}
+  - component: {fileID: 114651147547345498}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -262,6 +263,18 @@ MonoBehaviour:
   phase: 0
   frequency: 1.2
   originalColor: {r: 0, g: 0.75294125, b: 1, a: 1}
+--- !u!114 &114651147547345498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1598575217732444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightDisappearTime: 3.5
 --- !u!114 &114880540439544204
 MonoBehaviour:
   m_ObjectHideFlags: 1
