@@ -20,7 +20,7 @@ public class PowerUp : MonoBehaviour
     public UnityEvent consumedEvent;
     public UnityEvent dissapearsEvent;
 
-    private Animator animator;
+    private Animator[] animators;
     private Collider objCollider;
     private float currentLifetime;
     private new ParticleSystem.EmissionModule particleSystem;
@@ -32,9 +32,11 @@ public class PowerUp : MonoBehaviour
         pointLight = gameObject.GetComponentInChildren<ParticleSystem>().gameObject.GetComponentInChildren<Light>();
         Appears();
         objCollider = GetComponent<Collider>();
-        animator = GetComponentInChildren<Animator>();
-        animator.SetBool("consumed", false);
-        animator.SetBool("disappear", false);
+        animators = GetComponentsInChildren<Animator>();
+        foreach (Animator animator in animators) {
+            animator.SetBool("consumed", false);
+            animator.SetBool("disappear", false);
+        }
     }
 
     void Appears()
@@ -45,13 +47,17 @@ public class PowerUp : MonoBehaviour
 
     void GetConsumed()
     {
-        animator.SetBool("consumed", true);
+        foreach (Animator animator in animators) {
+            animator.SetBool("consumed", true);
+        }
         consumedEvent.Invoke();
     }
 
     void Dissapears()
     {
-        animator.SetBool("disappear", true);
+        foreach (Animator animator in animators) {
+            animator.SetBool("disappear", true);
+        }
         if (gameObject.GetComponentInChildren<ParticleSystem>() != null) {
             //particleSystem.enabled = false;
             objCollider.enabled = false;
