@@ -10,6 +10,7 @@ public class ScoreUI : MonoBehaviour
     public FloatVariable kills;
     public FloatVariable highScore;
     public UserData userData;
+    public FloatVariable HP;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI killsText;
@@ -36,23 +37,25 @@ public class ScoreUI : MonoBehaviour
 
     private void Update()
     {
-        if (IsDifferentFromPreviosValue(previousScoreValue, score))
-        {
-            scoreText.text = string.Format("{0}", score.Value);
-        }
-        if (IsDifferentFromPreviosValue(previousKillsValue, kills))
-        {
-            killsText.text = string.Format("x {0}", kills.Value);
-        }
-        if (IsBiggerFromPreviousValue(previousHighScoreValue, highScore)) 
-        {
-            highScoreText.text = string.Format("{0}", highScore.Value);
-        }
-        if (IsScoreBiggerThanHighScore(score.Value, highScore)) {
-            highScore.SetValue(score);
-        }
-        if (IsGlobalHighscoreBiggerThanLocalHighscore(userData.GetHighscore(), highScore)) {
-            highScore.SetValue(userData.GetHighscore());
+        if (HP.Value > 0f) {
+            if (IsDifferentFromPreviosValue(previousScoreValue, score))
+            {
+                scoreText.text = string.Format("{0}", score.Value);
+            }
+            if (IsDifferentFromPreviosValue(previousKillsValue, kills))
+            {
+                killsText.text = string.Format("x {0}", kills.Value);
+            }
+            if (IsBiggerFromPreviousValue(previousHighScoreValue, highScore)) 
+            {
+                highScoreText.text = string.Format("{0}", highScore.Value);
+            }
+            if (IsScoreBiggerThanHighScore(score.Value, highScore)) {
+                highScore.SetValue(score);
+            }
+            if (IsGlobalHighscoreBiggerThanLocalHighscore(userData.GetHighscore(), highScore)) {
+                highScore.SetValue(userData.GetHighscore());
+            }
         }
     }
 

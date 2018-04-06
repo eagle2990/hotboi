@@ -1086,6 +1086,7 @@ MonoBehaviour:
   kills: {fileID: 11400000, guid: cd97b35802c09eb48bb19623bac38a93, type: 2}
   highScore: {fileID: 11400000, guid: 62d71f58d839c9845b06adf96c3acd71, type: 2}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  HP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
   scoreText: {fileID: 114105393838842314}
   killsText: {fileID: 114280190103788304}
   highScoreText: {fileID: 114715088838844324}
