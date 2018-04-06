@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4182016966919592}
   - component: {fileID: 198818777917807150}
   - component: {fileID: 199198384167280078}
-  - component: {fileID: 95626781126366912}
+  - component: {fileID: 95562056783569118}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -123,7 +123,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95626781126366912
+--- !u!95 &95562056783569118
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -350,7 +350,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -714799556
+  randomSeed: -846697448
   InitialModule:
     serializedVersion: 3
     enabled: 1

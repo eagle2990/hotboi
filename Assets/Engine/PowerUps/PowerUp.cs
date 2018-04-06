@@ -33,7 +33,6 @@ public class PowerUp : MonoBehaviour
         Appears();
         objCollider = GetComponent<Collider>();
         animator = GetComponentInChildren<Animator>();
-        print(animator);
         animator.SetBool("consumed", false);
         animator.SetBool("disappear", false);
     }
