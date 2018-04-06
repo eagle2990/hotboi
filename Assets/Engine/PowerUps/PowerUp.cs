@@ -23,12 +23,12 @@ public class PowerUp : MonoBehaviour
     private Animator[] animators;
     private Collider objCollider;
     private float currentLifetime;
-    private new ParticleSystem.EmissionModule particleSystem;
+    //private new ParticleSystem.EmissionModule particleSystem;
     private Light pointLight;
 
     private void Start()
     {
-        particleSystem = gameObject.GetComponentInChildren<ParticleSystem>().emission;
+        //particleSystem = gameObject.GetComponentInChildren<ParticleSystem>().emission;
         pointLight = gameObject.GetComponentInChildren<ParticleSystem>().gameObject.GetComponentInChildren<Light>();
         Appears();
         objCollider = GetComponent<Collider>();
