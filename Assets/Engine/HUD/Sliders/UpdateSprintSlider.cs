@@ -39,7 +39,7 @@ public class UpdateSprintSlider : MonoBehaviour {
             slider.value = playerSprintAmount.Value;
             previousValue = playerSprintAmount.Value;
         }
-        if (Input.GetKey(KeyCode.LeftShift) && playerSprintAmount.Value > 0) {
+        if (hInput.GetButton("Sprint") && playerSprintAmount.Value > 0) {
             if (timer <= 0) {
                 playerSprintAmount.Value -= Time.deltaTime * sprintDepletionMultiplier;
             }

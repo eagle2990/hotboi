@@ -48,11 +48,12 @@ public class PlayerController : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _moveDir = transform.forward * move.magnitude;
-            if (Input.GetKey(KeyCode.LeftShift) && unitData.SprintAmount.Value > 0) {
+
+            if (hInput.GetButton("Sprint") && unitData.SprintAmount.Value > 0) {
                 _moveDir *= unitData.SprintSpeed.Value;
                 _animator.SetFloat("forwardSpeed", unitData.SprintSpeed.Value, dampTime, Time.deltaTime);
             }
-            if (!Input.GetKey(KeyCode.LeftShift) || unitData.SprintAmount.Value <= 0) {
+            if (!hInput.GetButton("Sprint") || unitData.SprintAmount.Value <= 0) {
                 _moveDir *= unitData.MoveSpeed.Value;
                 _animator.SetFloat("forwardSpeed", unitData.MoveSpeed.Value, dampTime, Time.deltaTime);
             }
