@@ -7,13 +7,9 @@ public class AreaKillPowerUp : MonoBehaviour {
     public List<GameObject> EnemiesToBeKilled;
     [Range(0f, 20f)]
     public float KillRadius = 10f;
-    public GameObject initialExplosion;
-    public GameObject icon;
     public bool showDebugRadius;
 
     public void Appear() {
-        initialExplosion.SetActive(true);
-        icon.SetActive(true);
     }
 
     public void Consumed() {
@@ -21,8 +17,6 @@ public class AreaKillPowerUp : MonoBehaviour {
     }
 
     public void Dissapear() {
-        initialExplosion.SetActive(false);
-        icon.SetActive(false);
     }
     // Display the explosion radius
     void OnDrawGizmosSelected() {

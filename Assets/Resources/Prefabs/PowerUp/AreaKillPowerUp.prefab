@@ -317,8 +317,6 @@ MonoBehaviour:
   - {fileID: 1126829149402450, guid: b882f3e3cef44d1488ecca80348bdcaa, type: 2}
   - {fileID: 1193944862995622, guid: 65254ee4836bcb04b9249d230b99f17a, type: 2}
   KillRadius: 10
-  initialExplosion: {fileID: 1030916696530562}
-  icon: {fileID: 1030916696530562}
   showDebugRadius: 0
 --- !u!114 &114336673779962856
 MonoBehaviour:

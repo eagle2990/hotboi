@@ -5,8 +5,6 @@ public class DoubleDamagePowerUp : MonoBehaviour {
     [Range(5f, 30f)]
     public float damageDuration = 10f;
     public float damageMultiplier = 2f;
-    public GameObject initialExplotion;
-    public GameObject icon;
     private GameObject fireParticleEffect;
     public Color newMovingFireColor; 
     public Color newSparksColor;

@@ -87,7 +87,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SprintPowerUpDisappear
+  m_Name: Disappear|SlowEnemiesPowerUp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -112,7 +112,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SprintPowerUpAppear
+  m_Name: Appear|SlowEnemiesPowerUp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -139,7 +139,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SprintPowerUpConsume
+  m_Name: Consume|SlowEnemiesPowerUp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

@@ -65,7 +65,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4470863191912086
 Transform:
   m_ObjectHideFlags: 1
@@ -204,8 +204,6 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
   damageDuration: 15
   damageMultiplier: 2
-  initialExplotion: {fileID: 1964111420290322}
-  icon: {fileID: 1964111420290322}
   newMovingFireColor: {r: 1, g: 1, b: 1, a: 1}
   newSparksColor: {r: 1, g: 1, b: 1, a: 1}
   newBaseFireColor: {r: 1, g: 1, b: 1, a: 1}
@@ -285,7 +283,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114356386857946064}
-        m_MethodName: Dissapear
+        m_MethodName: Disappear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
