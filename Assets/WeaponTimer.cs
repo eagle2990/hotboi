@@ -40,13 +40,11 @@ public class WeaponTimer : MonoBehaviour {
 
 
     public void SetDoubleDamageTimer(float time) {
-        print("Double damage start");
         playerAnimator.SetBool("doubleDamage", true);
         doubleDamageTimer += time;
     }
 
     public void SetSlowEnemiesTimer(float time) {
-        print("Slow enemies start"); 
         playerAnimator.SetBool("slowEnemies", true);
         slowEnemiesTimer += time;
     }
