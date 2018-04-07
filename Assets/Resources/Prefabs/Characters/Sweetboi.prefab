@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 4808866922915256}
   - component: {fileID: 136355173789823470}
   - component: {fileID: 114311721756335276}
+  - component: {fileID: 114588887216885856}
   m_Layer: 0
   m_Name: InflictDamage
   m_TagString: Untagged
@@ -1370,6 +1371,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114588887216885856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1357363513174858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3dd223c7e0d0ab458e0fda7e22460a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultWeapon: {fileID: 11400000, guid: adf58f96703dd33498e4b611cfded977, type: 2}
+  BurningMan: {fileID: 1583213982938172}
 --- !u!114 &114746629811524918
 MonoBehaviour:
   m_ObjectHideFlags: 1
