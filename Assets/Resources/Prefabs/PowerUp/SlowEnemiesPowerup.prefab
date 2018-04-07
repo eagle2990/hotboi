@@ -170,13 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc6103be3eab2a469a49a1b12b276f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemySpeedMultiplier: 0.193
-  EffectTimer: 10.1
-  newMovingFireColor: {r: 0, g: 0, b: 1, a: 0.878}
-  newSparksColor: {r: 0, g: 0, b: 1, a: 0.878}
-  newBaseFireColor: {r: 0, g: 0, b: 1, a: 0.878}
-  newSmokeColor: {r: 0, g: 0, b: 0, a: 0.191}
-  newFireLightColor: {r: 0, g: 0, b: 1, a: 0.878}
+  enemySpeedMultiplier: 0.5
+  effectTimer: 10
+  burningMan: {fileID: 0}
 --- !u!114 &114310953409911962
 MonoBehaviour:
   m_ObjectHideFlags: 1

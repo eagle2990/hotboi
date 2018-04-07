@@ -8,6 +8,6 @@ public abstract class UnitBasicData : ScriptableObject
     public FloatReference MaxHP;
     public FloatReference MoveSpeed;
     public FloatReference RotationSpeed;
-    public FloatReference Damage;
+    //public FloatReference Damage;
     public UnitType Type;
 }
