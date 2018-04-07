@@ -14,12 +14,10 @@ public class DeathScreenController : MonoBehaviour {
     public FloatVariable SweetboiHP;
     public PlayerBaseData SweetboiStats;
     public TextMeshProUGUI latestScore;
-    
-    private DataLoader dataLoader;
+   
 
 	void Start () {
         playAgainButton.onClick.AddListener(PlayAgain);
-        dataLoader = gameObject.GetComponent<DataLoader>();
 	}
 	
 	void Update () {
@@ -29,8 +27,6 @@ public class DeathScreenController : MonoBehaviour {
     }
 
     public void ShowDeathScreen() {
-        dataLoader.LoadGlobalData();
-
         if (!userData.isLoggedIn) {
             ShowGlobalScores();
         } else {
@@ -53,16 +49,19 @@ public class DeathScreenController : MonoBehaviour {
     }
 
     public void ShowGlobalScores() {
+        StartCoroutine(GlobalScoreLoader());
+    }
+    private IEnumerator GlobalScoreLoader() {
         string ScoreFieldText = "";
         List<Dictionary<string, int>> globalGames = userData.GetGlobalScores();
+        yield return new WaitUntil(() => globalGames != null);
         for (int i = 0; i < globalGames.Count; i++) {
-            //ScoreFieldText += i + 1 + ": " + globalGames[i]["score"] + "\n";
             foreach (KeyValuePair<string, int> kvp in globalGames[i]) {
-                //textBox3.Text += ("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
                 ScoreFieldText += string.Format(i+1 + ". " + "{0}: {1}", kvp.Key, kvp.Value + "\n");
             }
         }
         scoreTable.SetText(ScoreFieldText);
+
     }
 
     private void ResetPlayerHealth() {
@@ -72,9 +71,7 @@ public class DeathScreenController : MonoBehaviour {
 
     private void PlayAgain() {
         ResetPlayerHealth();
-        //userData.
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }
-
 }

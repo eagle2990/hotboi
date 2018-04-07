@@ -13,7 +13,7 @@ public class UpdateSprintSlider : MonoBehaviour {
 
     private Slider slider;
     private float previousValue;
-    private Color origColor;
+    //private Color origColor;
 
     void Start() {
         timer = 0f;
@@ -21,7 +21,7 @@ public class UpdateSprintSlider : MonoBehaviour {
         sprintRechargeMultiplier = 10f;
         playerSprintAmount.Value = playerStats.MaxSprintAmount.Value;
         slider = GetComponent<Slider>();
-        origColor = slider.GetComponentInChildren<Image>().color;
+        //origColor = slider.GetComponentInChildren<Image>().color;
         slider.GetComponentInChildren<FlashSprintBar>().enabled = false;
         slider.maxValue = playerStats.MaxSprintAmount;
 

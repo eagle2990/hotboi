@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 222605224486220240}
   - component: {fileID: 114925761022624682}
   - component: {fileID: 114121640084518216}
-  - component: {fileID: 114427772762195512}
+  - component: {fileID: 114972357439407540}
   m_Layer: 5
   m_Name: Global scores
   m_TagString: Untagged
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 222416285964480974}
   - component: {fileID: 114475811564983958}
   - component: {fileID: 114280401778801846}
-  - component: {fileID: 114368945207202148}
+  - component: {fileID: 114543852523712748}
   m_Layer: 5
   m_Name: User scores
   m_TagString: Untagged
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114427772762195512}
+      - m_Target: {fileID: 0}
         m_MethodName: ShowGlobalScores
         m_Mode: 1
         m_Arguments:
@@ -718,7 +718,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114368945207202148}
+      - m_Target: {fileID: 0}
         m_MethodName: ShowUserScores
         m_Mode: 1
         m_Arguments:
@@ -772,42 +772,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114368945207202148
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1972762105542900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3916a69b58e1c3648bc472340f095403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathScreen: {fileID: 1747727910722690}
-  scoreTable: {fileID: 114697688153548170}
-  playAgainButton: {fileID: 114293979910517612}
-  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  SweetboiHP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
-  SweetboiStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
-  latestScore: {fileID: 0}
---- !u!114 &114427772762195512
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250507270537368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3916a69b58e1c3648bc472340f095403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathScreen: {fileID: 1747727910722690}
-  scoreTable: {fileID: 114697688153548170}
-  playAgainButton: {fileID: 114293979910517612}
-  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  SweetboiHP: {fileID: 11400000, guid: 1d9320eea94c1a24f95910f5fdf22fb0, type: 2}
-  SweetboiStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
-  latestScore: {fileID: 0}
 --- !u!114 &114475811564983958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1016,6 +980,18 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114543852523712748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1972762105542900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346416772149f584e93ddf26984d2de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &114570267215831784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1679,6 +1655,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Play again
+--- !u!114 &114972357439407540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250507270537368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346416772149f584e93ddf26984d2de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
 --- !u!114 &114979412290664850
 MonoBehaviour:
   m_ObjectHideFlags: 1
