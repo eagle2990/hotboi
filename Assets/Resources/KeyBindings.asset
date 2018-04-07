@@ -13,11 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputs:
   - Name: Sprint
-    UniqueName: 
+    UniqueName: Sprint
     Type: 0
     Positive:
       Primary: 304
-      Secondary: 337
+      Secondary: 357
     Negative:
       Primary: 0
       Secondary: 0
