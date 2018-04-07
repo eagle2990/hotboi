@@ -46,7 +46,7 @@ public class DoubleDamagePowerUp : MonoBehaviour {
         //TODO change enemy attack
     }
 
-    public void Dissapear() {
+    public void Disappear() {
     }
 
     private GameObject[] FindPlayer() {

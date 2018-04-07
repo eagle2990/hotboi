@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1189a3ec4135245a4a20d233283014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagFilter: 
+  tagFilter: Player
   lifetimeSeconds: 10
   beginIntensity: 0
   finishIntensity: 5
@@ -344,7 +344,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1912136481
+  randomSeed: -1750988429
   InitialModule:
     serializedVersion: 3
     enabled: 1
