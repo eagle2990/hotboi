@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964111420290322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.23, y: 0, z: -8.04}
+  m_LocalPosition: {x: -25.39, y: 0, z: -8.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470863191912086}
@@ -170,7 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightDisappearTime: 3.5
 --- !u!114 &114069571196468782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -203,7 +202,6 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 5821b8edd02f5754aaca65194c3e8829, type: 2}
   damageDuration: 5
   damageMultiplier: 2
-  burningMan: {fileID: 0}
   doubleDamageStats: {fileID: 11400000, guid: c2985cb6c32f7d547a6e5b8dd5c7573a, type: 2}
 --- !u!114 &114561594029489052
 MonoBehaviour:
