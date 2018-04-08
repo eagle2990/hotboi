@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 198876329563090174}
   - component: {fileID: 199448816585233100}
   - component: {fileID: 95005838200464668}
+  - component: {fileID: 114832661887097846}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -295,7 +296,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030916696530562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b4d343afaec9a42b18dbd3b9c80efd, type: 3}
   m_Name: 
@@ -336,13 +337,24 @@ MonoBehaviour:
   phase: 0
   frequency: 1.2
   originalColor: {r: 0.76470596, g: 0, b: 0, a: 0.816}
+--- !u!114 &114832661887097846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038021271086902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!120 &120714649152484550
 LineRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030916696530562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 114591151792381342}
   - component: {fileID: 114409567753210078}
   - component: {fileID: 82169406676463878}
+  - component: {fileID: 114502341799582842}
   m_Layer: 8
   m_Name: Superfan(AlwaysChasing)
   m_TagString: Untagged
@@ -1042,7 +1043,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6c4b4fd96254636488d90d9d8acfaceb, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1263,13 +1264,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 82169406676463878}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 114502341799582842}
+        m_MethodName: PlayRandom
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 6c4b4fd96254636488d90d9d8acfaceb,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1391,6 +1391,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStepDust: {fileID: 198763976296078030}
   rightStepDust: {fileID: 198704356955365264}
+--- !u!114 &114502341799582842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193944862995622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b586af839fecd864e89ea3013a7d8468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieSounds:
+  - {fileID: 8300000, guid: 9e96c5022c664bd45b0a579f3bd0d205, type: 3}
+  - {fileID: 8300000, guid: aa28de0397425e84c95a2940c268d01b, type: 3}
+  - {fileID: 8300000, guid: 494f1615dbc191b479d13adebe53cee0, type: 3}
+  - {fileID: 8300000, guid: 425d8b11b2421d947b59686d2d5c2489, type: 3}
+  - {fileID: 8300000, guid: c3e09a36b35d0af44847cb21e856cbf3, type: 3}
+  - {fileID: 8300000, guid: 0ac69276fcffb9e4d921e4c6fb499500, type: 3}
+  - {fileID: 8300000, guid: bbca8f12c93b2bf4e8a3246ef497a8a9, type: 3}
+  - {fileID: 8300000, guid: 809a88e6fdbf68847b8dcfb765aaabad, type: 3}
+  - {fileID: 8300000, guid: 523d0217d8c2bf74f8136a862a14d9cf, type: 3}
+  - {fileID: 8300000, guid: a5e8059782cf2a54997b84c73cd89db4, type: 3}
+  - {fileID: 8300000, guid: 05554849278443840b909f5f23baccfa, type: 3}
 --- !u!114 &114554871721591504
 MonoBehaviour:
   m_ObjectHideFlags: 1
