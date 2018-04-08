@@ -18,17 +18,14 @@ MonoBehaviour:
     Variable: {fileID: 0}
   MoveSpeed:
     UseConstant: 1
-    ConstantValue: 8.5
+    ConstantValue: 7.5
     Variable: {fileID: 0}
   RotationSpeed:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  Damage:
-    UseConstant: 1
-    ConstantValue: 30
-    Variable: {fileID: 0}
   Type: {fileID: 11400000, guid: c431c3c535e9a39418b6a8be2e0812f3, type: 2}
+  Damage: {fileID: 0}
   WanderSpeed:
     UseConstant: 1
     ConstantValue: 1.4
