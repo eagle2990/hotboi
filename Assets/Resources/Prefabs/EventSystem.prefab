@@ -173,8 +173,8 @@ MonoBehaviour:
   randomEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1576941407162164}
-        m_MethodName: 
+      - m_Target: {fileID: 114722253938173782}
+        m_MethodName: PlayRandom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
