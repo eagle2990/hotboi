@@ -25,6 +25,7 @@ public class PowerUp : MonoBehaviour
     private float currentLifetime;
     //private new ParticleSystem.EmissionModule particleSystem;
     private Light pointLight;
+    private bool gotConsumed;
 
     private void Start()
     {
@@ -47,6 +48,7 @@ public class PowerUp : MonoBehaviour
 
     void GetConsumed()
     {
+        gotConsumed = true;
         foreach (Animator animator in animators) {
             animator.SetBool("consumed", true);
         }
@@ -55,8 +57,10 @@ public class PowerUp : MonoBehaviour
 
     void Dissapears()
     {
-        foreach (Animator animator in animators) {
-            animator.SetBool("disappear", true);
+        if (!gotConsumed) {
+            foreach (Animator animator in animators) {
+                animator.SetBool("disappear", true);
+            }
         }
         if (gameObject.GetComponentInChildren<ParticleSystem>() != null) {
             //particleSystem.enabled = false;
