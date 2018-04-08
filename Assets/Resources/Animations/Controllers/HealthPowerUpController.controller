@@ -41,7 +41,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: consumed
+    m_ConditionEvent: disappear
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102071201814342160}
@@ -65,7 +65,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: disappear
+    m_ConditionEvent: consumed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102797052067726868}
@@ -87,7 +87,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: HealthPowerUpConsumed
+  m_Name: HealthPowerUpDisappear
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -112,7 +112,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: HealtPowerUpDisappear
+  m_Name: HealtPowerUpConsumed
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -171,10 +171,10 @@ AnimatorStateMachine:
     m_Position: {x: 192, y: 48, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102797052067726868}
-    m_Position: {x: 192, y: 216, z: 0}
+    m_Position: {x: 336, y: 192, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102071201814342160}
-    m_Position: {x: -84, y: 156, z: 0}
+    m_Position: {x: 72, y: 192, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
