@@ -269,7 +269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightDisappearTime: 3.5
 --- !u!135 &135516749068850768
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -342,7 +341,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 547731311
+  randomSeed: 377840790
   InitialModule:
     serializedVersion: 3
     enabled: 1
