@@ -19,9 +19,4 @@ public class DoubleDamagePowerUp : MonoBehaviour {
 
     public void Disappear() {
     }
-
-    private GameObject[] FindPlayer() {
-        return GameObject.FindGameObjectsWithTag("Player");
-    }
-
 }

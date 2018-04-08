@@ -149,7 +149,7 @@ public class StartScreenVisualController : MonoBehaviour {
         loginForm.gameObject.SetActive(true);
     }
     public void PlayGame() {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(1);
     }
 
     
