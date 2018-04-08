@@ -13,8 +13,8 @@ public class DataInserter : MonoBehaviour {
     private int inputKills;
     private float inputPlaytime;
     private int inputLevels;
-    //private string CreateUserURL = "https://sweetboi.000webhostapp.com/insert_user.php";
-    private string InsertGameResultURL = "https://sweetboi.000webhostapp.com/insert_game_result.php";
+    private string CreateUserURL = "http://hotboi.veeb.eu/php/insert_user.php";
+    private string InsertGameResultURL = "http://hotboi.veeb.eu/php/insert_game_result.php";
 
     public void UploadResultToDB() {
         StartCoroutine(UploadResult(userdata.GetUsername(),
@@ -23,11 +23,11 @@ public class DataInserter : MonoBehaviour {
     }
 
     public void CreateUser(string name, string username, string password) {
-        //WWWForm form = new WWWForm();
-        //form.AddField("namePost", name);
-        //form.AddField("usernamePost", username);
-        //form.AddField("passwordPost", password);
-        //WWW www = new WWW(CreateUserURL, form);
+        WWWForm form = new WWWForm();
+        form.AddField("namePost", name);
+        form.AddField("usernamePost", username);
+        form.AddField("passwordPost", password);
+        WWW www = new WWW(CreateUserURL, form);
         //TODO check if user with same username already exists
         print("Maybe registered new user: " + username);
     }

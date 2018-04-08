@@ -12,9 +12,9 @@ public class DataLoader : MonoBehaviour {
     Dictionary<string, int> result;
     private List<Dictionary<string, int>> games = new List<Dictionary<string, int>>();
     private List<Dictionary<string, int>> globalGames = new List<Dictionary<string, int>>();
-    private string userAchievementsURL = "https://sweetboi.000webhostapp.com/user_achievements.php?username=";
-    private string userScoresURL = "https://sweetboi.000webhostapp.com/user_scores.php?username=";
-    private string globalScoresURL = "https://sweetboi.000webhostapp.com/global_scores.php?score_limit=";
+    private string userAchievementsURL = "http://hotboi.veeb.eu/php/user_achievements.php?username=";
+    private string userScoresURL = "http://hotboi.veeb.eu/php/user_scores.php?username=";
+    private string globalScoresURL = "http://hotboi.veeb.eu/php/global_scores.php?score_limit=";
 
 
     public void LoadStartingData() {
