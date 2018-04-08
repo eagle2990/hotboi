@@ -66,7 +66,7 @@ public class PowerUp : MonoBehaviour
             //particleSystem.enabled = false;
             objCollider.enabled = false;
             if (pointLight.GetComponentInParent<ParticleSystemAutoDestroy>() != null) {
-                pointLight.GetComponentInParent<ParticleSystemAutoDestroy>().FadeOut();
+                pointLight.GetComponentInParent<ParticleSystemAutoDestroy>().Destroy();
                 gameObject.GetComponentInChildren<ParticleSystem>().transform.parent = null;
             }
             dissapearsEvent.Invoke();

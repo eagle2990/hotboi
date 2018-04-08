@@ -18,6 +18,7 @@ public class AreaKillPowerUp : MonoBehaviour {
 
     public void Dissapear() {
     }
+
     // Display the explosion radius
     void OnDrawGizmosSelected() {
         if (showDebugRadius) {
