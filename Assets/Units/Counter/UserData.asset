@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: reimo110
   password: test123
-  highscore: 300
+  highscore: 190
   isLoggedIn: 1
   mostKills: 0
   highestLevelReached: 0

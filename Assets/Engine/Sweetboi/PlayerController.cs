@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController _characterController;
 
-    public UnitBasicData unitData;
+    public PlayerBaseData unitData;
 
     private float Gravity = 20.0f;
 
@@ -47,8 +47,17 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("run", move.magnitude > 0);
 
             _moveDir = transform.forward * move.magnitude;
+            //If left shift is held down, SPRINT madafakaaaaa
+            if (Input.GetKey(KeyCode.LeftShift) && unitData.SprintAmount.Value > 0) {
+                //TODO when sweetboi animation
+                _animator.SetBool("sprint", true);
+                    
+                _moveDir *= unitData.SprintSpeed.Value;
+            } else {
+                _animator.SetBool("sprint", false);
+                _moveDir *= unitData.MoveSpeed.Value;
+            }
 
-            _moveDir *= unitData.MoveSpeed.Value;
 
         }
 
@@ -57,4 +66,5 @@ public class PlayerController : MonoBehaviour
         _characterController.Move(_moveDir * Time.deltaTime);
     }
 
-    }
+
+}

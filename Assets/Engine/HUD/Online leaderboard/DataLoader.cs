@@ -16,10 +16,6 @@ public class DataLoader : MonoBehaviour {
     private string userScoresURL = "https://sweetboi.000webhostapp.com/user_scores.php?username=";
     private string globalScoresURL = "https://sweetboi.000webhostapp.com/global_scores.php?score_limit=";
 
-    //private string JSONGameResultsURL = "http://localhost/sweetboi/game_results.php?username=";
-
-    private void Start() {
-    }
 
     public void LoadStartingData() {
         StartCoroutine(LoadAchievements());

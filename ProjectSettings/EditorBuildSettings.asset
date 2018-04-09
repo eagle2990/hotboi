@@ -5,18 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/sweetboi - Reimo.unity
-    guid: 2c754516a086e7d46b3d2537f36eb0c0
-  - enabled: 0
-    path: Assets/Scenes/sweetboi - Eduardo.unity
-    guid: 87a57ba7903f88c4086c2ffd19ad1408
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: f1edcbc4acffa954fb78aa800a2bec04
+    guid: 8a317e595fa78a449b31cbd96e5ad236
   - enabled: 1
+    path: Assets/Scenes/sweetboi - Eduardo.unity
+    guid: 87a57ba7903f88c4086c2ffd19ad1408
+  - enabled: 0
     path: Assets/Scenes/sweetboi - Irma.unity
     guid: 988a33f87fab7494fb6168d6bd6bd72d
-  - enabled: 1
-    path: Assets/Scenes/DeathScene.unity
-    guid: fc83e4d84f98a2c439e08768b1c90a58
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000

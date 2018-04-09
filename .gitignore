@@ -40,3 +40,5 @@ sysinfo.txt
 # External Unity plugins
 **/EModules/Hierarchy/
 **/Plugins/*
+/Assets/Plugins.meta
+**~**
