@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Images.meta
+guid: d41c462dd69737342ae1e61ba122cad6
+folderAsset: yes
+timeCreated: 1521978464
+=======
 guid: b50e395febd71e94db6f04fce7cf6d57
 folderAsset: yes
 timeCreated: 1522373841
+>>>>>>> b12db162f7ea9258319255e6cdd1f58453e12521:Assets/Engine/Misc.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
