@@ -11,7 +11,7 @@ public class StartScreenVisualController : MonoBehaviour {
     public UserData userData;
     public Button playButton;
     public GameObject loginForm;
-    public GameObject startScreen;
+    public GameObject loginScreen;
     //login form
     public Button loginButton;
     public InputField username;
