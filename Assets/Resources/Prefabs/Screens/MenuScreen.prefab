@@ -4394,7 +4394,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1197750927950572, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd,
           type: 2}
         m_MethodName: SetActive
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4406,7 +4406,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1090987633624352, guid: 65254ee4836bcb04b9249d230b99f17a,
           type: 2}
         m_MethodName: SetActive
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4418,7 +4418,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1930413232203368, guid: b882f3e3cef44d1488ecca80348bdcaa,
           type: 2}
         m_MethodName: SetActive
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4429,7 +4429,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &114419003387320560
 MonoBehaviour:
   m_ObjectHideFlags: 1
