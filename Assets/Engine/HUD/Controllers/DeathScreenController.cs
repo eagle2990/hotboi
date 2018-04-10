@@ -71,7 +71,7 @@ public class DeathScreenController : MonoBehaviour {
 
     private void PlayAgain() {
         ResetPlayerHealth();
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        SceneManager.LoadSceneAsync("Level1");
         Time.timeScale = 1;
     }
 }

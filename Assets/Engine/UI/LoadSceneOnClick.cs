@@ -10,4 +10,8 @@ public class LoadSceneOnClick : MonoBehaviour {
         Time.timeScale = 1f;
         SceneManager.LoadSceneAsync(sceneIndex);
     }
+    public void LoadByName(string name) {
+        Time.timeScale = 1f;
+        SceneManager.LoadSceneAsync("Level1");
+    }
 }
