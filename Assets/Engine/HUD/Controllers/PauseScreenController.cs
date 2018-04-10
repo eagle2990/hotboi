@@ -8,7 +8,7 @@ public class PauseScreenController : MonoBehaviour {
     public Button resumeButton;
 
     void Start () {
-        resumeButton.onClick.AddListener(ResumeGame);
+        //resumeButton.onClick.AddListener(ResumeGame);
 	}
 	
 	void Update () {

@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b27548a41235b479e893d6e48fb018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  userData: {fileID: 0}
   dataloader: {fileID: 114133236161506514}
+  loginForm: {fileID: 0}
 --- !u!114 &114133236161506514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,15 +102,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4577f007f500ce140974b6df322ee26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoBoard: {fileID: 0}
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  playButton: {fileID: 0}
   loginForm: {fileID: 0}
-  loginScreen: {fileID: 0}
+  loginWindow: {fileID: 0}
+  registerForm: {fileID: 0}
+  registerWindow: {fileID: 0}
   loginButton: {fileID: 0}
   username: {fileID: 0}
   password: {fileID: 0}
-  registerButton: {fileID: 0}
   newUsername: {fileID: 0}
   newPassword: {fileID: 0}
   newRepeatPassword: {fileID: 0}
