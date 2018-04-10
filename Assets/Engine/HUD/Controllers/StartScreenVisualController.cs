@@ -26,9 +26,6 @@ public class StartScreenVisualController : MonoBehaviour {
     public InputField newName;
     public DataInserter dataInserter;
 
-
-    private Login login;
-
     void Start () {
         userData.ResetLocalUserData();
         username.Select();
@@ -112,7 +109,7 @@ public class StartScreenVisualController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return)) {
             //if not logged in, return acts as "log in"
             if (!userData.isLoggedIn) {
-                ChangeButtonText(loginButton, "log out");
+                loginButton.GetComponent<Login>().LogInOut();
             }
             //if logged in, return acts as "play"
             if (userData.isLoggedIn) {
