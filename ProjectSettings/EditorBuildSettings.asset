@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 8a317e595fa78a449b31cbd96e5ad236
   - enabled: 1
-    path: Assets/Scenes/sweetboi - Eduardo.unity
+    path: Assets/Scenes/Level1.unity
     guid: 87a57ba7903f88c4086c2ffd19ad1408
   - enabled: 0
-    path: Assets/Scenes/sweetboi - Irma.unity
-    guid: 988a33f87fab7494fb6168d6bd6bd72d
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
