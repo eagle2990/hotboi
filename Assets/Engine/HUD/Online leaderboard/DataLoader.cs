@@ -68,9 +68,7 @@ public class DataLoader : MonoBehaviour {
             result.Add(splitByString((splitByString((rawScore), "|||")[3]), ":::")[0], Int32.Parse(splitByString((splitByString((rawScore), "|||")[3]), ":::")[1]));
             games.Add(result);
           }
-        //TODO
         userdata.SetHighscore(LoadUserHighscore(games));
-        //userdata.SetHighscore(userdata.GetHighscore());
         userdata.SetScores(games);
         Debug.Log(".. final scores loaded and set ");
     }
@@ -83,9 +81,13 @@ public class DataLoader : MonoBehaviour {
         string globalScoresString = globalScores.text;
         List<string> rawScores = splitByString(globalScoresString, ";;;");
         foreach (string rawScore in rawScores) {
+            if (rawScore == null) {
+                Debug.LogError("Error. rawScore: " + rawScore + "\n. Possibly an empty row in database, 'players' table");
+            } else {
             result = new Dictionary<string, int>();
             result.Add(splitByString((splitByString((rawScore), "|||")[1]), ":::")[1], Int32.Parse(splitByString((splitByString((rawScore), "|||")[0]), ":::")[1]));
             globalGames.Add(result);
+            }
         }
         userdata.SetGlobalScores(globalGames);
         Debug.Log(".. global scores loaded and set ");

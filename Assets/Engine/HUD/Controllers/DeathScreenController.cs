@@ -14,17 +14,6 @@ public class DeathScreenController : MonoBehaviour {
     public FloatVariable SweetboiHP;
     public PlayerBaseData SweetboiStats;
     public TextMeshProUGUI latestScore;
-   
-
-	void Start () {
-        playAgainButton.onClick.AddListener(PlayAgain);
-	}
-	
-	void Update () {
-        if (deathScreen.activeSelf == true && Input.GetKeyDown(KeyCode.R)) {
-            PlayAgain();
-        }
-    }
 
     public void ShowDeathScreen() {
         if (!userData.isLoggedIn) {
@@ -34,7 +23,6 @@ public class DeathScreenController : MonoBehaviour {
         }
         deathScreen.SetActive(true);
     }
-
     public void HideDeathScreen() {
         deathScreen.SetActive(false);
     }
@@ -60,7 +48,9 @@ public class DeathScreenController : MonoBehaviour {
                 ScoreFieldText += string.Format(i+1 + ". " + "{0}: {1}", kvp.Key, kvp.Value + "\n");
             }
         }
+        print("Start print score table");
         scoreTable.SetText(ScoreFieldText);
+        print("end print score table");
 
     }
 
@@ -69,7 +59,7 @@ public class DeathScreenController : MonoBehaviour {
         SweetboiStats.HP.Value = SweetboiStats.MaxHP.Value;
     }
 
-    private void PlayAgain() {
+    public void PlayAgain() {
         ResetPlayerHealth();
         SceneManager.LoadSceneAsync("Level1");
         Time.timeScale = 1;
