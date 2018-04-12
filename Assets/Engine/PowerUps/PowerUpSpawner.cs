@@ -48,4 +48,8 @@ public class PowerUpSpawner : MonoBehaviour
             Instantiate(GetRandomPowerUp(), point, Quaternion.identity);
         }
     }
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, range);
+    }
 }
