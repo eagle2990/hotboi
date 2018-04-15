@@ -103,10 +103,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
+  menuLoginButton: {fileID: 0}
+  playButton: {fileID: 0}
   loginForm: {fileID: 0}
   loginWindow: {fileID: 0}
   registerForm: {fileID: 0}
   registerWindow: {fileID: 0}
+  registerScreenButton: {fileID: 0}
   loginButton: {fileID: 0}
   username: {fileID: 0}
   password: {fileID: 0}
