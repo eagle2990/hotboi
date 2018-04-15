@@ -613,7 +613,7 @@ Prefab:
     - target: {fileID: 224138278802558890, guid: 37878a4688b179d4789095db5331b13f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1008.2554
+      value: 973.9413
       objectReference: {fileID: 0}
     - target: {fileID: 224138278802558890, guid: 37878a4688b179d4789095db5331b13f,
         type: 2}
@@ -1091,7 +1091,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 6d430105d48c7a344bf99f50f24ee101, type: 3}
+      objectReference: {fileID: 8300000, guid: 278c4b1a8aee2004bb3d944fccb6c57b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f347eaf6a5b24b498301bbc094d984b, type: 2}
   m_IsPrefabParent: 0
