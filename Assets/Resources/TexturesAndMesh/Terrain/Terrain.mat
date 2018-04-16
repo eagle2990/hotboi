@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseBump:
-        m_Texture: {fileID: 2800000, guid: a8e3086f24e30444fb2ea45384d0dc8b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2af5538320560d240a3cb299b4cbd873, type: 3}
         m_Scale: {x: 30, y: 30}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -43,7 +43,7 @@ Material:
         m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bfac96579ea66d84ebe07c0cf698380e, type: 3}
+        m_Texture: {fileID: 2800000, guid: e682edaa862db6942ad558cd5cb749e9, type: 3}
         m_Scale: {x: 30, y: 30}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -59,19 +59,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture1:
-        m_Texture: {fileID: 2800000, guid: 2dffff02d196ff146b74c6de6e289755, type: 3}
+        m_Texture: {fileID: 2800000, guid: 595b47970749d074cace000e19e22f0e, type: 3}
         m_Scale: {x: 50, y: 50}
         m_Offset: {x: 0, y: 0}
     - _Texture1Bump:
-        m_Texture: {fileID: 2800000, guid: b43d8dd35cf853043aca293d99f9def8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8f6dc6530a85b364b8380d8979ad8810, type: 3}
         m_Scale: {x: 50, y: 50}
         m_Offset: {x: 0, y: 0}
     - _Texture2:
-        m_Texture: {fileID: 2800000, guid: 761ebccb4249c0a4db7ae2fc7ef24379, type: 3}
+        m_Texture: {fileID: 2800000, guid: 58efe7be233723e41abff0e9a2d3b58a, type: 3}
         m_Scale: {x: 40, y: 40}
         m_Offset: {x: 0, y: 0}
     - _Texture2Bump:
-        m_Texture: {fileID: 2800000, guid: c1503b152596f0a49974e823d90806e5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8a8a553de2bb4b74489cee65f5644aff, type: 3}
         m_Scale: {x: 40, y: 40}
         m_Offset: {x: 0, y: 0}
     - _Texture3:
@@ -91,7 +91,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _Metallic: 0.182
+    - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
