@@ -1221,7 +1221,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 0
     m_CustomResolution: -1
     m_Strength: 0.3
     m_Bias: 0
@@ -1588,7 +1588,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1858647724
+  randomSeed: -1696371361
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4949,7 +4949,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1048348082
+  randomSeed: -956479559
   InitialModule:
     serializedVersion: 3
     enabled: 1
