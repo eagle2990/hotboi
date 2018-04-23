@@ -12,11 +12,5 @@ public class MenuMusicNonStop : MonoBehaviour {
             AudioBegin = true;
         }
     }
-    void Update() {
-        //if (Application.loadedLevelName == "Upgraded") {
-        //    GetComponent<AudioSource>().Stop();
-        //    AudioBegin = false;
-        //}
-    }
 
 }
