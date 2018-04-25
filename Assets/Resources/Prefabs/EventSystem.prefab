@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leastSecondsBetweenEvents: 3
-  mostSecondsBetweenEvents: 10
+  mostSecondsBetweenEvents: 8
   randomEvent:
     m_PersistentCalls:
       m_Calls:
