@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToAdd: 1
-  addScoreTimer: 2
+  addScoreTimer: 0.5
   score: {fileID: 11400000, guid: 76e9ed73e692de5498bf224f16db0682, type: 2}
 --- !u!114 &114704446541788802
 MonoBehaviour:
