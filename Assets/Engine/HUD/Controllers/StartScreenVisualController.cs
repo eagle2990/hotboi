@@ -17,18 +17,20 @@ public class StartScreenVisualController : MonoBehaviour {
     public GameObject registerScreenButton;
     //login form
     public Button loginButton;
-    public InputField username;
-    public InputField password;
+    public TMP_InputField username;
+    public TMP_InputField password;
     //reg form
-    public InputField newUsername;
-    public InputField newPassword;
-    public InputField newRepeatPassword;
-    public InputField newName;
+    public TMP_InputField newUsername;
+    public TMP_InputField newPassword;
+    public TMP_InputField newRepeatPassword;
+    public TMP_InputField newName;
     public DataInserter dataInserter;
 
     void Start () {
         userData.ResetLocalUserData();
-        username.Select();
+        if (loginWindow.activeSelf) {
+            username.Select();
+        }
     }
 	
 	void Update () {

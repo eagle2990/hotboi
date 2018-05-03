@@ -9,15 +9,15 @@ public class Login : MonoBehaviour {
     public GameObject loginForm;
 
     private string LoginURL = "http://hotboi.veeb.eu/php/login.php";
-    private InputField username;
-    private InputField password;
+    private TMP_InputField username;
+    private TMP_InputField password;
 
     private string textToBeShowIfLoggedIn;
     private string textToBeShowIfLoggedOut;
 
     private void Start() {
-        username = loginForm.transform.Find("Username").GetComponent<InputField>();
-        password = loginForm.transform.Find("Password").GetComponent<InputField>();
+        username = loginForm.transform.Find("Username").GetComponent<TMP_InputField>();
+        password = loginForm.transform.Find("Password").GetComponent<TMP_InputField>();
     }
 
     private void LogIn() {
