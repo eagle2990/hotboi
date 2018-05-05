@@ -27,7 +27,7 @@ public class PowerUpSpawner : MonoBehaviour
             if (NavMesh.SamplePosition(randomPoint, out hit, 2.0f, NavMesh.AllAreas))
             {
                 result = hit.position;
-                //result.y = powerUpHeightFromGround;
+                result.y += powerUpHeightFromGround;
                 return true;
             }
         }

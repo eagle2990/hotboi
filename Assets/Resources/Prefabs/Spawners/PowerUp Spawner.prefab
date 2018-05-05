@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 30
   appearTime: 10
-  powerUpHeightFromGround: 3
+  powerUpHeightFromGround: 1.5
   PowerUpPrefabs:
   - {fileID: 1512554244620082, guid: fe84e8e55eb0e99428c6397b20fa9a4d, type: 2}
   - {fileID: 1150347174177464, guid: 87ac0324d1843234f8486ea32c453ebd, type: 2}
