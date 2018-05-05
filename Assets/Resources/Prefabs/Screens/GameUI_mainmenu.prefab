@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114864798098110970}
   - component: {fileID: 114133236161506514}
   - component: {fileID: 114991292846432174}
-  - component: {fileID: 114979957144956634}
   m_Layer: 0
   m_Name: GameUI_mainmenu
   m_TagString: Untagged
@@ -77,20 +76,6 @@ MonoBehaviour:
   userdata: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
   latestScore: {fileID: 0}
   comment: {fileID: 0}
---- !u!114 &114979957144956634
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1350562603345524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78b27548a41235b479e893d6e48fb018, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userData: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  dataloader: {fileID: 114133236161506514}
-  loginForm: {fileID: 0}
 --- !u!114 &114991292846432174
 MonoBehaviour:
   m_ObjectHideFlags: 1
