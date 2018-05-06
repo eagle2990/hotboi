@@ -11,7 +11,10 @@ public class FloatReference
     public FloatVariable Variable;
 
     public FloatReference()
-    { }
+    {
+        UseConstant = true;
+        ConstantValue = 0f;
+    }
 
     public FloatReference(float value)
     {

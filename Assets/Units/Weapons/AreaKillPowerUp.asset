@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Name: AreaKillPowerUp
   m_EditorClassIdentifier: 
   Name: AreaKillPowerUp
-  Damage:
+  CurrentDamage:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  InitialDamage:
     UseConstant: 1
     ConstantValue: 1000
     Variable: {fileID: 0}

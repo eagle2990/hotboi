@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Name: DoubleDamagePowerUp
   m_EditorClassIdentifier: 
   Name: DoubleDamagePowerUp
-  Damage:
+  CurrentDamage:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  InitialDamage:
     UseConstant: 1
     ConstantValue: 50
     Variable: {fileID: 0}

@@ -91,7 +91,7 @@ public class UserData : ScriptableObject {
         SetHighscore(0);
         SetMostKills(0);
         score.SetValue(0);
-        level.SetValue(0);
+        level.SetValue(1);
         playtime.SetValue(0);
         kills.SetValue(0);
     }

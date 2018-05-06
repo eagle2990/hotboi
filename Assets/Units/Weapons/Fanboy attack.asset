@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Name: Fanboy attack
   m_EditorClassIdentifier: 
   Name: Fanboy attack
-  Damage:
+  CurrentDamage:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  InitialDamage:
     UseConstant: 1
     ConstantValue: 15
     Variable: {fileID: 0}

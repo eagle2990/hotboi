@@ -64,11 +64,11 @@ public class RecieveDamage : MonoBehaviour
 
         if (isUsingExternalHPVariable)
         {
-            PlayerData.HP.Add(-weaponStats.Damage);
+            PlayerData.HP.Add(-weaponStats.CurrentDamage);
         }
         else
         {
-            currentHP -= weaponStats.Damage;
+            currentHP -= weaponStats.CurrentDamage;
         }
         UpdateHealthBar();
         DamageEvent.Invoke();

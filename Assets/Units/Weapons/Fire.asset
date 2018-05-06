@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   Name: Fire
-  Damage:
+  CurrentDamage:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  InitialDamage:
     UseConstant: 1
     ConstantValue: 25
     Variable: {fileID: 0}

@@ -6,6 +6,17 @@ using UnityEngine;
 public class WeaponBasicData : ScriptableObject
 {
     public string Name;
-    public FloatReference Damage;
+    public FloatReference CurrentDamage;
+    public FloatReference InitialDamage;
     public FloatReference AttackSpeed;
+
+    private void OnEnable()
+    {
+        if (InitialDamage == null)
+        {
+            InitialDamage = new FloatReference();
+        }
+
+        CurrentDamage = new FloatReference(InitialDamage.Value);
+    }
 }

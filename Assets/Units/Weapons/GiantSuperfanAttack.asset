@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Name: GiantSuperfanAttack
   m_EditorClassIdentifier: 
   Name: Giant Superfan Attack
-  Damage:
+  CurrentDamage:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  InitialDamage:
     UseConstant: 1
     ConstantValue: 50
     Variable: {fileID: 0}
