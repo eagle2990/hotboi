@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncreaseDifficulty : MonoBehaviour {
+public class IncreaseDifficulty : MonoBehaviour
+{
 
     public UserData data;
     public List<WeaponBasicData> enemyDamage;
@@ -15,13 +16,14 @@ public class IncreaseDifficulty : MonoBehaviour {
         RestartDifficulty();
     }
 
-    void Update () {
-		if(HasTheScoreBeingAchieved())
+    void Update()
+    {
+        if (HasTheScoreBeingAchieved())
         {
             IncreaseDamageOfEnemies();
             IncreaseLevel();
         }
-	}
+    }
 
     private bool HasTheScoreBeingAchieved()
     {
@@ -40,23 +42,25 @@ public class IncreaseDifficulty : MonoBehaviour {
 
     private void IncreaseDamageOfEnemies()
     {
-        for (int i = 0; i < enemyDamage.Count; i++)
-        {
-            enemyDamage[i].CurrentDamage.ConstantValue = enemyDamage[i].InitialDamage * difficultyMultiplier * data.level.Value;
-        }
+        ModifyEnemiesCurrentDamage(difficultyMultiplier * data.level.Value);
     }
 
     private void ResetToInitialDamage()
     {
-        for (int i = 0; i < enemyDamage.Count; i++)
-        {
-            enemyDamage[i].CurrentDamage.ConstantValue = enemyDamage[i].InitialDamage;
-        }
+        ModifyEnemiesCurrentDamage(1);
     }
 
     public void RestartDifficulty()
     {
         RestartLevel();
         ResetToInitialDamage();
+    }
+
+    private void ModifyEnemiesCurrentDamage(float multiplier)
+    {
+        for (int i = 0; i < enemyDamage.Count; i++)
+        {
+            enemyDamage[i].CurrentDamage.ConstantValue = enemyDamage[i].InitialDamage * multiplier;
+        }
     }
 }
