@@ -573,6 +573,11 @@ Prefab:
       propertyPath: randomEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 663374859}
+    - target: {fileID: 114716686920994930, guid: d9816f47730ad5d42941720752140c02,
+        type: 2}
+      propertyPath: difficultyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9816f47730ad5d42941720752140c02, type: 2}
   m_IsPrefabParent: 0
@@ -1583,8 +1588,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114672906760823682, guid: 22d99f58a27e0ac458024b9a71a2f979, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22d99f58a27e0ac458024b9a71a2f979, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1637605048 stripped

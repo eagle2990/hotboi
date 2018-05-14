@@ -512,7 +512,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4077842528951570}
-  - component: {fileID: 114672906760823682}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -2433,9 +2432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1126829149402450, guid: b882f3e3cef44d1488ecca80348bdcaa, type: 2}
   spawnTime: 15
-  spawnLimit: 3
+  spawnLimit: 1
   useDynamicSpawner: 0
-  limitRiseTimeInSeconds: 20
+  limitRiseTimeInSeconds: 60
   enemyCount: 0
   spawnpoints:
   - {fileID: 4670035745602384}
@@ -2538,17 +2537,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isVisible: 1
---- !u!114 &114672906760823682
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889900958035422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5036d54bf21062a488cd527cd894c116, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114718786005102452
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -22,7 +22,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   RotationSpeed:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 30
     Variable: {fileID: 0}
   Type: {fileID: 11400000, guid: c431c3c535e9a39418b6a8be2e0812f3, type: 2}
   Damage: {fileID: 0}
