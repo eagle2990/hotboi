@@ -515,9 +515,65 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1020889124817850, guid: 8f2f0a10889d91341b557fcef4d86463, type: 2}
+      propertyPath: m_Name
+      value: MenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482221852209778, guid: 8f2f0a10889d91341b557fcef4d86463,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 191883390}
+    - target: {fileID: 114482221852209778, guid: 8f2f0a10889d91341b557fcef4d86463,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadByIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482221852209778, guid: 8f2f0a10889d91341b557fcef4d86463,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114505606042416260, guid: 8f2f0a10889d91341b557fcef4d86463,
+        type: 2}
+      propertyPath: m_text
+      value: menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114505606042416260, guid: 8f2f0a10889d91341b557fcef4d86463,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114505606042416260, guid: 8f2f0a10889d91341b557fcef4d86463,
+        type: 2}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224832452230146060, guid: 8f2f0a10889d91341b557fcef4d86463,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 210
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114813780175242050, guid: 8f2f0a10889d91341b557fcef4d86463, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8f2f0a10889d91341b557fcef4d86463, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &191883389 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1020889124817850, guid: 8f2f0a10889d91341b557fcef4d86463,
+    type: 2}
+  m_PrefabInternal: {fileID: 191883388}
+--- !u!114 &191883390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191883389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47018bf866b430d4380992b88706c14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &230353065 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114570267215831784, guid: 8f2f0a10889d91341b557fcef4d86463,
