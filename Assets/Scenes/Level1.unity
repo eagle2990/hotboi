@@ -1330,11 +1330,6 @@ Prefab:
       propertyPath: randomEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 663374859}
-    - target: {fileID: 114704446541788802, guid: d9816f47730ad5d42941720752140c02,
-        type: 2}
-      propertyPath: mostSecondsBetweenEvents
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9816f47730ad5d42941720752140c02, type: 2}
   m_IsPrefabParent: 0
