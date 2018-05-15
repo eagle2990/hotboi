@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1193944862995622, guid: 65254ee4836bcb04b9249d230b99f17a, type: 2}
   spawnTime: 1
-  spawnLimit: 4
+  spawnLimit: 3
   useDynamicSpawner: 1
   limitRiseTimeInSeconds: 20
   enemyCount: 0
@@ -2598,7 +2598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1357662559637528, guid: f910ccfcdecb61148a655d6281c17960, type: 2}
   spawnTime: 1
-  spawnLimit: 5
+  spawnLimit: 6
   useDynamicSpawner: 0
   limitRiseTimeInSeconds: 40
   enemyCount: 0
