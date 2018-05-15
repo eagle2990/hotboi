@@ -14,11 +14,11 @@ MonoBehaviour:
   Name: Giant Superfan Attack
   CurrentDamage:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 100
     Variable: {fileID: 0}
   InitialDamage:
     UseConstant: 1
-    ConstantValue: 50
+    ConstantValue: 100
     Variable: {fileID: 0}
   AttackSpeed:
     UseConstant: 1
