@@ -14,13 +14,13 @@ MonoBehaviour:
   Name: Fanboy attack
   CurrentDamage:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 40
     Variable: {fileID: 0}
   InitialDamage:
     UseConstant: 1
-    ConstantValue: 15
+    ConstantValue: 10
     Variable: {fileID: 0}
   AttackSpeed:
     UseConstant: 1
-    ConstantValue: 10
+    ConstantValue: 3
     Variable: {fileID: 0}
