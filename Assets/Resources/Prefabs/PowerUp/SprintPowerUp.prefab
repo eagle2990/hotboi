@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1512554244620082}
+  m_RootGameObject: {fileID: 1667148968151392}
   m_IsPrefabParent: 1
---- !u!1 &1347567065368826
+--- !u!1 &1149231796644042
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4334478670976724}
-  - component: {fileID: 108305593012336680}
-  - component: {fileID: 114430854562411692}
+  - component: {fileID: 4417237630584170}
+  - component: {fileID: 108178194657711094}
+  - component: {fileID: 114528018912607960}
   m_Layer: 0
   m_Name: Point light
   m_TagString: Untagged
@@ -28,37 +28,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1512554244620082
+--- !u!1 &1239617895527232
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4381916204971414}
-  - component: {fileID: 114197826006287182}
-  - component: {fileID: 114880540439544204}
-  - component: {fileID: 135480879005922690}
-  - component: {fileID: 82858720456703874}
-  m_Layer: 0
-  m_Name: SprintPowerUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1598575217732444
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4182016966919592}
-  - component: {fileID: 198818777917807150}
-  - component: {fileID: 199198384167280078}
-  - component: {fileID: 95562056783569118}
-  - component: {fileID: 114219503536692728}
+  - component: {fileID: 4026425405536826}
+  - component: {fileID: 198342486129355436}
+  - component: {fileID: 199242922367948304}
+  - component: {fileID: 95823118809447946}
+  - component: {fileID: 114398130666561680}
   m_Layer: 0
   m_Name: ParticleSystem
   m_TagString: Untagged
@@ -66,53 +47,72 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4182016966919592
+--- !u!1 &1667148968151392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4062212125435752}
+  - component: {fileID: 114350900887109830}
+  - component: {fileID: 114908340208322828}
+  - component: {fileID: 135870872224835364}
+  - component: {fileID: 82026415585034436}
+  m_Layer: 0
+  m_Name: SprintPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4026425405536826
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598575217732444}
+  m_GameObject: {fileID: 1239617895527232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4334478670976724}
-  m_Father: {fileID: 4381916204971414}
+  - {fileID: 4417237630584170}
+  m_Father: {fileID: 4062212125435752}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4334478670976724
+--- !u!4 &4062212125435752
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347567065368826}
+  m_GameObject: {fileID: 1667148968151392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.41, y: 0.46, z: -11.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4026425405536826}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4417237630584170
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149231796644042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4182016966919592}
+  m_Father: {fileID: 4026425405536826}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4381916204971414
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1512554244620082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9959564, y: 0.4684099, z: -7.675255}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4182016966919592}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82858720456703874
+--- !u!82 &82026415585034436
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1512554244620082}
+  m_GameObject: {fileID: 1667148968151392}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -187,13 +187,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95562056783569118
+--- !u!95 &95823118809447946
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598575217732444}
+  m_GameObject: {fileID: 1239617895527232}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c6af061ae248c734ea093169b83d1ba6, type: 2}
@@ -204,12 +204,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!108 &108305593012336680
+--- !u!108 &108178194657711094
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347567065368826}
+  m_GameObject: {fileID: 1149231796644042}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
@@ -240,12 +240,12 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114197826006287182
+--- !u!114 &114350900887109830
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1512554244620082}
+  m_GameObject: {fileID: 1667148968151392}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb1189a3ec4135245a4a20d233283014, type: 3}
@@ -263,7 +263,7 @@ MonoBehaviour:
   appearsEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114880540439544204}
+      - m_Target: {fileID: 114908340208322828}
         m_MethodName: Appear
         m_Mode: 1
         m_Arguments:
@@ -291,7 +291,7 @@ MonoBehaviour:
   consumedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114880540439544204}
+      - m_Target: {fileID: 114908340208322828}
         m_MethodName: Consumed
         m_Mode: 1
         m_Arguments:
@@ -319,7 +319,7 @@ MonoBehaviour:
   dissapearsEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114880540439544204}
+      - m_Target: {fileID: 114908340208322828}
         m_MethodName: Dissapear
         m_Mode: 1
         m_Arguments:
@@ -332,23 +332,23 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114219503536692728
+--- !u!114 &114398130666561680
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598575217732444}
+  m_GameObject: {fileID: 1239617895527232}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01a27acce7efda84894c2088be4a4fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114430854562411692
+--- !u!114 &114528018912607960
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347567065368826}
+  m_GameObject: {fileID: 1149231796644042}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8adfe2e605eee7f4b8f9355d8f5664f7, type: 3}
@@ -361,12 +361,12 @@ MonoBehaviour:
   phase: 0
   frequency: 1.2
   originalColor: {r: 0, g: 0.75294125, b: 1, a: 1}
---- !u!114 &114880540439544204
+--- !u!114 &114908340208322828
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1512554244620082}
+  m_GameObject: {fileID: 1667148968151392}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6d483b7b7ccd954bb35f409b5437957, type: 3}
@@ -376,24 +376,24 @@ MonoBehaviour:
   sprintDuration: 5
   sprintAddAmount: 5
   sprintPowerUpByAddition: 0
---- !u!135 &135480879005922690
+--- !u!135 &135870872224835364
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1512554244620082}
+  m_GameObject: {fileID: 1667148968151392}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!198 &198818777917807150
+--- !u!198 &198342486129355436
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598575217732444}
+  m_GameObject: {fileID: 1239617895527232}
   serializedVersion: 5
   lengthInSec: 5
   simulationSpeed: 1
@@ -3755,13 +3755,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &199198384167280078
+--- !u!199 &199242922367948304
 ParticleSystemRenderer:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598575217732444}
+  m_GameObject: {fileID: 1239617895527232}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
