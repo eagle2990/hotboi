@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 114765721765835252}
   m_Layer: 8
   m_Name: Superfan(Patrol)
-  m_TagString: Superfan(AlwaysChasing)
+  m_TagString: Superfan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
