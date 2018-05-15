@@ -18,7 +18,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   MoveSpeed:
     UseConstant: 1
-    ConstantValue: 7.5
+    ConstantValue: 8
     Variable: {fileID: 0}
   RotationSpeed:
     UseConstant: 1

@@ -295,10 +295,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagFilter: Player
   lifetimeSeconds: 10
-  beginIntensity: 5
+  beginIntensity: 0
   finishIntensity: 5
-  lightAppearTime: 5
-  lightDisappearTime: 2
+  lightAppearTime: 4
+  lightDisappearTime: 0.2
   disappearAudioClip: {fileID: 8300000, guid: 893940dea6795464e831abc2de3950f0, type: 3}
   collisionLayer:
     serializedVersion: 2

@@ -14,11 +14,11 @@ MonoBehaviour:
   Name: AreaKillPowerUp
   CurrentDamage:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 200
     Variable: {fileID: 0}
   InitialDamage:
     UseConstant: 1
-    ConstantValue: 1000
+    ConstantValue: 200
     Variable: {fileID: 0}
   AttackSpeed:
     UseConstant: 1
