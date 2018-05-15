@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leastSecondsBetweenEvents: 3
-  mostSecondsBetweenEvents: 8
+  mostSecondsBetweenEvents: 10
   randomEvent:
     m_PersistentCalls:
       m_Calls:
@@ -474,7 +474,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f3817cc480ea2a54980cd3aedba7cb71, type: 2}
   - {fileID: 11400000, guid: b8bc31eb9a9ca8b43b97c0139dbc34e2, type: 2}
   difficultyMultiplier: 1
-  acummulatedPointsToTrigger: 50
+  acummulatedPointsToTrigger: 200
 --- !u!114 &114722253938173782
 MonoBehaviour:
   m_ObjectHideFlags: 1

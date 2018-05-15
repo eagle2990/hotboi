@@ -480,6 +480,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1724688857886528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4453020795761860}
+  - component: {fileID: 114795109578025448}
+  m_Layer: 0
+  m_Name: PowerUp Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1726915699789982
 GameObject:
   m_ObjectHideFlags: 1
@@ -798,6 +814,19 @@ Transform:
   m_Father: {fileID: 4178714185060794}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4453020795761860
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724688857886528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4685994902451640}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4470845222970550
 Transform:
   m_ObjectHideFlags: 1
@@ -963,6 +992,7 @@ Transform:
   - {fileID: 4808866922915256}
   - {fileID: 4676525670087282}
   - {fileID: 4552490464928178}
+  - {fileID: 4453020795761860}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -972,8 +1002,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635985522125208}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.00006280374, y: 0.8059518, z: -0.016351437}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0.000062942505, y: 0.8059518, z: -0.0163517}
   m_LocalScale: {x: 14.605689, y: 14.605689, z: 14.605689}
   m_Children:
   - {fileID: 4384173393052656}
@@ -1102,7 +1132,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 763fb29493e1ff2469a7a5c446a53c4a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.489
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1381,6 +1411,25 @@ MonoBehaviour:
   phase: 0
   frequency: 1.5
   originalColor: {r: 1, g: 0.64624745, b: 0.19852942, a: 1}
+--- !u!114 &114795109578025448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724688857886528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c025591752e2ea24a8629383c5e36dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 20
+  appearTime: 5
+  powerUpHeightFromGround: 1.5
+  PowerUpPrefabs:
+  - {fileID: 1537320389931614, guid: 50fad2f2384578249b2fb70a078a3bc5, type: 2}
+  - {fileID: 1701571557913954, guid: 0e9ce1c69ca132944b1553f60b776181, type: 2}
+  - {fileID: 1308777123634240, guid: 87ac0324d1843234f8486ea32c453ebd, type: 2}
+  - {fileID: 1667148968151392, guid: fe84e8e55eb0e99428c6397b20fa9a4d, type: 2}
 --- !u!114 &114838258296424664
 MonoBehaviour:
   m_ObjectHideFlags: 1
