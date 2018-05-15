@@ -20,11 +20,13 @@ public class AI_Follow : MonoBehaviour
     bool isTracking;
     private float timer;
     GameObject player;
+	private float wanderSpeed;
   
 
     void Start () 
 	{  
-        GameObject[] playerList = FindPlayer();
+		wanderSpeed = enemyStats.WanderSpeed;
+		GameObject[] playerList = FindPlayer();
         myAgent = GetComponent<NavMeshAgent>();
         if (playerList != null && playerList.Length > 0) {
             player = playerList[0];

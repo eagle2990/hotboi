@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyBaseData : UnitBasicData
 {
     public FloatVariable Damage;
+	public FloatReference WanderSpeed;
     public FloatVariable scoringPoints;
 
     private void OnEnable()
