@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class PowerUpSpawner : MonoBehaviour
 {
 
+    [Range(1f, 1000f)]
     public float range = 10.0f;
     [Range(1f, 30f)]
     public float appearTime = 10f;
@@ -47,5 +48,9 @@ public class PowerUpSpawner : MonoBehaviour
         {
             Instantiate(GetRandomPowerUp(), point, Quaternion.identity);
         }
+    }
+    void OnDrawGizmosSelected() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, range);
     }
 }
