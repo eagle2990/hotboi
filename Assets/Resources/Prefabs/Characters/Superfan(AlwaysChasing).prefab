@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 114409567753210078}
   - component: {fileID: 82169406676463878}
   - component: {fileID: 114502341799582842}
+  - component: {fileID: 114641060422078546}
   m_Layer: 8
   m_Name: Superfan(AlwaysChasing)
   m_TagString: Superfan(AlwaysChasing)
@@ -754,7 +755,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1193944862995622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8894806, y: 0.16785705, z: -6.7413483}
+  m_LocalPosition: {x: 2.6093445, y: 0.16785693, z: -25.365921}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4987580200177092}
@@ -1475,6 +1476,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114641060422078546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193944862995622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb7dd90645da0d4fbfd42141030937a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136628526176599602
 CapsuleCollider:
   m_ObjectHideFlags: 1

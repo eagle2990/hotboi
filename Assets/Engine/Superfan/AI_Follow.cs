@@ -20,13 +20,10 @@ public class AI_Follow : MonoBehaviour
     bool isTracking;
     private float timer;
     GameObject player;
-    private float chaseSpeed;
-    private float wanderSpeed;
+  
 
     void Start () 
-	{
-        chaseSpeed = enemyStats.MoveSpeed;
-        wanderSpeed = enemyStats.WanderSpeed;
+	{  
         GameObject[] playerList = FindPlayer();
         myAgent = GetComponent<NavMeshAgent>();
         if (playerList != null && playerList.Length > 0) {
@@ -46,11 +43,11 @@ public class AI_Follow : MonoBehaviour
             } else {
                 gameObject.GetComponent<Animator>().SetBool("chasing", true);
             }
-            UpdateSpeed(chaseSpeed, myAgent);
+            
         } else {
             isChasing = false;
             gameObject.GetComponent<Animator>().SetBool("chasing", false);
-            UpdateSpeed(wanderSpeed, myAgent);
+           
         }
         if (isTracking && isChasing) {
             myAgent.SetDestination(target.position);
