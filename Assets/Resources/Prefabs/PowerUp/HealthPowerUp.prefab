@@ -323,7 +323,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114863419810236494}
-        m_MethodName: Appear
+        m_MethodName: Consumed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
