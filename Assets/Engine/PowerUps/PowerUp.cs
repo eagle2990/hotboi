@@ -15,6 +15,7 @@ public class PowerUp : MonoBehaviour
     public float lightAppearTime = 4f;
     [Range(0f, 5f)]
     public float lightDisappearTime = 2f;
+    public AudioClip disappearAudioClip;
     public LayerMask collisionLayer;
     public UnityEvent appearsEvent;
     public UnityEvent consumedEvent;
@@ -70,7 +71,7 @@ public class PowerUp : MonoBehaviour
                 gameObject.GetComponentInChildren<ParticleSystem>().transform.parent = null;
             }
             dissapearsEvent.Invoke();
-            Destroy(gameObject);
+            Destroy(gameObject, disappearAudioClip.length);
         }
     }
 
