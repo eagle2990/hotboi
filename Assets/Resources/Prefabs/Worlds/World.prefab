@@ -6941,7 +6941,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4556614990117074}
-  - component: {fileID: 114276977577625998}
   - component: {fileID: 82699163530384870}
   - component: {fileID: 114748321861409006}
   - component: {fileID: 114466212298201938}
@@ -47057,24 +47056,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114276977577625998
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1618334665228028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e2c64f80665df40aa5f5b63cfb6e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leastSecondsBetweenEvents: 2
-  mostSecondsBetweenEvents: 5
-  randomEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114466212298201938
 MonoBehaviour:
   m_ObjectHideFlags: 1

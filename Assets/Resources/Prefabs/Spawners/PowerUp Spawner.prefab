@@ -51,8 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c025591752e2ea24a8629383c5e36dc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 30
-  appearTime: 3
+  range: 23
+  minAppearTime: 1
+  maxAppearTime: 7
   powerUpHeightFromGround: 1.5
   PowerUpPrefabs:
   - {fileID: 1537320389931614, guid: 50fad2f2384578249b2fb70a078a3bc5, type: 2}

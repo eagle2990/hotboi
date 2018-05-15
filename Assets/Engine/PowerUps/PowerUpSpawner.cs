@@ -8,18 +8,27 @@ public class PowerUpSpawner : MonoBehaviour
 
     [Range(1f, 1000f)]
     public float range = 10.0f;
-    [Range(1f, 30f)]
-    public float appearTime = 10f;
+    [Range(0.1f, 30f)]
+    public float minAppearTime = 1f;
+    [Range(2f, 30f)]
+    public float maxAppearTime = 7f;
     [Range(0f, 10f)]
     public float powerUpHeightFromGround = 1f;
     public List<GameObject> PowerUpPrefabs;
 
     private void Start()
     {
-        InvokeRepeating("SpawnPowerUp", 5.0f, appearTime);
+        Invoke("RandomThing", 1.0f);
     }
 
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
+
+    void RandomThing() {
+        float randomTime = Random.Range(minAppearTime, maxAppearTime);
+        SpawnPowerUp();
+        Invoke("RandomThing", randomTime);
+    }
+
+bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
         for (int i = 0; i < 30; i++)
         {
