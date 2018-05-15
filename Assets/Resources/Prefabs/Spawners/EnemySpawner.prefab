@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 23569200103572382}
   - component: {fileID: 114931081756857748}
   m_Layer: 0
-  m_Name: SuperfanSpawner
+  m_Name: Superfan(Patrol)Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1193944862995622, guid: 65254ee4836bcb04b9249d230b99f17a, type: 2}
   spawnTime: 1
-  spawnLimit: 3
+  spawnLimit: 4
   useDynamicSpawner: 1
   limitRiseTimeInSeconds: 20
   enemyCount: 0
@@ -2430,7 +2430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d87124f7d2cf0a8468cad924319ba81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1126829149402450, guid: b882f3e3cef44d1488ecca80348bdcaa, type: 2}
+  enemy: {fileID: 1838774244727894, guid: 101a5774da0e3814282ec66b8c215acc, type: 2}
   spawnTime: 15
   spawnLimit: 1
   useDynamicSpawner: 0
@@ -2596,11 +2596,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d87124f7d2cf0a8468cad924319ba81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1588241364190656, guid: b0c2bbdc9563b3641b5b0db8eaa11dbd, type: 2}
+  enemy: {fileID: 1357662559637528, guid: f910ccfcdecb61148a655d6281c17960, type: 2}
   spawnTime: 1
-  spawnLimit: 3
+  spawnLimit: 5
   useDynamicSpawner: 0
-  limitRiseTimeInSeconds: 20
+  limitRiseTimeInSeconds: 40
   enemyCount: 0
   spawnpoints:
   - {fileID: 4319199035433632}

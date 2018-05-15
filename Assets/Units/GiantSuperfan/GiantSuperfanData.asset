@@ -24,11 +24,8 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  Damage:
-    UseConstant: 1
-    ConstantValue: 50
-    Variable: {fileID: 0}
   Type: {fileID: 11400000, guid: 40511befc8f719c40ace2dfde1ed8477, type: 2}
+  Damage: {fileID: 0}
   WanderSpeed:
     UseConstant: 1
     ConstantValue: 4.5
