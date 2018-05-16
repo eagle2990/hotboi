@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -6,10 +7,8 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-
-    public AudioMixer audioMixer;
-
     public Dropdown resolutionDropdown;
+    public Dropdown qualityDropdown;
 
     Resolution[] resolutions;
 
@@ -38,6 +37,13 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        SelectCurrentQualityOption();
+    }
+
+    private void SelectCurrentQualityOption()
+    {
+        qualityDropdown.value = QualitySettings.GetQualityLevel();
     }
 
     public void SetVolume(float volume)
@@ -46,7 +52,6 @@ public class SettingsMenu : MonoBehaviour
     }
 
     public void SetQuality(int qualityIndex)
-
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
