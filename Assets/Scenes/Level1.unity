@@ -519,6 +519,10 @@ Prefab:
       propertyPath: m_Transition
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1747727910722690, guid: 8f2f0a10889d91341b557fcef4d86463, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f2f0a10889d91341b557fcef4d86463, type: 2}
   m_IsPrefabParent: 0
@@ -1526,6 +1530,26 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488419312587732, guid: 36abd00eb0abb9b47a99c2f1dda47c75,
+        type: 2}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488419312587732, guid: 36abd00eb0abb9b47a99c2f1dda47c75,
+        type: 2}
+      propertyPath: m_fontColor.r
+      value: 0.8156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488419312587732, guid: 36abd00eb0abb9b47a99c2f1dda47c75,
+        type: 2}
+      propertyPath: m_fontColor.g
+      value: 0.26666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488419312587732, guid: 36abd00eb0abb9b47a99c2f1dda47c75,
+        type: 2}
+      propertyPath: m_fontColor.b
+      value: 0.2627451
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36abd00eb0abb9b47a99c2f1dda47c75, type: 2}
