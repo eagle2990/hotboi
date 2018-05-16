@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4451804364769174}
   - component: {fileID: 108842155175578970}
-  - component: {fileID: 114746629811524918}
   m_Layer: 0
   m_Name: FireLight
   m_TagString: Untagged
@@ -443,6 +442,22 @@ GameObject:
   - component: {fileID: 4034747793105872}
   m_Layer: 0
   m_Name: Bone_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1651712132585636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4713460381862828}
+  - component: {fileID: 114337488143903796}
+  m_Layer: 0
+  m_Name: PowerUp Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -963,8 +978,22 @@ Transform:
   - {fileID: 4808866922915256}
   - {fileID: 4676525670087282}
   - {fileID: 4552490464928178}
+  - {fileID: 4713460381862828}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4713460381862828
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1651712132585636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4685994902451640}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4741607074163466
 Transform:
@@ -972,8 +1001,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635985522125208}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.00006280374, y: 0.8059518, z: -0.016351437}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0.000062942505, y: 0.8059518, z: -0.0163517}
   m_LocalScale: {x: 14.605689, y: 14.605689, z: 14.605689}
   m_Children:
   - {fileID: 4384173393052656}
@@ -1102,7 +1131,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 763fb29493e1ff2469a7a5c446a53c4a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.489
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1351,6 +1380,26 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114337488143903796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1651712132585636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08670848e3a8ad14791c164a58c41522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  minAppearTime: 3
+  maxAppearTime: 7
+  powerUpHeightFromGround: 1
+  PowerUpPrefabs:
+  - {fileID: 1537320389931614, guid: 50fad2f2384578249b2fb70a078a3bc5, type: 2}
+  - {fileID: 1701571557913954, guid: 0e9ce1c69ca132944b1553f60b776181, type: 2}
+  - {fileID: 1308777123634240, guid: 87ac0324d1843234f8486ea32c453ebd, type: 2}
+  - {fileID: 1667148968151392, guid: fe84e8e55eb0e99428c6397b20fa9a4d, type: 2}
 --- !u!114 &114588887216885856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1363,24 +1412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultWeapon: {fileID: 11400000, guid: adf58f96703dd33498e4b611cfded977, type: 2}
---- !u!114 &114746629811524918
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1079257242322046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adfe2e605eee7f4b8f9355d8f5664f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveform: 0
-  delay: 0
-  baseStart: 1.5
-  amplitude: 0.2
-  phase: 0
-  frequency: 1.5
-  originalColor: {r: 1, g: 0.64624745, b: 0.19852942, a: 1}
 --- !u!114 &114838258296424664
 MonoBehaviour:
   m_ObjectHideFlags: 1
