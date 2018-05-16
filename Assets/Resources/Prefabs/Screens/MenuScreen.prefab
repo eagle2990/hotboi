@@ -243,6 +243,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224133543876657230}
+  - component: {fileID: 114128217294143304}
   m_Layer: 5
   m_Name: LoadingScreenControl
   m_TagString: Untagged
@@ -1411,7 +1412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1655047461514734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1509,7 @@ GameObject:
   - component: {fileID: 224112250887533268}
   - component: {fileID: 114269216242294830}
   m_Layer: 5
-  m_Name: BrightnessSlider
+  m_Name: LoadingBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3289,8 +3290,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1348272308443614}
-        m_MethodName: 
+      - m_Target: {fileID: 114020863150417852}
+        m_MethodName: SetResolution
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3833,6 +3834,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114128217294143304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121009882735722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6efdb61bf15e03a498b552f9e8a3a1d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreenObj: {fileID: 1634146559411810}
+  slider: {fileID: 114269216242294830}
 --- !u!114 &114130741809019856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4850,13 +4864,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114758571175594934}
-        m_MethodName: LoadByName
-        m_Mode: 5
+      - m_Target: {fileID: 114128217294143304}
+        m_MethodName: LoadScreenExample
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: Level1
           m_BoolArgument: 0
@@ -14252,7 +14266,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 12, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14487,7 +14501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 10, y: 180}
   m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224309991032014838

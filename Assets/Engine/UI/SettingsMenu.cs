@@ -55,5 +55,11 @@ public class SettingsMenu : MonoBehaviour {
 	{
 		Screen.fullScreen = isFullscreen;
 	}
+
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution currentResolution = resolutions[resolutionIndex];
+        Screen.SetResolution(currentResolution.width, currentResolution.height, Screen.fullScreen);
+    }
 	
 }
