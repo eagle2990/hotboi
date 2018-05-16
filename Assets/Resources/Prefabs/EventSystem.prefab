@@ -362,7 +362,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e2c64f80665df40aa5f5b63cfb6e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leastSecondsBetweenEvents: 3
+  leastSecondsBetweenEvents: 4
   mostSecondsBetweenEvents: 8
   randomEvent:
     m_PersistentCalls:
@@ -470,9 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: df68c68f651d6c648af7deb7105ba8a2, type: 2}
-  enemyDamage:
-  - {fileID: 11400000, guid: f3817cc480ea2a54980cd3aedba7cb71, type: 2}
-  - {fileID: 11400000, guid: b8bc31eb9a9ca8b43b97c0139dbc34e2, type: 2}
+  enemyDamage: []
   difficultyMultiplier: 1
   acummulatedPointsToTrigger: 50
 --- !u!114 &114722253938173782

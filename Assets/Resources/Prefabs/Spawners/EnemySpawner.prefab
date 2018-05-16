@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1547678026036762
 GameObject:
   m_ObjectHideFlags: 1
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1193944862995622, guid: 65254ee4836bcb04b9249d230b99f17a, type: 2}
   spawnTime: 2
-  spawnLimit: 3
+  spawnLimit: 2
   useDynamicSpawner: 1
   limitRiseTimeInSeconds: 15
   enemyCount: 0
