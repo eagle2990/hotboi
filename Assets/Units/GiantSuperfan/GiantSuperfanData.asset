@@ -14,7 +14,7 @@ MonoBehaviour:
   Name: GiantSuperfanData
   MaxHP:
     UseConstant: 1
-    ConstantValue: 10000
+    ConstantValue: 1000000
     Variable: {fileID: 0}
   MoveSpeed:
     UseConstant: 1
