@@ -2169,9 +2169,20 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 730.95807
       objectReference: {fileID: 0}
+    - target: {fileID: 114020863150417852, guid: 37878a4688b179d4789095db5331b13f,
+        type: 2}
+      propertyPath: volumeSlider
+      value: 
+      objectReference: {fileID: 1932880803}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37878a4688b179d4789095db5331b13f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1932880803 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114189506305889320, guid: 37878a4688b179d4789095db5331b13f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1932880802}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1969450254 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114198748188634302, guid: 37878a4688b179d4789095db5331b13f,
