@@ -11,6 +11,7 @@ public class Login : MonoBehaviour {
     private string LoginURL = "http://hotboi.veeb.eu/php/login.php";
     private TMP_InputField username;
     private TMP_InputField password;
+    private TextMeshProUGUI messasge;
 
     private string textToBeShowIfLoggedIn;
     private string textToBeShowIfLoggedOut;
@@ -18,6 +19,8 @@ public class Login : MonoBehaviour {
     private void Start() {
         username = loginForm.transform.Find("Username").GetComponent<TMP_InputField>();
         password = loginForm.transform.Find("Password").GetComponent<TMP_InputField>();
+        messasge = loginForm.transform.Find("Response").GetComponent<TextMeshProUGUI>();
+        messasge.text = "";
     }
 
     private void LogIn() {
@@ -26,6 +29,7 @@ public class Login : MonoBehaviour {
     private void LogOut() {
         userData.ResetLocalUserData(); //log out by resetting data
         password.text = "";
+        messasge.text = "";
     }
 
     public void LogInOut() {
@@ -50,6 +54,7 @@ public class Login : MonoBehaviour {
             Debug.Log("Login success ");
             dataloader.LoadStartingData();
         } else {
+            messasge.text = "Your username or password is incorrect!";
             Debug.Log("Could not log in ");
         }
     }
