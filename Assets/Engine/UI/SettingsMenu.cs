@@ -10,6 +10,8 @@ public class SettingsMenu : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
 
+    public Slider volumeSlider;
+
     Resolution[] resolutions;
 
     void Start()
@@ -39,6 +41,12 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
 
         SelectCurrentQualityOption();
+        SetVolumeSliderToCurrentValue();
+    }
+
+    private void SetVolumeSliderToCurrentValue()
+    {
+        volumeSlider.value = AudioListener.volume;
     }
 
     private void SelectCurrentQualityOption()
@@ -72,5 +80,7 @@ public class SettingsMenu : MonoBehaviour
     {
         RenderSettings.ambientLight = new Color(brightness, brightness, brightness, 1.0f);
     }
+
+   
 
 }
